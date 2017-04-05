@@ -5,10 +5,12 @@ import {refreshUserInfo} from '../services/user';
 export default{
   namespace:'user',
   state:{
-    nickname:'',
-    headImg:'',
+    nickname:'神奇的梨子',
+    headImg:"http://webresources.b0.upaiyun.com/WechatIMG2.jpeg",
     token:null,
-    orders:[]
+    balance:0,
+    orders:[],
+    hasAuthority:false
   },
 
   effects:{

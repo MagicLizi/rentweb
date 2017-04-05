@@ -1,0 +1,74 @@
+.container{
+  width:100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: #efeff5;
+}
+
+.userInfo{
+  width: 100vw;
+  height: 45vh;
+  background-image: -webkit-radial-gradient(#FFBD71,#FF8A25);
+  background-image: radial-gradient(#FFBD71,#FF8A25);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.userInfoTop{
+  width: 100vw;
+  height: 31vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.avata{
+  width: 18vw;
+  height: 18vw;
+  background: center no-repeat;
+  background-size: cover;
+  border-radius: 9vw;
+  border: 1px solid #F1F1F1;
+}
+
+.userInfoBottom{
+  width: 100vw;
+  height: 14vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*background-color: red;*/
+}
+
+.line{
+  width:100vw;
+  height:1px;
+  background-color: white;
+  opacity: 0.3;
+}
+
+.cellContainer{
+  width: 100vw;
+  height:55vh;
+  background-color: #efeff5;
+}
+
+.cell{
+  width:100vw;
+  height:8vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.cell:active{
+  opacity: 0.5;
+}
+
+.cellline{
+  width:100vw;
+  height:1px;
+}
