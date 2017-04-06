@@ -31,9 +31,11 @@ class Authority extends React.Component {
         console.log(result['orderInfo']);
         var orderInfo = result['orderInfo'];
         var orderId = orderInfo['orderId'];
+        var userId = orderInfo['userId'];
         var info = {
           orderId : orderId,
-          path : '/authority'
+          path : '/authority',
+          userId :userId
         }
         var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;
         var redirect_uri = encodeURI(uri);
