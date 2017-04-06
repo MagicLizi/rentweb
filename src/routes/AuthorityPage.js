@@ -10,13 +10,14 @@ import cookie from 'react-cookie';
 class Authority extends React.Component {
 
   componentWillMount() {
-    var payobj = cookie.load('token',true);
-    alert(payobj);
-    // if(payobj){
-    //   alert(payobj);
-    // }
-
     setCurPath('/authority');
+  }
+
+  componentDidMount() {
+    var payobj = cookie.load('payobj',true);
+    if(payobj){
+      alert(payobj);
+    }
   }
 
   constructor() {
