@@ -41,7 +41,11 @@ export default function request(url, options) {
       }
       else{
         if(data.code === 9999){
-          alert('需要微信登陆');
+          var uri = `http://rentapi.magiclizi.com/user/wxlogin`;
+          var redirect_uri = encodeURI(uri);
+          var appId = 'wx4188036aadb09af1';
+          var newUri = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appId}&redirect_uri=${redirect_uri}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect`
+          window.location = newUri;
         }
         else{
           alert(data.message);
