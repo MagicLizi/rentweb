@@ -79,7 +79,7 @@ class Authority extends React.Component {
         var redirect_uri = encodeURI(uri);
         var newUri = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4188036aadb09af1&redirect_uri='
           + uri + '&response_type=code&scope=snsapi_base#wechat_redirect';
-        request(newUri,{},true);
+        window.location = newUri;
       }
     })
   }
