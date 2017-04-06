@@ -24,3 +24,9 @@ export async function repay(){
   });
 }
 
+export async function wxConfig(){
+  return await request('/action/wxConfig',{
+    method:'POST'
+  })
+}
+
