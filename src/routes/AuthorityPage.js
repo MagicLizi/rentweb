@@ -70,6 +70,7 @@ class Authority extends React.Component {
         var info = {
           orderId : orderId,
           path : '/authority',
+          userId:userId
         }
         var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;
         var redirect_uri = encodeURI(uri);
