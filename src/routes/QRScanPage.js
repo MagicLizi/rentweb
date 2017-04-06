@@ -49,10 +49,10 @@ class QRScanPage extends React.Component {
     WeixinJSBridge.invoke('scanQRCode',{
       'appid': 'wx4188036aadb09af1', // 公众号appID
       'desc' : 'desc', // 描述
-      'needResult' : 1, // 非必填，扫码处理方式。1：直接返回扫描结果，0：扫码结果由微信处理。默认为0
-      'scanType':['qrCode','barCode'] // 非必填，扫码类型，参数类型是数组，二维码是'qrCode'，一维码是'barCode'，默认全选
+      'needResult' : 0, // 非必填，扫码处理方式。1：直接返回扫描结果，0：扫码结果由微信处理。默认为0
+      'scanType':['qrCode'] // 非必填，扫码类型，参数类型是数组，二维码是'qrCode'，一维码是'barCode'，默认全选
     },function(res){
-      alert(res.resultStr);
+      alert(res);
     });
   }
 
