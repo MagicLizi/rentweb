@@ -6,6 +6,7 @@ import {connect} from 'dva';
 import rentPageCss from './RentPage.css';
 import {payAuthority} from '../services/user';
 import {setCurPath} from '../models/path';
+import request from '../utils/request';
 class Authority extends React.Component {
 
   componentWillMount() {
@@ -78,7 +79,7 @@ class Authority extends React.Component {
         var redirect_uri = encodeURI(uri);
         var newUri = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4188036aadb09af1&redirect_uri='
           + uri + '&response_type=code&scope=snsapi_base#wechat_redirect';
-        window.location = newUri;
+        request(newUri,{},true);
       }
     })
   }

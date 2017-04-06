@@ -24,8 +24,11 @@ function checkStatus(response) {
  * @param  {object} [options] The options we want to pass to "fetch"
  * @return {object}           An object containing either "data" or "err"
  */
-export default function request(url, options) {
+export default function request(url, options,without) {
   var lastUrl = domain + url;
+  if(without){
+    lastUrl = url;
+  }
   options = Object.assign({},options,{
     headers: {
       'Accept': 'application/json',
@@ -46,7 +49,8 @@ export default function request(url, options) {
           var redirect_uri = encodeURI(uri);
           var appId = 'wx4188036aadb09af1';
           var newUri = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appId}&redirect_uri=${redirect_uri}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect`
-          window.location = newUri;
+          // window.location = newUri;
+          request(newUri,{},true);
         }
         else{
           alert(data.message);
