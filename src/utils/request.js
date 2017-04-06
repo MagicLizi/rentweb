@@ -1,6 +1,6 @@
 import fetch from 'dva/fetch';
-const domain = 'http://localhost:5002';
-
+var domain = 'http://localhost:5002';
+domain = 'http://rentapi.magiclizi.com'
 
 function parseJSON(response) {
   return response.json();
