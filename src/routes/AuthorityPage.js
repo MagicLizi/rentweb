@@ -25,22 +25,24 @@ class Authority extends React.Component {
   }
 
   onBridgeReady(){
-    var payobj = cookie.load("payobj",true);
-    if(payobj&&payobj.length>0){
-      var obj = JSON.parse(payobj);
-      WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
-        cookie.remove('payobj');
-        if(res['err_msg'] == "get_brand_wcpay_request:ok"){
-          alert("支付成功");
-        }
-        else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
-          alert("支付取消");
-        }
-        else{
-          alert("支付失败:"+res);
-        }
-      });
-    }
+    var payobj = this.props.location.query['payobj'];
+    alert(payobj);
+    // var payobj = cookie.load("payobj",true);
+    // if(payobj&&payobj.length>0){
+    //   var obj = JSON.parse(payobj);
+    //   WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
+    //     cookie.remove('payobj');
+    //     if(res['err_msg'] == "get_brand_wcpay_request:ok"){
+    //       alert("支付成功");
+    //     }
+    //     else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
+    //       alert("支付取消");
+    //     }
+    //     else{
+    //       alert("支付失败:"+res);
+    //     }
+    //   });
+    // }
   }
 
   componentDidMount() {
