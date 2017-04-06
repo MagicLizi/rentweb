@@ -40,9 +40,14 @@ export default function request(url, options) {
         return data.data;
       }
       else{
-        alert(data.message);
-        console.error(`请求出错:${JSON.stringify(data)}`);
-        return null;
+        if(data.code === 9999){
+          alert('需要微信登陆');
+        }
+        else{
+          alert(data.message);
+          console.error(`请求出错:${JSON.stringify(data)}`);
+          return null;
+        }
       }
     })
     .catch(err => {
