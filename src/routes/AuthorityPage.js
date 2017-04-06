@@ -10,7 +10,7 @@ import cookie from 'react-cookie';
 class Authority extends React.Component {
 
   componentWillMount() {
-    var payobj = cookie.select('token');
+    var payobj = cookie.load('token',true);
     alert(payobj);
     // if(payobj){
     //   alert(payobj);
