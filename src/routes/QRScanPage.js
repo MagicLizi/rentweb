@@ -52,7 +52,7 @@ class QRScanPage extends React.Component {
       'needResult' : 0, // 非必填，扫码处理方式。1：直接返回扫描结果，0：扫码结果由微信处理。默认为0
       'scanType':['qrCode'] // 非必填，扫码类型，参数类型是数组，二维码是'qrCode'，一维码是'barCode'，默认全选
     },function(res){
-      alert(res);
+      alert(JSON.stringify(res));
     });
   }
 
