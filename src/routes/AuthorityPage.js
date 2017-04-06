@@ -31,7 +31,11 @@ class Authority extends React.Component {
         console.log(result['orderInfo']);
         var orderInfo = result['orderInfo'];
         var orderId = orderInfo['orderId'];
-        var uri = `http://rentapi.magiclizi.com/pay/payment?orderId=${orderId}&path=/authority`;
+        var info = {
+          orderId : orderId,
+          path : '/authority'
+        }
+        var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.parse(info)}`;
         var redirect_uri = encodeURI(uri);
         var newUri = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4188036aadb09af1&redirect_uri='
           + uri + '&response_type=code&scope=snsapi_base#wechat_redirect';
