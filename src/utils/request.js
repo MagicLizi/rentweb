@@ -30,7 +30,7 @@ export default function request(url, options) {
       'Accept': 'application/json',
       'Content-Type':'application/json'
     },
-    // credentials :"include"
+    credentials :"include"
   })
   return fetch(lastUrl, options)
     .then(checkStatus)
