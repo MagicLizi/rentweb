@@ -26,7 +26,9 @@ class Authority extends React.Component {
 
   onBridgeReady(){
     var payobj = this.props.location.query['payobj'];
-    alert(payobj);
+    if(payobj){
+      alert(payobj);
+    }
     // var payobj = cookie.load("payobj",true);
     // if(payobj&&payobj.length>0){
     //   var obj = JSON.parse(payobj);
