@@ -35,7 +35,7 @@ class Authority extends React.Component {
             this.props.goQR();
           }
           else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
-            alert("支付取消");
+            // alert("支付取消");
             this.props.cancelPay();
           }
           else{
