@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import {connect} from 'dva';
-import rentPageCss from './RepayPage.css';
+import rentPageCss from './RentPage.css';
 import {repay} from '../services/action';
 class RepayPage extends React.Component {
 
