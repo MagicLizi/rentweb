@@ -35,9 +35,11 @@ class Authority extends React.Component {
           }
           else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
             alert("支付取消");
+            this.props.checkUserAuthority();
           }
           else{
             alert("支付失败:"+res);
+            this.props.checkUserAuthority();
           }
         });
       }
@@ -82,4 +84,12 @@ class Authority extends React.Component {
   }
 }
 
-export default connect()(Authority);
+var mapDispatchToProps = function(dispatch){
+  return {
+    checkUserAuthority:()=>{
+      dispatch({type:'user/replaceCheckAuthority'})
+    }
+  }
+}
+
+export default connect(null,mapDispatchToProps)(Authority);

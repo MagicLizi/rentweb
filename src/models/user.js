@@ -73,6 +73,25 @@ export default{
         })
       }
     },
-
+    *replaceCheckAuthority(action,{call,put}){
+      var result = yield call(checkAuthority);
+      if(result){
+        var authority = result['authority'];
+        if(authority === 1){
+          yield put(
+            routerRedux.replace({pathname:'/qrScan'})
+          )
+        }
+        else{
+          yield put(
+            routerRedux.replace({pathname:'/authority'})
+          )
+        }
+        yield put({
+          type:'refreshAuthority',
+          hasAuthority:~~authority
+        })
+      }
+    },
   }
 }
