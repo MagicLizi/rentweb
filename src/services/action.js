@@ -27,9 +27,9 @@ export async function repay(){
 export async function wxConfig(url){
   return await request('/action/wxConfig',{
     method:'POST',
-    body:{
+    body:JSON.stringify({
       url:url
-    }
+    })
   })
 }
 
