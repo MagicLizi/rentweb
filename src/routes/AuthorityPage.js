@@ -25,7 +25,7 @@ class Authority extends React.Component {
   }
 
   onBridgeReady(){
-    alert('ready');
+    alert(this.props.location);
     var payobj = this.props.location.query['payobj'];
     if(payobj){
       alert(payobj);
