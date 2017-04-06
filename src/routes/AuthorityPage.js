@@ -16,7 +16,19 @@ class Authority extends React.Component {
   componentDidMount() {
     var payobj = cookie.load("payobj",true);
     if(payobj){
-      alert(payobj);
+      var obj = JSON.parse(payobj);
+      WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
+        cookie.remove('payobj');
+        if(res['err_msg'] == "get_brand_wcpay_request:ok"){
+          alert("支付成功");
+        }
+        else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
+          alert("支付取消");
+        }
+        else{
+          alert("支付失败"+res['err_msg']);
+        }
+      });
     }
   }
 
