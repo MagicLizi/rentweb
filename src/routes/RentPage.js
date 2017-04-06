@@ -3,7 +3,8 @@
  */
 import React from 'react';
 import {connect} from 'dva';
-import {rent} from '../services/action';
+import rentPageCss from './RentPage.css';
+
 class RentPage extends React.Component{
 
   constructor() {
@@ -11,25 +12,59 @@ class RentPage extends React.Component{
   }
 
   componentWillMount() {
-    // var appId = 'wx4188036aadb09af1';
-    // var newUri = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appId}&redirect_uri=${redirect_uri}
-    // &response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect`
-
-  }
-
-  rent(){
-
+    this['props'].getCurRentInfo();
   }
 
   render(){
     return(
-      <div>
-        <button onClick={()=>{this.rent()}}>rent</button>
+      <div className = {rentPageCss['container']}>
+        {this.renderAction()}
       </div>
     )
   }
+
+  closeWeb(){
+    WeixinJSBridge.invoke('closeWindow',{},function(res){
+
+    });
+  }
+
+  renderAction(){
+    var curRentInfo = this['props'].curRentInfo;
+    if(curRentInfo){
+      return(
+        <div onClick={()=>{this.closeWeb()}} className = {rentPageCss['bg']}
+             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/inservice.jpg)'}}></div>
+      )
+    }
+    else{
+      return(
+        <div onClick={()=>{this.checkAuthority()}} className = {rentPageCss['bg']}
+             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentfirst.jpg)'}}></div>
+      )
+    }
+  }
+
+  checkAuthority(){
+    this.props.checkUserAuthority();
+  }
 }
 
-export default connect()(RentPage);
+var mapStateToProps = function(state){
+  return state['user'];
+}
+
+var mapDispatchToProps = function(dispatch){
+  return {
+    getCurRentInfo:()=>{
+      dispatch({type:'user/getCurRentInfo'})
+    },
+    checkUserAuthority:()=>{
+      dispatch({type:'user/checkAuthority'})
+    }
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(RentPage);
 
 

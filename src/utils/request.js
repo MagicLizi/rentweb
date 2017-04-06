@@ -1,4 +1,6 @@
 import fetch from 'dva/fetch';
+const domain = 'http://localhost:5002';
+
 
 function parseJSON(response) {
   return response.json();
@@ -22,9 +24,29 @@ function checkStatus(response) {
  * @return {object}           An object containing either "data" or "err"
  */
 export default function request(url, options) {
-  return fetch(url, options)
+  var lastUrl = domain + url;
+  options = Object.assign({},options,{
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type':'application/json'
+    },
+    // credentials :"include"
+  })
+  return fetch(lastUrl, options)
     .then(checkStatus)
     .then(parseJSON)
-    .then(data => ({ data }))
-    .catch(err => ({ err }));
+    .then(data => {
+      if(data.code === 200){
+        return data.data;
+      }
+      else{
+        alert(data.message);
+        console.error(`请求出错:${JSON.stringify(data)}`);
+        return null;
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      throw err;
+    });
 }
