@@ -75,7 +75,7 @@ export default{
     },
     *cancelPay(action,{call,put}){
       yield put(
-        routerRedux.replace({pathname:'/authority'})
+        routerRedux.replace({pathname:'/authority',query:{}})
       )
     },
     *goQR(action,{call,put}){
