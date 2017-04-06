@@ -32,14 +32,16 @@ class Authority extends React.Component {
         WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
           if(res['err_msg'] == "get_brand_wcpay_request:ok"){
             alert("支付成功");
+            this.props.goQR();
           }
           else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
             alert("支付取消");
+            this.props.cancelPay();
           }
           else{
             alert("支付失败:"+res);
+            this.props.cancelPay();
           }
-          this.props.checkUserAuthority();
         });
       }
     }
@@ -85,8 +87,11 @@ class Authority extends React.Component {
 
 var mapDispatchToProps = function(dispatch){
   return {
-    checkUserAuthority:()=>{
-      dispatch({type:'user/replaceCheckAuthority'})
+    cancelPay:()=>{
+      dispatch({type:'user/cancelPay'})
+    },
+    goQR:()=>{
+      dispatch({type:'user/goQR'})
     }
   }
 }
