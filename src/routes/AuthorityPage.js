@@ -16,9 +16,9 @@ class Authority extends React.Component {
     }
     else {
       if (document.addEventListener) {
-        document.addEventListener("WeixinJSBridgeReady", this.onBridgeReady, false);
+        document.addEventListener("WeixinJSBridgeReady", ()=>{this.onBridgeReady()}, false);
       } else if (document.attachEvent) {
-        document.attachEvent("WeixinJSBridgeReady", this.onBridgeReady);
+        document.attachEvent("WeixinJSBridgeReady", ()=>{this.onBridgeReady()});
       }
     }
     setCurPath('/authority');
