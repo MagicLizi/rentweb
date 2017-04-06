@@ -6,6 +6,7 @@ import {connect} from 'dva';
 import rentPageCss from './RentPage.css';
 import {dealQRResult} from '../services/action';
 import {setCurPath} from '../models/path';
+var wx = require('weixin-js-sdk');
 class QRScanPage extends React.Component {
 
   constructor() {
