@@ -10,10 +10,21 @@ import cookie from 'react-cookie';
 class Authority extends React.Component {
 
   componentWillMount() {
+
+    if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+
+    }
+    else {
+      if (document.addEventListener) {
+        document.addEventListener("WeixinJSBridgeReady", this.onBridgeReady, false);
+      } else if (document.attachEvent) {
+        document.attachEvent("WeixinJSBridgeReady", this.onBridgeReady);
+      }
+    }
     setCurPath('/authority');
   }
 
-  componentDidMount() {
+  onBridgeReady(){
     var payobj = cookie.load("payobj",true);
     if(payobj){
       var obj = JSON.parse(payobj);
@@ -30,6 +41,10 @@ class Authority extends React.Component {
         }
       });
     }
+  }
+
+  componentDidMount() {
+
   }
 
   constructor() {
