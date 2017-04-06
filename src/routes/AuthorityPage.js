@@ -32,16 +32,14 @@ class Authority extends React.Component {
         WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
           if(res['err_msg'] == "get_brand_wcpay_request:ok"){
             alert("支付成功");
-            //跳转
           }
           else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
             alert("支付取消");
-            this.props.checkUserAuthority();
           }
           else{
             alert("支付失败:"+res);
-            this.props.checkUserAuthority();
           }
+          this.props.checkUserAuthority();
         });
       }
     }
