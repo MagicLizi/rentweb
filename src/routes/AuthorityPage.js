@@ -26,7 +26,7 @@ class Authority extends React.Component {
 
   onBridgeReady(){
     var payobj = cookie.load("payobj",true);
-    if(payobj){
+    if(payobj&&payobj.length>0){
       var obj = JSON.parse(payobj);
       WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
         cookie.remove('payobj');
@@ -37,7 +37,7 @@ class Authority extends React.Component {
           alert("支付取消");
         }
         else{
-          alert("支付失败"+res['err_msg']);
+          alert("支付失败:"+res);
         }
       });
     }
