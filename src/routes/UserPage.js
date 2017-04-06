@@ -4,7 +4,7 @@
 import React from 'react';
 import {connect} from 'dva';
 import userPageCss from './UserPage.css';
-
+import {setCurPath} from '../models/path';
 class UserPage extends React.Component{
 
   constructor() {
@@ -12,6 +12,7 @@ class UserPage extends React.Component{
   }
 
   componentWillMount() {
+    setCurPath('/user');
     this.props.refreshUserInfo();
   }
 

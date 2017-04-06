@@ -5,7 +5,12 @@ import React from 'react';
 import {connect} from 'dva';
 import rentPageCss from './RentPage.css';
 import {payAuthority} from '../services/user';
+import {setCurPath} from '../models/path';
 class Authority extends React.Component {
+
+  componentWillMount() {
+    setCurPath('/authority');
+  }
 
   constructor() {
     super();
@@ -24,7 +29,13 @@ class Authority extends React.Component {
     payAuthority().then(result=>{
       if(result){
         console.log(result['orderInfo']);
-        console.log('调用支付！支付成功后设置订单paidat 以及用户authority')
+        var orderInfo = result['orderInfo'];
+        var orderId = orderInfo['orderId'];
+        var uri = `http://rentapi.magiclizi.com/pay/payment?orderId=${orderId}&path=/authority`;
+        var redirect_uri = encodeURI(uri);
+        var newUri = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4188036aadb09af1&redirect_uri='
+          + uri + '&response_type=code&scope=snsapi_base#wechat_redirect';
+        window.location = newUri;
       }
     })
   }

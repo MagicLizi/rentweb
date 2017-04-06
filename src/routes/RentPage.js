@@ -4,7 +4,7 @@
 import React from 'react';
 import {connect} from 'dva';
 import rentPageCss from './RentPage.css';
-
+import {setCurPath} from '../models/path';
 class RentPage extends React.Component{
 
   constructor() {
@@ -12,6 +12,7 @@ class RentPage extends React.Component{
   }
 
   componentWillMount() {
+    setCurPath('/rent');
     this['props'].getCurRentInfo();
   }
 

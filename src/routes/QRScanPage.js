@@ -5,6 +5,7 @@ import React from 'react';
 import {connect} from 'dva';
 import rentPageCss from './RentPage.css';
 import {dealQRResult} from '../services/action';
+import {setCurPath} from '../models/path';
 class QRScanPage extends React.Component {
 
   constructor() {
@@ -12,6 +13,10 @@ class QRScanPage extends React.Component {
     this['state'] = {
       boxInfo:null
     }
+  }
+
+  componentWillMount() {
+    setCurPath('/qrScan');
   }
 
   dealScanResult(){

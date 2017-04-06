@@ -5,6 +5,7 @@ import React from 'react';
 import {connect} from 'dva';
 import rentPageCss from './RentPage.css';
 import {repay} from '../services/action';
+import {setCurPath} from '../models/path';
 class RepayPage extends React.Component {
 
   constructor() {
@@ -12,7 +13,7 @@ class RepayPage extends React.Component {
   }
 
   componentWillMount() {
-
+    setCurPath('/repay');
   }
 
   repay(){

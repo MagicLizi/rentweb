@@ -1,6 +1,7 @@
 import fetch from 'dva/fetch';
 var domain = 'http://localhost:5002';
-domain = 'http://rentapi.magiclizi.com'
+domain = 'http://rentapi.magiclizi.com';
+import {curPath} from '../models/path';
 
 function parseJSON(response) {
   return response.json();
@@ -41,7 +42,7 @@ export default function request(url, options) {
       }
       else{
         if(data.code === 9999){
-          var uri = `http://rentapi.magiclizi.com/user/wxlogin?path=/user`;
+          var uri = `http://rentapi.magiclizi.com/user/wxlogin?path=${curPath}`;
           var redirect_uri = encodeURI(uri);
           var appId = 'wx4188036aadb09af1';
           var newUri = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appId}&redirect_uri=${redirect_uri}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect`

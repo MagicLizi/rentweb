@@ -5,6 +5,7 @@ import React from 'react';
 import {connect} from 'dva';
 import rentPageCss from './RentPage.css';
 import {openInRenting} from '../services/action';
+import {setCurPath} from '../models/path';
 class OpenInRentingPage extends React.Component {
 
   constructor() {
@@ -12,6 +13,7 @@ class OpenInRentingPage extends React.Component {
   }
 
   componentWillMount() {
+    setCurPath('/openInRenting');
     this.props.getCurRentInfo();
   }
 
