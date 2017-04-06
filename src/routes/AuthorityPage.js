@@ -6,7 +6,6 @@ import {connect} from 'dva';
 import rentPageCss from './RentPage.css';
 import {payAuthority} from '../services/user';
 import {setCurPath} from '../models/path';
-import request from '../utils/request';
 class Authority extends React.Component {
 
   componentWillMount() {
