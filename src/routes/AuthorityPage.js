@@ -14,7 +14,7 @@ class Authority extends React.Component {
   }
 
   componentDidMount() {
-    var payobj = cookie.load('payobj',true);
+    var payobj = cookie.load("payobj",true);
     if(payobj){
       alert(payobj);
     }
