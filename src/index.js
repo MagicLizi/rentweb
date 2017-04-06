@@ -1,8 +1,7 @@
 import dva from 'dva';
 import './index.html';
 import './index.css';
-// import { useRouterHistory } from 'dva/router';
-// import { createHashHistory } from 'history';
+
 import { browserHistory } from 'dva/router';
 // 1. Initialize
 const app = dva({
