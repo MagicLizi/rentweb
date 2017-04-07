@@ -86,7 +86,7 @@ export default{
 
     *showHelp(action,{call,put}){
       yield put(
-        routerRedux.replace({pathname:'/help'})
+        routerRedux.push({pathname:'/help'})
       )
     }
   }
