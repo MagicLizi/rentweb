@@ -7,7 +7,7 @@ import UserOrderCss from './UserOrder.css';
 import moment from 'moment';
 class UserOrder extends React.Component{
   componentWillMount() {
-    // this['props'].getOrders();
+    this['props'].getOrders();
   }
 
   render(){
@@ -21,8 +21,7 @@ class UserOrder extends React.Component{
 
   renderRows(){
     var rows = this.props.orders.map((data,i)=>{
-      console.log(data);
-      if(data.orderType === 'authority'){
+      if(data['orderType'] === 'authority'){
         return(
           <div key = {i} style = {{width:'94vw',borderRadius:4,backgroundColor:'white',display:'flex',marginTop:'4vw',flexDirection:'column'}}>
             <span style = {{marginTop:'2vh',marginLeft:'3vw',color:'rgb(38,38,38)',fontSize:14}}>订单编号 : {data.orderId.split('_')[1]}</span>
