@@ -8,7 +8,7 @@ import QRScanPage from './routes/QRScanPage';
 import OpenInRenting from './routes/OpenInRentingPage';
 import RepayPage from './routes/RepayPage';
 import HelpPage from './routes/HelperPage';
-
+import OrderPage from './routes/UserOrder';
 function RouterConfig({ history }) {
   return (
     <Router history={history}>
@@ -20,6 +20,7 @@ function RouterConfig({ history }) {
       <Route path="/openInRenting" component={OpenInRenting} />
       <Route path="/repay" component={RepayPage} />
       <Route path="/help" component={HelpPage} />
+      <Route path="/orders" component={OrderPage} />
     </Router>
   );
 }

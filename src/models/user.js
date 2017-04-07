@@ -1,7 +1,7 @@
 /**
  * Created by magiclizi on 2017/4/5.
  */
-import {refreshUserInfo,getCurRentInfo,checkAuthority} from '../services/user';
+import {refreshUserInfo,getCurRentInfo,checkAuthority,getOrders} from '../services/user';
 import { routerRedux } from 'dva/router';
 export default{
   namespace:'user',
@@ -24,6 +24,9 @@ export default{
     },
     refreshAuthority(state,action){
       return Object.assign({},state,{hasAuthority:action['authority']})
+    },
+    setCurOrders(state,action){
+      return Object.assign({},state,{orders:action['orders']})
     }
   },
 
@@ -49,6 +52,16 @@ export default{
         yield put({
           type:'setCurRentInfo',
           curRentInfo:result['curRentInfo']
+        })
+      }
+    },
+
+    *getUserOrders(action,{call,put}){
+      var result = yield call(getOrders);
+      if(result){
+        yield put({
+          type:'setCurOrders',
+          orders:result['orders']
         })
       }
     },
@@ -90,6 +103,11 @@ export default{
     *rentCancelPay(action,{call,put}){
       yield put(
         routerRedux.replace({pathname:'/repay'})
+      )
+    },
+    *showUserOrders(action,{call,put}){
+      yield put(
+        routerRedux.replace({pathname:'/orders'})
       )
     }
   }

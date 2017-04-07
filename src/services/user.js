@@ -28,3 +28,6 @@ export async function tryCancelAuthority(){
   });
 }
 
+export async function getOrders(){
+  return await request('/user/orders',{});
+}

@@ -20,7 +20,7 @@ class UserPage extends React.Component{
   cancelAuthority(){
     tryCancelAuthority().then(result=>{
       if(result){
-        alert('退还押金申请成功，押金将会在1个工作日内返还到您的支付账户中！')
+        alert('退还押金申请成功，押金将会在1个工作日内返还到您的支付账户中！');
       }
     })
   }
@@ -46,7 +46,7 @@ class UserPage extends React.Component{
 
         <div className = {userPageCss['cellContainer']}>
 
-          <div className = {userPageCss['cell']} style = {{marginTop:'5vh'}}>
+          <div onClick={()=>{this.props.showUserOrders()}} className = {userPageCss['cell']} style = {{marginTop:'5vh'}}>
             <span style = {{fontSize:15,color:'#2b2c2d',width:'46.5vw',marginLeft:'3.5vw'}}>我的订单</span>
             <div style = {{width:'50vw',height:'8vh',display:'flex',
               alignItems:'center',justifyContent:'flex-end'}}>
@@ -100,6 +100,11 @@ var mapDispatchToProps = function(dispatch){
     showHelp:()=>{
       dispatch({
         type:'user/showHelp'
+      })
+    },
+    showUserOrders:()=>{
+      dispatch({
+        type:'user/showUserOrders'
       })
     }
   }
