@@ -26,17 +26,44 @@ class RepayPage extends React.Component {
     })
   }
 
+  renderAction(){
+    if(this.props.curRentInfo){
+      return(
+        <div className = {rentPageCss['bg']}
+             style = {{backgroundImage:'url(url(http://rentservice.b0.upaiyun.com/repay.jpeg)'}}>
+
+        </div>
+      )
+    }
+    else{
+      return(
+        <div className = {rentPageCss['bg']}
+             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/openRentingError.jpg)'}}>
+          <div onClick={()=>{this.closeWeb()}} className = {rentPageCss['ball']}/>
+        </div>
+      )
+    }
+  }
+
   render(){
     return(
       <div className = {rentPageCss['container']}>
-        <div className = {rentPageCss['bg']}
-             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg)'}}></div>
-
-        <div onClick={()=>{this.repay()}} className = {rentPageCss['ball']}/>
-
+        {this.renderAction()}
       </div>
     )
   }
 }
 
-export default connect()(RepayPage)
+var mapStateToProps = function(state){
+  return state['user'];
+}
+
+var mapDispathchToProps = function(dispatch){
+  return{
+    getCurRentInfo:()=>{
+      dispatch({type:'user/getCurRentInfo'})
+    },
+  }
+}
+
+export default connect(mapStateToProps,mapDispathchToProps)(RepayPage)
