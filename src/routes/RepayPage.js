@@ -4,7 +4,7 @@
 import React from 'react';
 import {connect} from 'dva';
 import rentPageCss from './RentPage.css';
-import {repay} from '../services/action';
+import {repay,payrent} from '../services/action';
 import {setCurPath} from '../models/path';
 class RepayPage extends React.Component {
 
@@ -30,7 +30,9 @@ class RepayPage extends React.Component {
   }
 
   payRent(){
-    alert('调用支付');
+    payrent().then(result=>{
+
+    })
   }
 
   renderAction(){

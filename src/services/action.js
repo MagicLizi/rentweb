@@ -33,3 +33,9 @@ export async function wxConfig(url){
   })
 }
 
+export async function payrent(){
+  return await request('/action/payrent',{
+    method:'POST'
+  })
+}
+
