@@ -34,10 +34,10 @@ class RentPage extends React.Component{
     var curRentInfo = this['props'].curRentInfo;
     if(curRentInfo){
       return(
-        <div onClick={()=>{this.closeWeb()}} className = {rentPageCss['bg']}
+        <div className = {rentPageCss['bg']}
              style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentinservice.jpg'}}>
-          <span style = {{fontSize:14,color:'white'}}>亲的柜号是{JSON.stringify(curRentInfo)}号</span>
-          <div onClick={()=>{this.checkAuthority()}} className = {rentPageCss['ball']}/>
+          <span style = {{fontSize:14,color:'white'}}>亲的柜号是{curRentInfo['chestLogicId']}_{curRentInfo['boxId']}号</span>
+          <div onClick={()=>{this.closeWeb()}} className = {rentPageCss['ball']}/>
         </div>
       )
     }
