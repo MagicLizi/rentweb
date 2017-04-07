@@ -14,6 +14,7 @@ class RepayPage extends React.Component {
 
   componentWillMount() {
     setCurPath('/repay');
+    this.props.getCurRentInfo();
   }
 
   repay(){
@@ -43,6 +44,12 @@ class RepayPage extends React.Component {
         </div>
       )
     }
+  }
+
+  closeWeb(){
+    WeixinJSBridge.invoke('closeWindow',{},function(res){
+
+    });
   }
 
   render(){
