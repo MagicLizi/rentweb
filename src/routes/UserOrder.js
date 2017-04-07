@@ -40,14 +40,17 @@ class UserOrder extends React.Component{
         )
       }
       else{
+        var str = '使用中';
+        if(data.startAt){
+          str = `${moment(data.startAt * 1000).format('YYYY/MM/DD HH:mm:ss')} 至 ${moment(data.endAt * 1000).format('YYYY/MM/DD HH:mm:ss')}`;
+        }
         return(
           <div key = {i} style = {{width:'94vw',borderRadius:4,backgroundColor:'white',display:'flex',marginTop:'4vw',flexDirection:'column'}}>
             <span style = {{marginTop:'2vh',marginLeft:'3vw',color:'rgb(38,38,38)',fontSize:14}}>订单编号 : {data.orderId.split('_')[1]}</span>
             <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单类型 : 租金</span>
             <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单金额 : {(data.orderPrice/100).toFixed(2)}元</span>
             <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单状态 : {payStr}</span>
-            <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>开始时间 : {moment(data.startAt * 1000).format('YYYY/MM/DD HH:mm:ss')}</span>
-            <span style = {{marginTop:'1vh',marginBottom:'2vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13,marginBottom:'2vh'}}>结束时间 : {data.endAt?moment(data.endAt * 1000).format('YYYY/MM/DD HH:mm:ss'):'使用中'}</span>
+            <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13,marginBottom:'2vh'}}>租赁状态 : {str}</span>
           </div>
         )
       }
