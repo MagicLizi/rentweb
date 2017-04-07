@@ -36,7 +36,7 @@ class RentPage extends React.Component{
       return(
         <div className = {rentPageCss['bg']}
              style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentinservice.jpg)'}}>
-          <span style = {{fontSize:30,color:'white',marginTop:'30vh'}}>亲的柜号是{curRentInfo['chestLogicId']}_{curRentInfo['boxId']}号
+          <span style = {{fontSize:30,color:'white',marginTop:'50vh'}}>亲的柜号是{curRentInfo['chestLogicId']}_{curRentInfo['boxId']}号
           </span>
           <div onClick={()=>{this.closeWeb()}} className = {rentPageCss['ball']}/>
         </div>
