@@ -31,8 +31,11 @@ class RepayPage extends React.Component {
     if(this.props.curRentInfo){
       return(
         <div className = {rentPageCss['bg']}
-             style = {{backgroundImage:'url(url(http://rentservice.b0.upaiyun.com/repay.jpeg)'}}>
-
+             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg)'}}>
+          <span style = {{fontSize:30,color:'white',marginBottom:'28vh',width:'70vw'}}>
+            猪猪提醒，亲的柜号是{this.props.curRentInfo['chestLogicId']}_{this.props.curRentInfo['boxId']}号，记得将球放入的同时，把门关上哦。还有私人物品，千万别忘了呢。点击确认。
+          </span>
+          <div onClick={()=>{this.repay()}} className = {rentPageCss['ball']}/>
         </div>
       )
     }
