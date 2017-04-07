@@ -35,7 +35,7 @@ class RentPage extends React.Component{
     if(curRentInfo){
       return(
         <div className = {rentPageCss['bg']}
-             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentinservice.jpg)'}}>
+             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentinservice.jpg!w640)'}}>
           <span style = {{fontSize:30,color:'white',marginBottom:'28vh'}}>亲的柜号是{curRentInfo['chestLogicId']}_{curRentInfo['boxId']}号
           </span>
           <div onClick={()=>{this.closeWeb()}} className = {rentPageCss['ball']}/>
@@ -45,7 +45,7 @@ class RentPage extends React.Component{
     else{
       return(
         <div className = {rentPageCss['bg']}
-             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentwarning.jpg)'}}>
+             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentwarning.jpg!w640)'}}>
           <div onClick={()=>{this.checkAuthority()}} className = {rentPageCss['ball']}/>
         </div>
       )
