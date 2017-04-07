@@ -19,7 +19,9 @@ class UserPage extends React.Component{
 
   cancelAuthority(){
     tryCancelAuthority().then(result=>{
-
+      if(result){
+        alert('退还押金申请成功，押金将会在1个工作日内返还到您的支付账户中！')
+      }
     })
   }
 
