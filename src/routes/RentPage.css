@@ -8,4 +8,16 @@
   width: 100vw;
   height: 100vh;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.ball{
+  width :30vw;
+  height: 30vw;
+  margin-bottom: 50vw;
+  background-size: cover;
+  background-image: url(http://rentservice.b0.upaiyun.com/btn.jpg);
 }
