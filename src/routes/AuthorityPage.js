@@ -57,8 +57,10 @@ class Authority extends React.Component {
   render(){
     return(
       <div className = {rentPageCss['container']}>
-        <div onClick={()=>this.payAuthority()} className = {rentPageCss['bg']}
-             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rent1.jpg)'}}></div>
+        <div className = {rentPageCss['bg']}
+             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentAllDetail.jpg)'}}>
+          <div onClick={()=>{this.payAuthority()}} className = {rentPageCss['ball']}/>
+        </div>
       </div>
     )
   }
