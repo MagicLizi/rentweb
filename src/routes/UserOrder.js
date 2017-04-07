@@ -20,7 +20,7 @@ class UserOrder extends React.Component{
   renderRows(){
     var rows = this.props.orders.map((data,i)=>{
         return(
-          <div style = {{width:'80vw',borderRadius:4,height:'20vw', marginTop:'4vh'}}>
+          <div key = {i} style = {{width:'80vw',borderRadius:4,height:'20vw', marginTop:'4vh',backgroundColor:'red'}}>
           </div>
         )
     })
