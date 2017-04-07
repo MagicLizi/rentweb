@@ -22,3 +22,9 @@ export async function payAuthority(){
   });
 }
 
+export async function tryCancelAuthority(){
+  return await request('/user/tryCancelAuthority',{
+    method:'POST'
+  });
+}
+

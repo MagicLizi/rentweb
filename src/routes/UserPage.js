@@ -5,6 +5,7 @@ import React from 'react';
 import {connect} from 'dva';
 import userPageCss from './UserPage.css';
 import {setCurPath} from '../models/path';
+import {tryCancelAuthority} from '../services/user';
 class UserPage extends React.Component{
 
   constructor() {
@@ -16,6 +17,11 @@ class UserPage extends React.Component{
     this.props.refreshUserInfo();
   }
 
+  cancelAuthority(){
+    tryCancelAuthority().then(result=>{
+
+    })
+  }
 
   render(){
     var nickname = this.props['nickname'];
@@ -46,7 +52,7 @@ class UserPage extends React.Component{
             </div>
           </div>
 
-          <div className = {userPageCss['cell']} style = {{marginTop:'5vh'}}>
+          <div onClick={()=>{this.cancelAuthority()}} className = {userPageCss['cell']} style = {{marginTop:'5vh'}}>
             <span style = {{fontSize:15,color:'#2b2c2d',width:'46.5vw',marginLeft:'3.5vw'}}>我的押金
               <span style = {{fontSize:15,color:'red'}}>{hasAuthority===0?'「未支付」':' 「点击退还」'}</span>
             </span>
