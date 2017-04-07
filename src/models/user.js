@@ -109,7 +109,7 @@ export default{
     },
     *showUserOrders(action,{call,put}){
       yield put(
-        routerRedux.replace({pathname:'/orders'})
+        routerRedux.push({pathname:'/orders'})
       )
     }
   }
