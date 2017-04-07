@@ -64,7 +64,7 @@ class UserPage extends React.Component{
             </div>
           </div>
           <div className = {userPageCss['cellline']}/>
-          <div className = {userPageCss['cell']}>
+          <div onClick={()=>{this.showHelp()}} className = {userPageCss['cell']}>
             <span style = {{fontSize:15,color:'#2b2c2d',width:'46.5vw',marginLeft:'3.5vw'}}>使用帮助</span>
             <div style = {{width:'50vw',height:'8vh',display:'flex',
               alignItems:'center',justifyContent:'flex-end'}}>
@@ -73,7 +73,7 @@ class UserPage extends React.Component{
           </div>
 
           <div className = {userPageCss['cell']} style = {{marginTop:'5vh'}}>
-            <span style = {{fontSize:15,color:'#2b2c2d',width:'46.5vw',marginLeft:'3.5vw'}}>客服电话     4008000000</span>
+            <a style = {{fontSize:15,color:'#2b2c2d',width:'46.5vw',marginLeft:'3.5vw'}} href="tel:4008000000">客服电话</a>
             <div style = {{width:'50vw',height:'8vh',display:'flex',
               alignItems:'center',justifyContent:'flex-end'}}>
               <img src = {require('../assets/right.png')} style = {{width:'1.05vh',height:'2vh',marginRight:'3.5vw'}}/>
@@ -94,6 +94,11 @@ var mapDispatchToProps = function(dispatch){
     refreshUserInfo:()=>{
       dispatch({
         type:'user/refreshUserInfo'
+      })
+    },
+    showHelp:()=>{
+      dispatch({
+        type:'user/showHelp'
       })
     }
   }

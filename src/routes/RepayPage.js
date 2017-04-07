@@ -29,8 +29,11 @@ class RepayPage extends React.Component {
   render(){
     return(
       <div className = {rentPageCss['container']}>
-        <div onClick={()=>{this.repay()}} className = {rentPageCss['bg']}
+        <div className = {rentPageCss['bg']}
              style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg)'}}></div>
+
+        <div onClick={()=>{this.repay()}} className = {rentPageCss['ball']}/>
+
       </div>
     )
   }

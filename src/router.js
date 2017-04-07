@@ -7,6 +7,7 @@ import AuthorityPage from './routes/AuthorityPage';
 import QRScanPage from './routes/QRScanPage';
 import OpenInRenting from './routes/OpenInRentingPage';
 import RepayPage from './routes/RepayPage';
+import HelpPage from './routes/HelperPage';
 
 function RouterConfig({ history }) {
   return (
@@ -18,6 +19,7 @@ function RouterConfig({ history }) {
       <Route path="/qrScan" component={QRScanPage} />
       <Route path="/openInRenting" component={OpenInRenting} />
       <Route path="/repay" component={RepayPage} />
+      <Route path="/help" component={HelpPage} />
     </Router>
   );
 }

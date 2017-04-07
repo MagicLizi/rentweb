@@ -83,5 +83,11 @@ export default{
         routerRedux.replace({pathname:'/qrScan'})
       )
     },
+
+    *showHelp(action,{call,put}){
+      yield put(
+        routerRedux.replace({pathname:'/help'})
+      )
+    }
   }
 }
