@@ -66,7 +66,7 @@ class UserPage extends React.Component{
           </div>
 
           <div className = {userPageCss['cell']} style = {{marginTop:'5vh'}}>
-            <a style = {{fontSize:15,width:'46.5vw',marginLeft:'3.5vw'}} href="tel:4008000000">客服电话</a>
+            <a style = {{fontSize:15,width:'46.5vw',marginLeft:'3.5vw',color:'#2b2c2d'}} href="tel:4008000000">客服电话</a>
             <div style = {{width:'50vw',height:'8vh',display:'flex',
               alignItems:'center',justifyContent:'flex-end'}}>
               <img src = {require('../assets/right.png')} style = {{width:'1.05vh',height:'2vh',marginRight:'3.5vw'}}/>
