@@ -31,7 +31,8 @@ class RepayPage extends React.Component {
 
   payRent(){
     payrent().then(result=>{
-
+      var orderId = result['orderId'];
+      alert(orderId);
     })
   }
 
