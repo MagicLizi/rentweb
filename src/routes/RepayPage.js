@@ -38,6 +38,12 @@ class RepayPage extends React.Component {
       return(
         <div className = {rentPageCss['bg']}
              style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg)'}}>
+          <span style = {{fontSize:25,color:'white'}}>
+            您本次租用时长：{this.state.orderInfo.duration}小时
+          </span>
+          <span style = {{fontSize:25,color:'white',marginBottom:'16vh'}}>
+            费用共计：{(this.state.orderInfo['orderPrice']/100).toFixed(2)}元
+          </span>
           <div onClick={()=>{this.payRent()}} className = {rentPageCss['ball']}/>
         </div>
       )
