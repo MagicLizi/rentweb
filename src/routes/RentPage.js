@@ -35,7 +35,10 @@ class RentPage extends React.Component{
     if(curRentInfo){
       return(
         <div onClick={()=>{this.closeWeb()}} className = {rentPageCss['bg']}
-             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/inservice.jpg)'}}></div>
+             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentinservice.jpg'}}>
+          <span style = {{fontSize:14,color:'white'}}>亲的柜号是{JSON.stringify(curRentInfo)}号</span>
+          <div onClick={()=>{this.checkAuthority()}} className = {rentPageCss['ball']}/>
+        </div>
       )
     }
     else{
