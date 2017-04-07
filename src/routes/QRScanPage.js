@@ -19,7 +19,9 @@ class QRScanPage extends React.Component {
   componentWillMount() {
     setCurPath('/qrScan');
 
-    wxConfig('http://rent.magiclizi.com/qrScan').then(result=>{
+    alert(this.props.location.pathname);
+    var path = this.props.location.pathname;
+    wxConfig(`http://rent.magiclizi.com${path}`).then(result=>{
       alert(JSON.stringify(result.config));
 
       wx.config(result.config);

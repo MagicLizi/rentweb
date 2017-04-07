@@ -7,7 +7,7 @@ class IndexPage extends React.Component {
   }
 
   componentWillMount() {
-
+    console.log(this.props);
   }
 
   render(){
