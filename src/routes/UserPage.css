@@ -72,3 +72,6 @@
   width:100vw;
   height:1px;
 }
+
+a:link { text-decoration: none;color: blue}
+a:visited { text-decoration: none;color: green}
