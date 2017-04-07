@@ -53,8 +53,10 @@ class OpenInRentingPage extends React.Component {
     }
     else{
       return(
-        <div onClick={()=>{this.closeWeb()}} className = {rentPageCss['bg']}
-             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/openInRentingError.jpg)'}}></div>
+        <div className = {rentPageCss['bg']}
+             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/openRentingError.jpg)'}}>
+          <div onClick={()=>{this.closeWeb()}} className = {rentPageCss['ball']}/>
+        </div>
       )
     }
   }
