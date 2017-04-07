@@ -88,6 +88,11 @@ export default{
       yield put(
         routerRedux.push({pathname:'/help'})
       )
+    },
+    *rentCancelPay(action,{call,put}){
+      yield put(
+        routerRedux.replace({pathname:'/repay'})
+      )
     }
   }
 }

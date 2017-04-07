@@ -16,9 +16,44 @@ class RepayPage extends React.Component {
   }
 
   componentWillMount() {
+    if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+
+    }
+    else {
+      if (document.addEventListener) {
+        document.addEventListener("WeixinJSBridgeReady", ()=>{this.onBridgeReady()}, false);
+      } else if (document.attachEvent) {
+        document.attachEvent("WeixinJSBridgeReady", ()=>{this.onBridgeReady()});
+      }
+    }
     setCurPath('/repay');
     this.props.getCurRentInfo();
   }
+
+  onBridgeReady(){
+    var payobj = this.props.location.query['payobj'];
+    if(payobj){
+      if(payobj&&payobj.length>0){
+        var obj = JSON.parse(payobj);
+        WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
+          if(res['err_msg'] == "get_brand_wcpay_request:ok"){
+            alert("支付成功");
+            this.closeWeb();
+            // this.props.goQR();
+          }
+          else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
+            // alert("支付取消");
+            this.props.cancelPay();
+          }
+          else{
+            alert("支付失败:"+res);
+            this.props.cancelPay();
+          }
+        });
+      }
+    }
+  }
+
 
   repay(){
     repay().then(result=>{
@@ -31,8 +66,20 @@ class RepayPage extends React.Component {
 
   payRent(){
     payrent().then(result=>{
-      var orderId = result['orderId'];
-      alert(orderId);
+      if(result){
+        var orderId = result['orderId'];
+        var userId = result['userId'];
+        var info = {
+          orderId : orderId,
+          path : '/repay',
+          userId:userId
+        }
+        var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;
+        var redirect_uri = encodeURI(uri);
+        var newUri = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4188036aadb09af1&redirect_uri='
+          + uri + '&response_type=code&scope=snsapi_base#wechat_redirect';
+        window.location = newUri;
+      }
     })
   }
 
@@ -98,6 +145,9 @@ var mapDispathchToProps = function(dispatch){
     getCurRentInfo:()=>{
       dispatch({type:'user/getCurRentInfo'})
     },
+    cancelPay:()=>{
+      dispatch({type:'user/rentCancelPay'})
+    }
   }
 }
 
