@@ -59,12 +59,12 @@ export default{
         var authority = result['authority'];
         if(authority === 1){
           yield put(
-            routerRedux.push({pathname:'/qrScan'})
+            routerRedux.replace({pathname:'/qrScan'})
           )
         }
         else{
           yield put(
-            routerRedux.push({pathname:'/authority'})
+            routerRedux.replace({pathname:'/authority'})
           )
         }
         yield put({
