@@ -41,7 +41,7 @@ class RepayPage extends React.Component {
           <span style = {{fontSize:25,color:'white'}}>
             您本次租用时长：{this.state.orderInfo.duration}小时
           </span>
-          <span style = {{fontSize:25,color:'white',marginBottom:'16vh'}}>
+          <span style = {{fontSize:25,color:'white',marginBottom:'24vh'}}>
             费用共计：{(this.state.orderInfo['orderPrice']/100).toFixed(2)}元
           </span>
           <div onClick={()=>{this.payRent()}} className = {rentPageCss['ball']}/>
