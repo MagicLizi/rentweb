@@ -27,7 +27,7 @@ class UserOrder extends React.Component{
             <span style = {{marginTop:'2vh',marginLeft:'3vw',color:'rgb(38,38,38)',fontSize:14}}>订单编号 : {data.orderId.split('_')[1]}</span>
             <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单类型 : 押金</span>
             <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单金额 : {(data.orderPrice/100).toFixed(2)}元</span>
-            <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单状态 : {data.paidAt?'已支付':'未支付'}</span>
+            <span style = {{marginTop:'1vh',marginBottom:'2vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单状态 : {data.paidAt?'已支付':'未支付'}</span>
           </div>
         )
       }
@@ -39,7 +39,7 @@ class UserOrder extends React.Component{
             <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单金额 : {(data.orderPrice/100).toFixed(2)}元</span>
             <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单状态 : {data.paidAt?'已支付':'未支付'}</span>
             <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13,marginBottom:'2vh'}}>开始时间 : {moment(data.startAt * 1000).format('YYYY/MM/DD HH:mm:ss')}</span>
-            <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13,marginBottom:'2vh'}}>结束时间 : {data.endAt?moment(data.endAt * 1000).format('YYYY/MM/DD HH:mm:ss'):'使用中'}</span>
+            <span style = {{marginTop:'1vh',marginBottom:'2vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13,marginBottom:'2vh'}}>结束时间 : {data.endAt?moment(data.endAt * 1000).format('YYYY/MM/DD HH:mm:ss'):'使用中'}</span>
           </div>
         )
       }
