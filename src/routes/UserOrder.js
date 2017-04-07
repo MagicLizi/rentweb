@@ -21,13 +21,21 @@ class UserOrder extends React.Component{
 
   renderRows(){
     var rows = this.props.orders.map((data,i)=>{
+      var payState = data['payState'];
+      var payStr = '未付款';
+      if(payState === 1){
+        payStr = '已付款';
+      }
+      else if(payState === 2){
+        payStr = '已退款';
+      }
       if(data['orderType'] === 'authority'){
         return(
           <div key = {i} style = {{width:'94vw',borderRadius:4,backgroundColor:'white',display:'flex',marginTop:'4vw',flexDirection:'column'}}>
             <span style = {{marginTop:'2vh',marginLeft:'3vw',color:'rgb(38,38,38)',fontSize:14}}>订单编号 : {data.orderId.split('_')[1]}</span>
             <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单类型 : 押金</span>
             <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单金额 : {(data.orderPrice/100).toFixed(2)}元</span>
-            <span style = {{marginTop:'1vh',marginBottom:'2vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单状态 : {data.paidAt?'已支付':'未支付'}</span>
+            <span style = {{marginTop:'1vh',marginBottom:'2vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单状态 : {payStr}</span>
           </div>
         )
       }
@@ -37,7 +45,7 @@ class UserOrder extends React.Component{
             <span style = {{marginTop:'2vh',marginLeft:'3vw',color:'rgb(38,38,38)',fontSize:14}}>订单编号 : {data.orderId.split('_')[1]}</span>
             <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单类型 : 租金</span>
             <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单金额 : {(data.orderPrice/100).toFixed(2)}元</span>
-            <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单状态 : {data.paidAt?'已支付':'未支付'}</span>
+            <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单状态 : {payStr}</span>
             <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>开始时间 : {moment(data.startAt * 1000).format('YYYY/MM/DD HH:mm:ss')}</span>
             <span style = {{marginTop:'1vh',marginBottom:'2vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13,marginBottom:'2vh'}}>结束时间 : {data.endAt?moment(data.endAt * 1000).format('YYYY/MM/DD HH:mm:ss'):'使用中'}</span>
           </div>
