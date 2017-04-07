@@ -10,10 +10,9 @@ class UserOrder extends React.Component{
   }
 
   render(){
-    alert(this.props.orders);
     return(
       <div className = {UserOrderCss['container']}>
-        {this.props.orders}
+        {JSON.stringify(this.props.orders)}
       </div>
     )
   }
