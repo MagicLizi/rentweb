@@ -11,8 +11,7 @@ export default{
     token:null,
     balance:0,
     orders:[
-      {"id":28,"orderId":"authority_201704071491541369","userId":"oUewqwjS-hj8Sj61oCOESgJgdRjk","orderType":"authority","orderPrice":1,"payType":"wx","outOrderId":"4008152001201704076165416651","paidAt":1491541373,"createAt":"1491541369"},
-      {"id":21,"orderId":"rent_201704071491540400_2","userId":"oUewqwjS-hj8Sj61oCOESgJgdRjk","orderType":"rent","orderPrice":1,"payType":"wx","outOrderId":"4008152001201704076164874309","paidAt":1491540407,"createAt":"1491540400"}
+
     ],
     hasAuthority:0,
     curRentInfo:null
