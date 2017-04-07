@@ -15,9 +15,9 @@
 }
 
 .ball{
-  width :30vw;
-  height: 30vw;
-  margin-bottom: 50vw;
+  width :28vw;
+  height: 28vw;
+  margin-bottom: 10vw;
   background-size: cover;
   background-image: url(http://rentservice.b0.upaiyun.com/btn.jpg);
 }
