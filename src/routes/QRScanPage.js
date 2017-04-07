@@ -87,8 +87,10 @@ class QRScanPage extends React.Component {
     }
     else{
       return(
-        <div onClick={()=>this.openQRScan()} className = {rentPageCss['bg']}
-             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rent2.jpg)'}}></div>
+        <div className = {rentPageCss['bg']}
+             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentDetail.jpg)'}}>
+          <div onClick={()=>{this.openQRScan()}} className = {rentPageCss['ball']}/>
+        </div>
       )
     }
   }
