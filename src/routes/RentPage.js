@@ -42,7 +42,7 @@ class RentPage extends React.Component{
       return(
         <div className = {rentPageCss['bg']}
              style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentwarning.jpg)'}}>
-          <div onClick={()=>{this.checkAuthority()}} className = {rentPageCss['btn']}/>
+          <div onClick={()=>{this.checkAuthority()}} className = {rentPageCss['ball']}/>
         </div>
       )
     }
