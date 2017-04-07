@@ -84,12 +84,12 @@ class QRScanPage extends React.Component {
 
     if(this.state.boxInfo){
       return(
-        <div onClick={()=>this.closeWeb()} className = {rentPageCss['bg']}
+        <div className = {rentPageCss['bg']}
              style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentSuccessNew.jpg)'}}>
           <span style = {{fontSize : 24,color:'white'}}>亲的柜号是{this.state.boxInfo}</span>
           <span style = {{fontSize : 24,color:'white'}}>租球期间点时时开门，</span>
           <span style = {{fontSize : 24,color:'white',marginBottom:'20vh'}}>可存取物品哦！</span>
-          <div onClick={()=>{this.openQRScan()}} className = {rentPageCss['ball']}/>
+          <div onClick={()=>this.closeWeb()}  className = {rentPageCss['ball']}/>
         </div>
       )
     }
