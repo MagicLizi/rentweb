@@ -21,7 +21,7 @@ class QRScanPage extends React.Component {
 
     // alert(this.props.location.pathname);
     // var path = this.props.location.pathname;
-    wxConfig(`http://rent.magiclizi.com/rent`).then(result=>{
+    wxConfig(`http://rent.magiclizi.com/qrScan`).then(result=>{
       // alert(JSON.stringify(result.config));
 
       wx.config(result.config);

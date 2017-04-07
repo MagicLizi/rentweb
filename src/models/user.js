@@ -57,20 +57,18 @@ export default{
       var result = yield call(checkAuthority);
       if(result){
         var authority = result['authority'];
+        yield put({
+          type:'refreshAuthority',
+          hasAuthority:~~authority
+        })
         if(authority === 1){
-          yield put(
-            routerRedux.push({pathname:'/qrScan'})
-          )
+          window.location = 'http://rent.magiclizi.com/qrScan'
         }
         else{
           yield put(
             routerRedux.push({pathname:'/authority'})
           )
         }
-        yield put({
-          type:'refreshAuthority',
-          hasAuthority:~~authority
-        })
       }
     },
     *cancelPay(action,{call,put}){
