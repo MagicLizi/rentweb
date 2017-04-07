@@ -59,10 +59,10 @@
         <entry file="file://$PROJECT_DIR$/src/routes/RentPage.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
-              <caret line="38" column="64" lean-forward="false" selection-start-line="38" selection-start-column="64" selection-end-line="38" selection-end-column="64" />
+              <caret line="38" column="68" lean-forward="false" selection-start-line="38" selection-start-column="68" selection-end-line="38" selection-end-column="68" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
-                <marker date="1491528020000" expanded="true" signature="427:470" ph="..." />
+                <marker date="1491528044000" expanded="true" signature="427:470" ph="..." />
               </folding>
             </state>
           </provider>
@@ -427,12 +427,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1491375165189</updated>
-      <workItem from="1491375320906" duration="65433000" />
+      <workItem from="1491375320906" duration="65457000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65433000" />
+    <option name="totallyTimeSpent" value="65457000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -709,10 +709,10 @@
     <entry file="file://$PROJECT_DIR$/src/routes/RentPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="38" column="64" lean-forward="false" selection-start-line="38" selection-start-column="64" selection-end-line="38" selection-end-column="64" />
+          <caret line="38" column="68" lean-forward="false" selection-start-line="38" selection-start-column="68" selection-end-line="38" selection-end-column="68" />
           <folding>
             <element signature="e#45#71#0" expanded="true" />
-            <marker date="1491528020000" expanded="true" signature="427:470" ph="..." />
+            <marker date="1491528044000" expanded="true" signature="427:470" ph="..." />
           </folding>
         </state>
       </provider>
