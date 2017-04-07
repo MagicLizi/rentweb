@@ -69,7 +69,9 @@ class QRScanPage extends React.Component {
           dealQRResult(res.resultStr).then(result=>{
             if(result){
               self.setState({boxInfo:result.boxInfo});
-              alert('开门中！请稍后。。。');
+              setTimeout(()=>{
+                alert('开门中！请稍后。。。');
+              },500);
             }
           })
         }
@@ -79,10 +81,16 @@ class QRScanPage extends React.Component {
 
   renderAction(){
     // console.log(this.state.boxInfo);
+
     if(this.state.boxInfo){
       return(
         <div onClick={()=>this.closeWeb()} className = {rentPageCss['bg']}
-             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentsuccess.jpg)'}}></div>
+             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentSuccessNew.jpg'}}>
+          <span style = {{fontSize : 14,color:'white',marginBottom:'55vh'}}>亲的柜号是{this.state.boxInfo}</span>
+          <span style = {{fontSize : 14,color:'white',marginBottom:'54vh'}}>租球期间点时时开门，</span>
+          <span style = {{fontSize : 14,color:'white',marginBottom:'53vh'}}>可存取物品哦！</span>
+          <div onClick={()=>{this.openQRScan()}} className = {rentPageCss['ball']}/>
+        </div>
       )
     }
     else{
