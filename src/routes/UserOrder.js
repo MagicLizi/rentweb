@@ -12,9 +12,19 @@ class UserOrder extends React.Component{
   render(){
     return(
       <div className = {UserOrderCss['container']}>
-        {JSON.stringify(this.props.orders)}
+        {this.renderRows()}
       </div>
     )
+  }
+
+  renderRows(){
+    var rows = this.props.orders.map((data,i)=>{
+        return(
+          <div style = {{width:'80vw',borderRadius:4,height:'20vw'}}>
+          </div>
+        )
+    })
+    return rows;
   }
 }
 
