@@ -40,12 +40,12 @@ class QRScanPage extends React.Component {
   }
 
   dealScanResult(qrResult){
-    // alert(qrResult);
-    dealQRResult(qrResult).then(result=>{
-      if(result){
-        this.setState({boxInfo:result.boxInfo});
-      }
-    })
+    alert(qrResult);
+  //   dealQRResult(qrResult).then(result=>{
+  //     if(result){
+  //       this.setState({boxInfo:result.boxInfo});
+  //     }
+  //   })
   }
 
   scanSuccess(){
@@ -71,6 +71,7 @@ class QRScanPage extends React.Component {
       success: function (res) {
         var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
         if(result){
+          alert(result);
           this.dealScanResult(result);
         }
       }
