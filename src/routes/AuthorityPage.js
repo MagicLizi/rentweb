@@ -30,8 +30,8 @@ class Authority extends React.Component {
         var obj = JSON.parse(payobj);
         WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
           if(res['err_msg'] == "get_brand_wcpay_request:ok"){
-            alert("支付成功");
-            window.location = 'http://rent.magiclizi.com/qrScan';
+            // alert("支付成功");
+            window.location = 'http://rent.magiclizi.com/qrScan?direction=true';
           }
           else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
             // alert("支付取消");
