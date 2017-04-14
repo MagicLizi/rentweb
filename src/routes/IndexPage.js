@@ -4,6 +4,9 @@ import Loading from '../components/Loading';
 class IndexPage extends React.Component {
   constructor(){
     super();
+    this.state = {
+      show:true
+    }
   }
 
   componentWillMount() {
@@ -14,7 +17,9 @@ class IndexPage extends React.Component {
     return (
       <div>
         rentweb启动成功！
-        <Loading />
+        {this['state'].show?(<Loading closeLoading = {()=>{
+          this.setState({show:false})
+        }}/>):null}
       </div>
     );
   }

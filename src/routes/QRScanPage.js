@@ -7,12 +7,14 @@ import rentPageCss from './RentPage.css';
 import {dealQRResult,wxConfig} from '../services/action';
 import {setCurPath} from '../models/path';
 var wx = require('weixin-js-sdk');
+import Loading from '../components/Loading';
 class QRScanPage extends React.Component {
 
   constructor() {
     super();
     this['state'] = {
-      boxInfo:null
+      boxInfo:null,
+      showloading:false
     }
   }
 
@@ -49,6 +51,9 @@ class QRScanPage extends React.Component {
     return(
       <div className = {rentPageCss['container']}>
         {this.renderAction()}
+        {this.state.showloading?(<Loading closeLoading = {()=>{
+          this.setState({showloading:false})
+        }}/>):null}
       </div>
     )
   }
@@ -63,9 +68,7 @@ class QRScanPage extends React.Component {
           dealQRResult(res.resultStr).then(result=>{
             if(result){
               self.setState({boxInfo:result.boxInfo});
-              setTimeout(()=>{
-                alert('开门中！请稍后。。。');
-              },500);
+              this.setState({showloading:true});
             }
           })
         }

@@ -6,10 +6,14 @@ import {connect} from 'dva';
 import rentPageCss from './RentPage.css';
 import {openInRenting} from '../services/action';
 import {setCurPath} from '../models/path';
+import Loading from '../components/Loading';
 class OpenInRentingPage extends React.Component {
 
   constructor() {
     super();
+    this['state']={
+      showloading:false
+    }
   }
 
   componentWillMount() {
@@ -21,6 +25,9 @@ class OpenInRentingPage extends React.Component {
     return(
       <div className = {rentPageCss['container']}>
         {this.renderAction()}
+        {this.state.showloading?(<Loading closeLoading = {()=>{
+          this.setState({showloading:false})
+        }}/>):null}
       </div>
     )
   }
@@ -28,7 +35,7 @@ class OpenInRentingPage extends React.Component {
   openInRenting(){
     openInRenting().then(result=>{
       if(result){
-        alert('开门中，请稍后。。。');
+        this.setState({showloading:true})
       }
     })
 

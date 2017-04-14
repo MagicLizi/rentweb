@@ -4,8 +4,28 @@
 import React from 'react';
 var LoadingTarget = require('react-loading');
 class Loading extends React.Component {
+  constructor(){
+    super();
+    this['state'] = {
+      total :8
+    }
+  }
+
+  componentWillMount() {
+    this.timer = setInterval(()=>{
+      var cur = this.state.total - 1;
+      if(cur>=0){
+        this.setState({total:cur});
+      }
+      else{
+        this.timer&&clearInterval(this.timer);
+        this.props['closeLoading']&&this.props['closeLoading']();
+      }
+    },1000);
+  }
+
   render(){
-    var title = this['props'].title?this['props'].title:'加载中,请稍后...';
+    var title = this['props'].title?this['props'].title:`开门中，请稍后..剩余 ${this.state.total} 秒`;
     return (
       <div style = {{width:'100vw',height:'100vh',display:'flex',alignItems:'center',
         justifyContent:'center',flexDirection:'column',
@@ -14,6 +34,10 @@ class Loading extends React.Component {
         <span style = {{fontSize:14,color:'white',marginTop:'3vh',fontWeight:300}}>{title}</span>
       </div>
     );
+  }
+
+  componentWillUnMount() {
+    this.timer&&clearInterval(this.timer);
   }
 };
 

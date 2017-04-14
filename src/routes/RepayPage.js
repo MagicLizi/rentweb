@@ -6,12 +6,14 @@ import {connect} from 'dva';
 import rentPageCss from './RentPage.css';
 import {repay,payrent} from '../services/action';
 import {setCurPath} from '../models/path';
+import Loading from '../components/Loading';
 class RepayPage extends React.Component {
 
   constructor() {
     super();
     this['state'] = {
-      orderInfo:null
+      orderInfo:null,
+      showloading:false
     }
   }
 
@@ -58,6 +60,7 @@ class RepayPage extends React.Component {
   repay(){
     repay().then(result=>{
       if(result){
+        this.setState({showloading:true});
         var orderInfo = result['orderInfo'];
         this.setState({orderInfo:orderInfo});
       }
@@ -131,6 +134,9 @@ class RepayPage extends React.Component {
     return(
       <div className = {rentPageCss['container']}>
         {this.renderAction()}
+        {this.state.showloading?(<Loading closeLoading = {()=>{
+          this.setState({showloading:false})
+        }}/>):null}
       </div>
     )
   }
