@@ -49,9 +49,11 @@ class RepayPage extends React.Component {
           else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
             // alert("支付取消");
             this.props.cancelPay();
+            this.setState({showPay:false});
           }
           else{
             alert("支付失败:"+res);
+            this.setState({showPay:false});
             this.props.cancelPay();
           }
         });
