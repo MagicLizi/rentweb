@@ -38,7 +38,9 @@ class RepayPage extends React.Component {
         });
       }
       else{
-        this.setState({showPay:true});
+        this.repay(()=>{
+          this.setState({showPay:true});
+        });
       }
     });
     // var payobj = this.props.location.query['payobj'];
