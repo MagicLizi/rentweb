@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aca2e0a0-f881-452b-a440-c64dba87f5fa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/RepayPage.js" afterPath="$PROJECT_DIR$/src/routes/RepayPage.js" />
-    </list>
+    <list default="true" id="aca2e0a0-f881-452b-a440-c64dba87f5fa" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -85,8 +83,8 @@
       <file leaf-file-name="RepayPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/RepayPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+            <state relative-caret-position="156">
+              <caret line="96" column="27" lean-forward="false" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="33" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
               </folding>
@@ -153,7 +151,6 @@
       <find>inservice</find>
       <find>scanSuccess</find>
       <find>scan</find>
-      <find>alert</find>
       <find>dealScanResult</find>
       <find>ball.jpg</find>
       <find>btn.jpg</find>
@@ -169,6 +166,7 @@
       <find>分钟</find>
       <find>柜号</find>
       <find>showPay</find>
+      <find>alert</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -463,12 +461,12 @@
       <workItem from="1491628308225" duration="1324000" />
       <workItem from="1492073638479" duration="1000" />
       <workItem from="1492075411688" duration="683000" />
-      <workItem from="1492145966992" duration="8307000" />
+      <workItem from="1492145966992" duration="8386000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95506000" />
+    <option name="totallyTimeSpent" value="95585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -895,8 +893,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/RepayPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        <state relative-caret-position="156">
+          <caret line="96" column="27" lean-forward="false" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="33" />
           <folding>
             <element signature="e#45#71#0" expanded="true" />
           </folding>

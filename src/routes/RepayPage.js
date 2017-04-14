@@ -94,7 +94,7 @@ class RepayPage extends React.Component {
   }
 
   renderAction(){
-    alert(this.state.showPay);
+    // alert(this.state.showPay);
     if(this.state.showPay){
       return(
         <div className = {rentPageCss['bg']}
