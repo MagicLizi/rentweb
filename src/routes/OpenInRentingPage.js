@@ -47,12 +47,13 @@ class OpenInRentingPage extends React.Component {
     });
   }
 
+  //{this.props.curRentInfo['chestLogicId']}
   renderAction(){
     if(this.props.curRentInfo){
       return(
         <div className = {rentPageCss['bg']}
              style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentinservice.jpg!w640)'}}>
-          <span style = {{fontSize:30,color:'white',marginBottom:'28vh'}}>亲的柜号是{this.props.curRentInfo['chestLogicId']}_{this.props.curRentInfo['boxId']}号
+          <span style = {{fontSize:30,color:'white',marginBottom:'28vh'}}>亲的柜号是{this.props.curRentInfo['boxId']}号
           </span>
           <div onClick={()=>{this.openInRenting()}} className = {rentPageCss['ball']}/>
         </div>

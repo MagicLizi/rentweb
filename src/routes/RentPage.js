@@ -30,13 +30,14 @@ class RentPage extends React.Component{
     });
   }
 
+  //{curRentInfo['chestLogicId']}_
   renderAction(){
     var curRentInfo = this['props'].curRentInfo;
     if(curRentInfo){
       return(
         <div className = {rentPageCss['bg']}
              style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentinservice.jpg!w640)'}}>
-          <span style = {{fontSize:30,color:'white',marginBottom:'28vh'}}>亲的柜号是{curRentInfo['chestLogicId']}_{curRentInfo['boxId']}号
+          <span style = {{fontSize:30,color:'white',marginBottom:'28vh'}}>亲的柜号是{curRentInfo['boxId']}号
           </span>
           <div onClick={()=>{this.closeWeb()}} className = {rentPageCss['ball']}/>
         </div>

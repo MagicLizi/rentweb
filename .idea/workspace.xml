@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="aca2e0a0-f881-452b-a440-c64dba87f5fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Loading.js" afterPath="$PROJECT_DIR$/src/components/Loading.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/IndexPage.js" afterPath="$PROJECT_DIR$/src/routes/IndexPage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/OpenInRentingPage.js" afterPath="$PROJECT_DIR$/src/routes/OpenInRentingPage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/QRScanPage.js" afterPath="$PROJECT_DIR$/src/routes/QRScanPage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/RentPage.js" afterPath="$PROJECT_DIR$/src/routes/RentPage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/RepayPage.js" afterPath="$PROJECT_DIR$/src/routes/RepayPage.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -41,8 +40,8 @@
       <file leaf-file-name="OpenInRentingPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/OpenInRentingPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="165">
+              <caret line="55" column="76" lean-forward="false" selection-start-line="55" selection-start-column="76" selection-end-line="55" selection-end-column="76" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#45#71#0" expanded="true" />
@@ -63,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QRScanPage.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="QRScanPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/QRScanPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1216">
-              <caret line="70" column="48" lean-forward="false" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
+            <state relative-caret-position="241">
+              <caret line="86" column="67" lean-forward="false" selection-start-line="86" selection-start-column="67" selection-end-line="86" selection-end-column="67" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
               </folding>
@@ -78,20 +77,20 @@
       <file leaf-file-name="RentPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/RentPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="715">
-              <caret line="47" column="98" lean-forward="false" selection-start-line="47" selection-start-column="98" selection-end-line="47" selection-end-column="98" />
+            <state relative-caret-position="51">
+              <caret line="32" column="34" lean-forward="false" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
               <folding>
-                <marker date="1491550887000" expanded="true" signature="427:470" ph="..." />
+                <marker date="1492153773000" expanded="true" signature="427:470" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RepayPage.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RepayPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/RepayPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="62" column="42" lean-forward="false" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+            <state relative-caret-position="61">
+              <caret line="104" column="48" lean-forward="false" selection-start-line="104" selection-start-column="48" selection-end-line="104" selection-end-column="48" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
               </folding>
@@ -172,6 +171,7 @@
       <find>您本次租用时长</find>
       <find>小时</find>
       <find>分钟</find>
+      <find>柜号</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -199,15 +199,15 @@
         <option value="$PROJECT_DIR$/src/routes/UserOrder.css" />
         <option value="$PROJECT_DIR$/src/models/user.js" />
         <option value="$PROJECT_DIR$/src/routes/HelperPage.js" />
-        <option value="$PROJECT_DIR$/src/routes/RentPage.js" />
         <option value="$PROJECT_DIR$/src/routes/UserOrder.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/routes/AuthorityPage.js" />
         <option value="$PROJECT_DIR$/src/components/Loading.js" />
         <option value="$PROJECT_DIR$/src/routes/IndexPage.js" />
         <option value="$PROJECT_DIR$/src/routes/OpenInRentingPage.js" />
-        <option value="$PROJECT_DIR$/src/routes/QRScanPage.js" />
+        <option value="$PROJECT_DIR$/src/routes/RentPage.js" />
         <option value="$PROJECT_DIR$/src/routes/RepayPage.js" />
+        <option value="$PROJECT_DIR$/src/routes/QRScanPage.js" />
       </list>
     </option>
   </component>
@@ -466,12 +466,12 @@
       <workItem from="1491628308225" duration="1324000" />
       <workItem from="1492073638479" duration="1000" />
       <workItem from="1492075411688" duration="683000" />
-      <workItem from="1492145966992" duration="6461000" />
+      <workItem from="1492145966992" duration="6801000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93660000" />
+    <option name="totallyTimeSpent" value="94000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -480,12 +480,12 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24594785" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -551,7 +551,7 @@
         <state relative-caret-position="798">
           <caret line="47" column="98" lean-forward="false" selection-start-line="47" selection-start-column="98" selection-end-line="47" selection-end-column="98" />
           <folding>
-            <marker date="1491550887000" expanded="true" signature="427:470" ph="..." />
+            <marker date="1492153773000" expanded="true" signature="427:470" ph="..." />
           </folding>
         </state>
       </provider>
@@ -651,7 +651,7 @@
         <state relative-caret-position="798">
           <caret line="47" column="98" lean-forward="false" selection-start-line="47" selection-start-column="98" selection-end-line="47" selection-end-column="98" />
           <folding>
-            <marker date="1491550887000" expanded="true" signature="427:470" ph="..." />
+            <marker date="1492153773000" expanded="true" signature="427:470" ph="..." />
           </folding>
         </state>
       </provider>
@@ -820,16 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/RentPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="715">
-          <caret line="47" column="98" lean-forward="false" selection-start-line="47" selection-start-column="98" selection-end-line="47" selection-end-column="98" />
-          <folding>
-            <marker date="1491550887000" expanded="true" signature="427:470" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/services/action.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -867,10 +857,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/RentPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/RentPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="32" column="34" lean-forward="false" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+          <folding>
+            <marker date="1492153773000" expanded="true" signature="427:470" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/RepayPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="104" column="48" lean-forward="false" selection-start-line="104" selection-start-column="48" selection-end-line="104" selection-end-column="48" />
+          <folding>
+            <element signature="e#45#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/OpenInRentingPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state relative-caret-position="165">
+          <caret line="55" column="76" lean-forward="false" selection-start-line="55" selection-start-column="76" selection-end-line="55" selection-end-column="76" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#45#71#0" expanded="true" />
@@ -880,26 +898,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/QRScanPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="70" column="48" lean-forward="false" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
-          <folding>
-            <element signature="e#45#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/RentPage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/RepayPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="62" column="42" lean-forward="false" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+        <state relative-caret-position="241">
+          <caret line="86" column="67" lean-forward="false" selection-start-line="86" selection-start-column="67" selection-end-line="86" selection-end-column="67" />
           <folding>
             <element signature="e#45#71#0" expanded="true" />
           </folding>
