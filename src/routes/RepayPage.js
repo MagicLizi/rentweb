@@ -7,6 +7,7 @@ import rentPageCss from './RentPage.css';
 import {repay,payrent} from '../services/action';
 import {setCurPath} from '../models/path';
 import Loading from '../components/Loading';
+import PLoading from '../components/PayLoading';
 class RepayPage extends React.Component {
 
   constructor() {
@@ -14,7 +15,8 @@ class RepayPage extends React.Component {
     this['state'] = {
       orderInfo:null,
       showloading:false,
-      showPay:false
+      showPay:false,
+      showPayLoading:false
     }
   }
 
@@ -126,7 +128,7 @@ class RepayPage extends React.Component {
           <span style = {{fontSize:25,color:'white',marginBottom:'24vh'}}>
             费用共计：{(this.state.orderInfo['orderPrice']/100).toFixed(2)}元
           </span>
-          <div onClick={()=>{this.payRent()}} className = {rentPageCss['ball']}/>
+          <div onClick={()=>{this.setState({showPayLoading:true})}} className = {rentPageCss['ball']}/>
         </div>
       )
     }
@@ -163,6 +165,10 @@ class RepayPage extends React.Component {
         {this.renderAction()}
         {this.state.showloading?(<Loading closeLoading = {()=>{
           this.setState({showloading:false})
+        }}/>):null}
+        {this.state.showPayLoading?(<PLoading closeLoading = {()=>{
+          this.setState({showPayLoading:false})
+          this.payRent();
         }}/>):null}
       </div>
     )

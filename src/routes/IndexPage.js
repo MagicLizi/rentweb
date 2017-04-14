@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'dva';
 import Loading from '../components/Loading';
+import PLoading from '../components/PayLoading';
 class IndexPage extends React.Component {
   constructor(){
     super();
@@ -17,9 +18,7 @@ class IndexPage extends React.Component {
     return (
       <div>
         rentweb启动成功！
-        {this['state'].show?(<Loading closeLoading = {()=>{
-          this.setState({show:false})
-        }}/>):null}
+        <PLoading />
       </div>
     );
   }

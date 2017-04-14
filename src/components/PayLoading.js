@@ -1,13 +1,16 @@
 /**
+ * Created by magiclizi on 2017/4/14.
+ */
+/**
  * Created by magiclizi on 2017/4/6.
  */
 import React from 'react';
 var LoadingTarget = require('react-loading');
-class Loading extends React.Component {
+class PayLoading extends React.Component {
   constructor(){
     super();
     this['state'] = {
-      total :8
+      total :10
     }
   }
 
@@ -18,7 +21,6 @@ class Loading extends React.Component {
         this.setState({total:cur});
       }
       else{
-        alert('开门完成，如果柜门没有打开，请联系客服！')
         this.timer&&clearInterval(this.timer);
         this.props['closeLoading']&&this.props['closeLoading']();
       }
@@ -26,7 +28,7 @@ class Loading extends React.Component {
   }
 
   render(){
-    var title = this['props'].title?this['props'].title:`开门中，请稍后..剩余 ${this.state.total} 秒`;
+    var title = this['props'].title?this['props'].title:`调用支付中..剩余 ${this.state.total} 秒`;
     return (
       <div style = {{width:'100vw',height:'100vh',display:'flex',alignItems:'center',
         justifyContent:'center',flexDirection:'column',
@@ -42,8 +44,8 @@ class Loading extends React.Component {
   }
 };
 
-Loading.propTypes = {
+PayLoading.propTypes = {
 
 };
 
-export default Loading;
+export default PayLoading;
