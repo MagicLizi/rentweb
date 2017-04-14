@@ -18,9 +18,12 @@ export async function openInRenting(){
   });
 }
 
-export async function repay(){
+export async function repay(needOpen){
   return await request('/action/repay',{
     method:'POST',
+    body:JSON.stringify({
+      needOpen:needOpen
+    })
   });
 }
 

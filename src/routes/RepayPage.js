@@ -34,12 +34,12 @@ class RepayPage extends React.Component {
       if(this.props.curRentInfo){
         var payobj = this.props.location.query['payobj'];
         if(!payobj){
-          this.repay(()=>{
+          this.repay(true,()=>{
             this.setState({showloading:true});
           });
         }
         else{
-          this.repay(()=>{
+          this.repay(false,()=>{
             this.setState({showPay:true});
           });
         }
@@ -81,8 +81,8 @@ class RepayPage extends React.Component {
   }
 
 
-  repay(callback){
-    repay().then(result=>{
+  repay(needOpen,callback){
+    repay(needOpen).then(result=>{
       if(result){
         var orderInfo = result['orderInfo'];
         this.setState({orderInfo:orderInfo});
