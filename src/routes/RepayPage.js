@@ -31,8 +31,13 @@ class RepayPage extends React.Component {
     }
     setCurPath('/repay');
     this.props.getCurRentInfo();
-
-    this.repay();
+    var payobj = this.props.location.query['payobj'];
+    if(!payobj) {
+      this.repay();
+    }
+    else{
+      this.setState({showPay:true});
+    }
   }
 
   onBridgeReady(){
