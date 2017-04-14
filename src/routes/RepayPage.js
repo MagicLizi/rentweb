@@ -31,16 +31,18 @@ class RepayPage extends React.Component {
     }
     setCurPath('/repay');
     this.props.getCurRentInfo(()=>{
-      var payobj = this.props.location.query['payobj'];
-      if(!payobj){
-        this.repay(()=>{
-          this.setState({showloading:true});
-        });
-      }
-      else{
-        this.repay(()=>{
-          this.setState({showPay:true});
-        });
+      if(!this.props.curRentInfo){
+        var payobj = this.props.location.query['payobj'];
+        if(!payobj){
+          this.repay(()=>{
+            this.setState({showloading:true});
+          });
+        }
+        else{
+          this.repay(()=>{
+            this.setState({showPay:true});
+          });
+        }
       }
     });
     // var payobj = this.props.location.query['payobj'];
