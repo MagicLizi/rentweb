@@ -32,19 +32,13 @@ class RepayPage extends React.Component {
     setCurPath('/repay');
     this.props.getCurRentInfo();
     this.repay();
-    var payobj = this.props.location.query['payobj'];
-    if(!payobj) {
-      this.setState({showloading:true});
-    }
-    else{
-      this.setState({showPay:true});
-    }
   }
 
   onBridgeReady(){
     var payobj = this.props.location.query['payobj'];
     if(payobj){
       if(payobj&&payobj.length>0){
+        this.setState({showPay:true});
         var obj = JSON.parse(payobj);
         WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
           if(res['err_msg'] == "get_brand_wcpay_request:ok"){
@@ -64,6 +58,9 @@ class RepayPage extends React.Component {
           }
         });
       }
+    }
+    else{
+      this.setState({showloading:true});
     }
   }
 
