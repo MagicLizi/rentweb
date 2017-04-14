@@ -30,15 +30,27 @@ class RepayPage extends React.Component {
       }
     }
     setCurPath('/repay');
-    this.props.getCurRentInfo();
-    this.repay();
+    this.props.getCurRentInfo(()=>{
+      var payobj = this.props.location.query['payobj'];
+      if(!payobj){
+        this.repay(()=>{
+          this.setState({showloading:true});
+        });
+      }
+    });
+    // var payobj = this.props.location.query['payobj'];
+    // if(!payobj) {
+    //   this.setState({showloading:true});
+    // }
+    // else{
+    //   this.setState({showPay:true});
+    // }
   }
 
   onBridgeReady(){
     var payobj = this.props.location.query['payobj'];
     if(payobj){
       if(payobj&&payobj.length>0){
-        this.setState({showPay:true});
         var obj = JSON.parse(payobj);
         WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
           if(res['err_msg'] == "get_brand_wcpay_request:ok"){
@@ -59,17 +71,15 @@ class RepayPage extends React.Component {
         });
       }
     }
-    else{
-      this.setState({showloading:true});
-    }
   }
 
 
-  repay(){
+  repay(callback){
     repay().then(result=>{
       if(result){
         var orderInfo = result['orderInfo'];
         this.setState({orderInfo:orderInfo});
+        callback();
       }
     })
   }
@@ -158,8 +168,8 @@ var mapStateToProps = function(state){
 
 var mapDispathchToProps = function(dispatch){
   return{
-    getCurRentInfo:()=>{
-      dispatch({type:'user/getCurRentInfo'})
+    getCurRentInfo:(callback)=>{
+      dispatch({type:'user/getCurRentInfo',callback:callback})
     },
     cancelPay:()=>{
       dispatch({type:'user/rentCancelPay'})

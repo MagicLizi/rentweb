@@ -55,6 +55,8 @@ export default{
           type:'setCurRentInfo',
           curRentInfo:result['curRentInfo']
         })
+
+        action['callback']&&action['callback']();
       }
     },
 
