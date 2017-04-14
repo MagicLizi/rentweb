@@ -68,7 +68,7 @@ class QRScanPage extends React.Component {
           dealQRResult(res.resultStr).then(result=>{
             if(result){
               self.setState({boxInfo:result.boxInfo});
-              this.setState({showloading:true});
+              self.setState({showloading:true});
             }
           })
         }
