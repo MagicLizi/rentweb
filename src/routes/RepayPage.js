@@ -13,7 +13,8 @@ class RepayPage extends React.Component {
     super();
     this['state'] = {
       orderInfo:null,
-      showloading:false
+      showloading:false,
+      showPay:false
     }
   }
 
@@ -86,8 +87,12 @@ class RepayPage extends React.Component {
     })
   }
 
+  goPay(){
+    this.setState({showPay:true});
+  }
+
   renderAction(){
-    if(this.state.orderInfo){
+    if(this.state.showPay){
       return(
         <div className = {rentPageCss['bg']}
              style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg!w640)'}}>
@@ -106,11 +111,8 @@ class RepayPage extends React.Component {
       if(this.props.curRentInfo){
         return(
           <div className = {rentPageCss['bg']}
-               style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg!w640)'}}>
-          <span style = {{fontSize:25,color:'white',marginBottom:'16vh',width:'75vw',textAlign:'center'}}>
-            猪猪提醒，亲的柜号是{this.props.curRentInfo['boxId']}号，记得将球放入的同时，把门关上哦。还有私人物品，千万别忘了呢。点击确认。
-          </span>
-            <div onClick={()=>{this.repay()}} className = {rentPageCss['ball']}/>
+               style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repaynew.jpg!w640)'}}>
+            <div onClick={()=>{this.goPay()}} className = {rentPageCss['ball']}/>
           </div>
         )
       }
