@@ -88,11 +88,11 @@ class RepayPage extends React.Component {
   }
 
   goPay(){
-    alert('gopay');
     this.setState({showPay:true});
   }
 
   renderAction(){
+    alert(this.state.showPay);
     if(this.state.showPay){
       return(
         <div className = {rentPageCss['bg']}
