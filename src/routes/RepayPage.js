@@ -88,6 +88,7 @@ class RepayPage extends React.Component {
   }
 
   goPay(){
+    alert('gopay');
     this.setState({showPay:true});
   }
 
