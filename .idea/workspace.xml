@@ -27,8 +27,8 @@
       <file leaf-file-name="OpenInRentingPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/OpenInRentingPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="54" column="101" lean-forward="true" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="101" />
+            <state relative-caret-position="152">
+              <caret line="54" column="44" lean-forward="false" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="44" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#45#71#0" expanded="true" />
@@ -469,12 +469,12 @@
       <workItem from="1491628308225" duration="1324000" />
       <workItem from="1492073638479" duration="1000" />
       <workItem from="1492075411688" duration="683000" />
-      <workItem from="1492145966992" duration="14953000" />
+      <workItem from="1492145966992" duration="15245000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102152000" />
+    <option name="totallyTimeSpent" value="102444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -904,8 +904,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/OpenInRentingPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="54" column="101" lean-forward="true" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="101" />
+        <state relative-caret-position="152">
+          <caret line="54" column="44" lean-forward="false" selection-start-line="54" selection-start-column="44" selection-end-line="54" selection-end-column="44" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#45#71#0" expanded="true" />
