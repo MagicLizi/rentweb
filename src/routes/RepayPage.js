@@ -31,9 +31,10 @@ class RepayPage extends React.Component {
     }
     setCurPath('/repay');
     this.props.getCurRentInfo();
+    this.repay();
     var payobj = this.props.location.query['payobj'];
     if(!payobj) {
-      this.repay();
+      this.setState({showloading:true});
     }
     else{
       this.setState({showPay:true});
@@ -70,7 +71,6 @@ class RepayPage extends React.Component {
   repay(){
     repay().then(result=>{
       if(result){
-        this.setState({showloading:true});
         var orderInfo = result['orderInfo'];
         this.setState({orderInfo:orderInfo});
       }
