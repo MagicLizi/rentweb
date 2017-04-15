@@ -164,6 +164,7 @@ class RepayPage extends React.Component {
         {this.state.showloading?(<Loading closeLoading = {()=>{
           var payobj = this.props.location.query['payobj'];
           if(!payobj){
+            alert('发送！');
             this.repay(true,()=>{
               this.setState({showloading:false})
             });
