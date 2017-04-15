@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="aca2e0a0-f881-452b-a440-c64dba87f5fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Loading.js" afterPath="$PROJECT_DIR$/src/components/Loading.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/RepayPage.js" afterPath="$PROJECT_DIR$/src/routes/RepayPage.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -74,8 +75,8 @@
       <file leaf-file-name="RepayPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/RepayPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="165" column="22" lean-forward="true" selection-start-line="165" selection-start-column="22" selection-end-line="165" selection-end-column="22" />
+            <state relative-caret-position="190">
+              <caret line="168" column="56" lean-forward="false" selection-start-line="168" selection-start-column="56" selection-end-line="168" selection-end-column="56" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
               </folding>
@@ -96,11 +97,11 @@
       <file leaf-file-name="Loading.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Loading.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="39" column="26" lean-forward="false" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+            <state relative-caret-position="114">
+              <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="29" />
               <folding>
-                <marker date="1492164843000" expanded="true" signature="788:811" ph="..." />
-                <marker date="1492164843000" expanded="false" signature="997:1057" ph="..." />
+                <marker date="1492240114000" expanded="true" signature="909:932" ph="..." />
+                <marker date="1492240114000" expanded="false" signature="1118:1178" ph="..." />
               </folding>
             </state>
           </provider>
@@ -170,8 +171,8 @@
       <find>柜号</find>
       <find>showPay</find>
       <find>getCur</find>
-      <find>alert</find>
       <find>getCurRentInfo</find>
+      <find>alert</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -204,10 +205,10 @@
         <option value="$PROJECT_DIR$/src/services/action.js" />
         <option value="$PROJECT_DIR$/src/components/PayLoading.js" />
         <option value="$PROJECT_DIR$/src/routes/IndexPage.js" />
-        <option value="$PROJECT_DIR$/src/components/Loading.js" />
         <option value="$PROJECT_DIR$/src/routes/OpenInRentingPage.js" />
         <option value="$PROJECT_DIR$/src/routes/RentPage.css" />
         <option value="$PROJECT_DIR$/src/routes/RentPage.js" />
+        <option value="$PROJECT_DIR$/src/components/Loading.js" />
         <option value="$PROJECT_DIR$/src/routes/RepayPage.js" />
       </list>
     </option>
@@ -467,12 +468,12 @@
       <workItem from="1491628308225" duration="1324000" />
       <workItem from="1492073638479" duration="1000" />
       <workItem from="1492075411688" duration="683000" />
-      <workItem from="1492145966992" duration="20877000" />
+      <workItem from="1492145966992" duration="21467000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108076000" />
+    <option name="totallyTimeSpent" value="108666000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -841,17 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Loading.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="39" column="26" lean-forward="false" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-          <folding>
-            <marker date="1492164843000" expanded="true" signature="788:811" ph="..." />
-            <marker date="1492164843000" expanded="false" signature="997:1057" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/PayLoading.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -901,10 +891,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Loading.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="29" />
+          <folding>
+            <marker date="1492240114000" expanded="true" signature="909:932" ph="..." />
+            <marker date="1492240114000" expanded="false" signature="1118:1178" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/RepayPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="165" column="22" lean-forward="true" selection-start-line="165" selection-start-column="22" selection-end-line="165" selection-end-column="22" />
+        <state relative-caret-position="190">
+          <caret line="168" column="56" lean-forward="false" selection-start-line="168" selection-start-column="56" selection-end-line="168" selection-end-column="56" />
           <folding>
             <element signature="e#45#71#0" expanded="true" />
           </folding>

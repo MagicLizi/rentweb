@@ -12,6 +12,13 @@ class Loading extends React.Component {
   }
 
   componentWillMount() {
+
+    if(this['props'].duration){
+      this.setState({total:this['props'].duration});
+    }
+  }
+
+  componentDidMount() {
     this.timer = setInterval(()=>{
       var cur = this.state.total - 1;
       if(cur>=0){
