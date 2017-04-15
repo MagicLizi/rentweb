@@ -36,9 +36,8 @@ class RepayPage extends React.Component {
       if(this.props.curRentInfo){
         var payobj = this.props.location.query['payobj'];
         if(!payobj){
-          this.repay(true,()=>{
-            this.setState({showloading:true});
-          });
+          this.setState({showloading:true});
+
         }
         else{
           this.repay(false,()=>{
@@ -164,7 +163,12 @@ class RepayPage extends React.Component {
       <div className = {rentPageCss['container']}>
         {this.renderAction()}
         {this.state.showloading?(<Loading closeLoading = {()=>{
-          this.setState({showloading:false})
+          var payobj = this.props.location.query['payobj'];
+          if(!payobj){
+            this.repay(true,()=>{
+              this.setState({showloading:false})
+            });
+          }
         }}/>):null}
         {this.state.showPayLoading?(<PLoading closeLoading = {()=>{
           this.setState({showPayLoading:false})
