@@ -22,3 +22,18 @@
   background-image: url(http://rentservice.b0.upaiyun.com/ball.png);
 }
 
+.ball1{
+  width :28vw;
+  height: 28vw;
+  margin-bottom: 4vh;
+  background-size: cover;
+  background-image: url(http://rentservice.b0.upaiyun.com/ball1.png);
+}
+
+.ball2{
+  width :28vw;
+  height: 28vw;
+  margin-bottom: 4vh;
+  background-size: cover;
+  background-image: url(http://rentservice.b0.upaiyun.com/ball2.png);
+}
