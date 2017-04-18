@@ -6,6 +6,7 @@ import {connect} from 'dva';
 import userPageCss from './UserPage.css';
 import {setCurPath} from '../models/path';
 import {tryCancelAuthority} from '../services/user';
+import {repay,payrent} from '../services/action';
 class UserPage extends React.Component{
 
   constructor() {
@@ -18,11 +19,26 @@ class UserPage extends React.Component{
   }
 
   cancelAuthority(){
-    alert('123');
     tryCancelAuthority().then(result=>{
       if(result){
         if(result['rentInfo']){
-          alert(JSON.stringify(result['rentInfo']));
+          alert('您有未支付的订单，请先支付！');
+          payrent().then(result=>{
+            if(result){
+              var orderId = result['orderId'];
+              var userId = result['userId'];
+              var info = {
+                orderId : orderId,
+                path : '/user',
+                userId:userId
+              }
+              var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;
+              var redirect_uri = encodeURI(uri);
+              var newUri = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4188036aadb09af1&redirect_uri='
+                + uri + '&response_type=code&scope=snsapi_base#wechat_redirect';
+              window.location = newUri;
+            }
+          })
         }
         else{
           alert('退还押金申请成功，押金将会在1个工作日内返还到您的支付账户中！');
