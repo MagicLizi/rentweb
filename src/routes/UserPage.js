@@ -20,6 +20,7 @@ class UserPage extends React.Component{
   cancelAuthority(){
     tryCancelAuthority().then(result=>{
       if(result){
+        alert(JSON.stringify(result));
         if(result['rentInfo']){
           alert(JSON.stringify(result['rentInfo']));
         }
