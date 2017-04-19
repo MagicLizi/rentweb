@@ -1,6 +1,6 @@
 import fetch from 'dva/fetch';
 var domain = 'http://localhost:5002';
-// domain = 'http://rentapi.magiclizi.com';
+domain = 'http://rentapi.magiclizi.com';
 import {curPath} from '../models/path';
 
 function parseJSON(response) {
