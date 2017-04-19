@@ -64,6 +64,7 @@ class BindMobile extends React.Component{
       if(result){
         // this.vtimer&&clearInterval(this.vtimer);
         alert('绑定成功');
+        window.location = 'http://rent.magiclizi.com/rent';
       }
     })
   }
@@ -115,5 +116,6 @@ class BindMobile extends React.Component{
     )
   }
 }
+
 
 export default connect()(BindMobile)
