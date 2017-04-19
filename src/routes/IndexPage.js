@@ -17,8 +17,7 @@ class IndexPage extends React.Component {
   render(){
     return (
       <div>
-        rentweb启动成功！
-        <PLoading />
+
       </div>
     );
   }
