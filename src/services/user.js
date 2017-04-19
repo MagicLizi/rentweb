@@ -31,3 +31,22 @@ export async function tryCancelAuthority(){
 export async function getOrders(){
   return await request('/user/orders',{});
 }
+
+
+export async function getVerifyCode(mobile){
+  return await request(`/user/getVerifyCode?mobile=${mobile}`,{});
+}
+
+export async function checkNeedBind(){
+  return await request(`/user/userneedbind`,{});
+}
+
+export async function bind(mobile,verifyCode){
+  return await request(`/user/bind`,{
+    method:'POST',
+    body:JSON.stringify({
+      mobile:mobile,
+      verifyCode:verifyCode
+    })
+  });
+}

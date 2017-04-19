@@ -1,0 +1,217 @@
+.loginContainer{
+  width:100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /*background-color: red;*/
+}
+
+.inputContainer{
+  width:86vw;
+  display: flex;
+  flex:1;
+  flex-direction: column;
+}
+
+.halfinput{
+  text-align: left;
+  width: 60%;
+  height:10vw;
+  font-size : 0.9em;
+  color: #000000;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  /*margin-top: 6px;*/
+  outline:none;
+}
+
+.verifyContainer{
+  margin-top: 6px;
+  width: 100%;
+  height:10vw;
+  margin-bottom: 1vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.getverify{
+  width: 40%;
+  height:10vw;
+  /*background-color: red;*/
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.textGetVer{
+  font-size: 0.9em;
+  color:#efc517;
+  font-weight: 400;
+  margin-right: 2.2vw;
+  margin-top: 2vw;
+}
+
+.textGetVer:active
+{
+  opacity:0.5;
+}
+
+.input{
+  text-align: left;
+  width: 100%;
+  height:10vw;
+  font-size : 0.9em;
+  color: #000000;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  margin-top: 6px;
+  outline:none;
+}
+
+.input::-webkit-input-placeholder {
+  color: black;
+  opacity: 0.2;
+}
+
+.input:-webkit-autofill {
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.halfinput::-webkit-input-placeholder {
+  color: black;
+  opacity: 0.2;
+}
+
+.halfinput:-webkit-autofill {
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.title{
+  font-size: 0.85em;
+  margin-left: 1vw
+}
+
+.line{
+  width: 86vw;
+  height:1px;
+  background-color: #000000;
+  opacity:0.2;
+}
+
+.loginIcon{
+  width:22vw;
+  height:22vw;
+  margin-top: 4vw;
+}
+
+.goInBtn{
+  width:86vw;
+  height:10vw;
+  background-color: #414044;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8vw;
+}
+
+.goInBtn:active{
+  opacity: 0.5;
+}
+
+
+.container{
+  width:100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.avata{
+  width:20vw;
+  height:20vw;
+  border-radius: 10vw;
+  background: center no-repeat;
+  background-size: cover;
+  border: 1px solid #F1F1F1;
+  margin-top: 6vw;
+}
+
+.nickname{
+  font-size: 0.9em;
+  font-weight: 400;
+  color: #414044;
+}
+
+.logout{
+  width:100vw;
+  height:13vw;
+  background-color: #CA2222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14vw;
+}
+
+.logoutTitle{
+  color: white;
+  font-size: 1em;
+}
+
+.logout:active{
+  opacity: 0.5;
+}
+
+.cellContainer{
+  width: 100vw;
+  height:14vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cellContainer:active{
+  opacity: 0.5;
+}
+
+.cell{
+  width: 92vw;
+  height:14vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*background-color: blue;*/
+}
+
+.userline{
+  width: 100vw;
+  height: 1px;
+  background-color: black;
+  opacity: 0.2;
+}
+
+.smallline{
+  width: 96vw;
+  height: 1px;
+  background-color: black;
+  opacity: 0.2;
+  align-self: flex-end;
+}
+
+.infoTitle{
+  width: 92vw;
+  font-size: 0.8em;
+  opacity: 0.6;
+}
+
+.cellTitle{
+  font-size: 1em;
+  opacity: 0.6;
+}

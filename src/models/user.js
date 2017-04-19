@@ -1,7 +1,7 @@
 /**
  * Created by magiclizi on 2017/4/5.
  */
-import {refreshUserInfo,getCurRentInfo,checkAuthority,getOrders} from '../services/user';
+import {refreshUserInfo,getCurRentInfo,checkAuthority,getOrders,checkNeedBind} from '../services/user';
 import { routerRedux } from 'dva/router';
 export default{
   namespace:'user',
@@ -113,6 +113,20 @@ export default{
       yield put(
         routerRedux.push({pathname:'/orders'})
       )
+    },
+
+    *checkNeedBind(action,{call,put}){
+      var result = yield call(checkNeedBind);
+      if(result){
+        if(result['need']){
+          yield put(
+            routerRedux.push({pathname:'/bind'})
+          )
+        }
+        else{
+          action['callback']&&action['callback']();
+        }
+      }
     }
   }
 }

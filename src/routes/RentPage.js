@@ -12,8 +12,11 @@ class RentPage extends React.Component{
   }
 
   componentWillMount() {
-    setCurPath('/rent');
-    this['props'].getCurRentInfo();
+
+    this['props'].checkNeedBind(()=>{
+      setCurPath('/rent');
+      this['props'].getCurRentInfo();
+    })
   }
 
   render(){
@@ -69,6 +72,9 @@ var mapDispatchToProps = function(dispatch){
     },
     checkUserAuthority:()=>{
       dispatch({type:'user/checkAuthority'})
+    },
+    checkNeedBind:(callback)=>{
+      dispatch({type:'user/checkNeedBind',callback:callback})
     }
   }
 }
