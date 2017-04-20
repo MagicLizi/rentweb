@@ -68,10 +68,6 @@ class RentPage extends React.Component{
           if(res['err_msg'] == "get_brand_wcpay_request:ok"){
 
             alert("支付成功");
-
-            setTimeout(()=>{
-              this.checkAuthority();
-            },500);
             // this.closeWeb();
             // this.props.goQR();
           }
@@ -129,6 +125,7 @@ class RentPage extends React.Component{
   }
 
   checkAuthority(){
+    alert('123');
     this.props.checkUserAuthority();
   }
 }

@@ -49,11 +49,11 @@
       <file leaf-file-name="RentPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/RentPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+            <state relative-caret-position="144">
+              <caret line="69" column="26" lean-forward="false" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
-                <marker date="1492661867000" expanded="true" signature="2805:2848" ph="..." />
+                <marker date="1492662044000" expanded="true" signature="2718:2761" ph="..." />
               </folding>
             </state>
           </provider>
@@ -474,12 +474,12 @@
       <workItem from="1492268799784" duration="3097000" />
       <workItem from="1492341531966" duration="1409000" />
       <workItem from="1492522267681" duration="4666000" />
-      <workItem from="1492623402769" duration="8877000" />
+      <workItem from="1492623402769" duration="9052000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127878000" />
+    <option name="totallyTimeSpent" value="128053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -533,7 +533,7 @@
           <caret line="47" column="98" lean-forward="false" selection-start-line="47" selection-start-column="98" selection-end-line="47" selection-end-column="98" />
           <folding>
             <element signature="e#45#71#0" expanded="true" />
-            <marker date="1492661867000" expanded="true" signature="2805:2848" ph="..." />
+            <marker date="1492662044000" expanded="true" signature="2718:2761" ph="..." />
           </folding>
         </state>
       </provider>
@@ -627,7 +627,7 @@
           <caret line="47" column="98" lean-forward="false" selection-start-line="47" selection-start-column="98" selection-end-line="47" selection-end-column="98" />
           <folding>
             <element signature="e#45#71#0" expanded="true" />
-            <marker date="1492661867000" expanded="true" signature="2805:2848" ph="..." />
+            <marker date="1492662044000" expanded="true" signature="2718:2761" ph="..." />
           </folding>
         </state>
       </provider>
@@ -895,11 +895,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/RentPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+        <state relative-caret-position="144">
+          <caret line="69" column="26" lean-forward="false" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
           <folding>
             <element signature="e#45#71#0" expanded="true" />
-            <marker date="1492661867000" expanded="true" signature="2805:2848" ph="..." />
+            <marker date="1492662044000" expanded="true" signature="2718:2761" ph="..." />
           </folding>
         </state>
       </provider>
