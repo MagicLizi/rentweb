@@ -118,15 +118,15 @@ class RentPage extends React.Component{
       return(
         <div className = {rentPageCss['bg']}
              style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentwarning.jpg!w640)'}}>
-          <div onClick={()=>{this.checkAuthority()}} className = {rentPageCss['ball']}/>
+          <div onClick={()=>{this['props'].checkUserAuthority()}} className = {rentPageCss['ball']}/>
         </div>
       )
     }
   }
 
-  checkAuthority(){
-    this.props.checkUserAuthority();
-  }
+  // checkAuthority(){
+  //   this.props.checkUserAuthority();
+  // }
 }
 
 var mapStateToProps = function(state){
@@ -139,6 +139,7 @@ var mapDispatchToProps = function(dispatch){
       dispatch({type:'user/getCurRentInfo',callback:callback})
     },
     checkUserAuthority:()=>{
+      alert('check');
       dispatch({type:'user/checkAuthority'})
     },
     checkNeedBind:(callback)=>{
