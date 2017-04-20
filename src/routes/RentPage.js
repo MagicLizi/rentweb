@@ -5,6 +5,7 @@ import React from 'react';
 import {connect} from 'dva';
 import rentPageCss from './RentPage.css';
 import {setCurPath} from '../models/path';
+import {payrent} from '../services/action';
 class RentPage extends React.Component{
 
   constructor() {
@@ -13,10 +14,53 @@ class RentPage extends React.Component{
 
   componentWillMount() {
 
+    if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+
+    }
+    else {
+      if (document.addEventListener) {
+        document.addEventListener("WeixinJSBridgeReady", ()=>{this.onBridgeReady()}, false);
+      } else if (document.attachEvent) {
+        document.attachEvent("WeixinJSBridgeReady", ()=>{this.onBridgeReady()});
+      }
+    }
+
+    setCurPath('/rent');
+
     this['props'].checkNeedBind(()=>{
-      setCurPath('/rent');
       this['props'].getCurRentInfo();
     })
+  }
+
+  onBridgeReady(){
+    var payobj = this.props.location.query['payobj'];
+    if(payobj){
+      if(payobj&&payobj.length>0){
+        var obj = JSON.parse(payobj);
+        WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
+          if(res['err_msg'] == "get_brand_wcpay_request:ok"){
+
+            alert("支付成功");
+
+            setTimeout(()=>{
+              this.checkAuthority();
+            },500);
+            // this.closeWeb();
+            // this.props.goQR();
+          }
+          else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
+            // alert("支付取消");
+            // this.props.cancelPay();
+            // this.setState({showPay:true});
+          }
+          else{
+            alert("支付失败:"+res);
+            // this.setState({showPay:true});
+            // this.props.cancelPay();
+          }
+        });
+      }
+    }
   }
 
   render(){
@@ -33,6 +77,33 @@ class RentPage extends React.Component{
     });
   }
 
+  selectCurInfo(){
+    var curRentInfo = this['props'].curRentInfo;
+    if(curRentInfo.orderId){
+      var userId = curRentInfo.userId;
+      var orderId = curRentInfo.orderId;
+
+      payrent().then(result=>{
+        if(result){
+          var info = {
+            orderId : orderId,
+            path : '/rent',
+            userId:userId
+          }
+          var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;
+          var redirect_uri = encodeURI(uri);
+          var newUri = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4188036aadb09af1&redirect_uri='
+            + uri + '&response_type=code&scope=snsapi_base#wechat_redirect';
+          window.location = newUri;
+        }
+      })
+
+    }
+    else{
+      this.closeWeb()
+    }
+  }
+
   //{curRentInfo['chestLogicId']}_
   renderAction(){
     var curRentInfo = this['props'].curRentInfo;
@@ -42,7 +113,7 @@ class RentPage extends React.Component{
              style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentinservice.jpg!w640)'}}>
           <span style = {{fontSize:30,color:'white',marginBottom:'28vh'}}>亲的柜号是{curRentInfo['boxId']}号
           </span>
-          <div onClick={()=>{this.closeWeb()}} className = {rentPageCss['ball']}/>
+          <div onClick={()=>{this.selectCurInfo()}} className = {rentPageCss['ball']}/>
         </div>
       )
     }

@@ -36,18 +36,18 @@ class UserPage extends React.Component{
         WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
           if(res['err_msg'] == "get_brand_wcpay_request:ok"){
             alert("支付成功");
-            this.closeWeb();
+            // this.closeWeb();
             // this.props.goQR();
           }
           else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
             // alert("支付取消");
-            this.props.cancelPay();
-            this.setState({showPay:true});
+            // this.props.cancelPay();
+            // this.setState({showPay:true});
           }
           else{
             alert("支付失败:"+res);
-            this.setState({showPay:true});
-            this.props.cancelPay();
+            // this.setState({showPay:true});
+            // this.props.cancelPay();
           }
         });
       }
