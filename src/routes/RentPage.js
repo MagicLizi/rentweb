@@ -78,7 +78,6 @@ class RentPage extends React.Component{
   }
 
   componentDidMount() {
-    alert('1231');
     var curRentInfo = this['props'].curRentInfo;
     if(curRentInfo.orderId){
       var c = confirm('您有未支付的订单，请先支付！');
@@ -107,6 +106,7 @@ class RentPage extends React.Component{
   //{curRentInfo['chestLogicId']}_
   renderAction(){
     var curRentInfo = this['props'].curRentInfo;
+    alert(JSON.stringify(curRentInfo))
     if(curRentInfo){
       return(
         <div className = {rentPageCss['bg']}
