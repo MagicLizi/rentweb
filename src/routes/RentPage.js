@@ -30,7 +30,7 @@ class RentPage extends React.Component{
     this['props'].checkNeedBind(()=>{
       this['props'].getCurRentInfo(()=>{
         var curRentInfo = this['props'].curRentInfo;
-        if(curRentInfo.orderId){
+        if(curRentInfo&&curRentInfo.orderId){
           var payobj = this.props.location.query['payobj'];
           if(!payobj){
             var c = confirm('您有未支付的订单，请先支付！');
