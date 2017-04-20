@@ -70,7 +70,7 @@ export default{
       }
     },
 
-    *checkAuthority(action,{call,put}){
+    *checkUserAuthority(action,{call,put}){
       alert('213');
       var result = yield call(checkAuthority);
       if(result){
