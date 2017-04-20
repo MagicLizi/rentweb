@@ -125,7 +125,8 @@ class RentPage extends React.Component{
   }
 
   checkAuthority(){
-    this.props.checkUserAuthority();
+    alert('123');
+    // this.props.checkUserAuthority();
   }
 }
 
