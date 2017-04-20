@@ -68,7 +68,7 @@ class RentPage extends React.Component{
           if(res['err_msg'] == "get_brand_wcpay_request:ok"){
 
             alert("支付成功");
-            // this.closeWeb();
+            this.closeWeb();
             // this.props.goQR();
           }
           else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
