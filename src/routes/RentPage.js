@@ -139,7 +139,7 @@ var mapDispatchToProps = function(dispatch){
       dispatch({type:'user/getCurRentInfo',callback:callback})
     },
     checkUserAuthority:()=>{
-      // alert('check');
+      alert(JSON.stringify(dispatch));
       dispatch({type:'user/checkUserAuthority'})
     },
     checkNeedBind:(callback)=>{

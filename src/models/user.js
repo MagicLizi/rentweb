@@ -71,7 +71,6 @@ export default{
     },
 
     *checkUserAuthority(action,{call,put}){
-      alert('213');
       var result = yield call(checkAuthority);
       if(result){
         var authority = result['authority'];
