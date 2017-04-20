@@ -28,7 +28,31 @@ class RentPage extends React.Component{
     setCurPath('/rent');
 
     this['props'].checkNeedBind(()=>{
-      this['props'].getCurRentInfo();
+      this['props'].getCurRentInfo(()=>{
+        var curRentInfo = this['props'].curRentInfo;
+        if(curRentInfo.orderId){
+          var c = confirm('您有未支付的订单，请先支付！');
+          if(c){
+            var userId = curRentInfo.userId;
+            var orderId = curRentInfo.orderId;
+
+            payrent().then(result=>{
+              if(result){
+                var info = {
+                  orderId : orderId,
+                  path : '/rent',
+                  userId:userId
+                }
+                var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;
+                var redirect_uri = encodeURI(uri);
+                var newUri = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4188036aadb09af1&redirect_uri='
+                  + uri + '&response_type=code&scope=snsapi_base#wechat_redirect';
+                window.location = newUri;
+              }
+            })
+          }
+        }
+      });
     })
   }
 
@@ -77,36 +101,10 @@ class RentPage extends React.Component{
     });
   }
 
-  componentDidMount() {
-    var curRentInfo = this['props'].curRentInfo;
-    if(curRentInfo.orderId){
-      var c = confirm('您有未支付的订单，请先支付！');
-      if(c){
-        var userId = curRentInfo.userId;
-        var orderId = curRentInfo.orderId;
-
-        payrent().then(result=>{
-          if(result){
-            var info = {
-              orderId : orderId,
-              path : '/rent',
-              userId:userId
-            }
-            var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;
-            var redirect_uri = encodeURI(uri);
-            var newUri = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4188036aadb09af1&redirect_uri='
-              + uri + '&response_type=code&scope=snsapi_base#wechat_redirect';
-            window.location = newUri;
-          }
-        })
-      }
-    }
-  }
 
   //{curRentInfo['chestLogicId']}_
   renderAction(){
     var curRentInfo = this['props'].curRentInfo;
-    alert(JSON.stringify(curRentInfo))
     if(curRentInfo){
       return(
         <div className = {rentPageCss['bg']}
@@ -138,8 +136,8 @@ var mapStateToProps = function(state){
 
 var mapDispatchToProps = function(dispatch){
   return {
-    getCurRentInfo:()=>{
-      dispatch({type:'user/getCurRentInfo'})
+    getCurRentInfo:(callback)=>{
+      dispatch({type:'user/getCurRentInfo',callback:callback})
     },
     checkUserAuthority:()=>{
       dispatch({type:'user/checkAuthority'})
