@@ -117,7 +117,7 @@ class RentPage extends React.Component{
     else{
       return(
         <div className = {rentPageCss['bg']}
-             style = {{backgroundImage:'url()'}}>
+             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentwarning.jpg!w640)'}}>
           <div onClick={()=>{this.checkAuthority()}} className = {rentPageCss['ball']}/>
         </div>
       )
@@ -125,8 +125,7 @@ class RentPage extends React.Component{
   }
 
   checkAuthority(){
-    alert('123');
-    // this.props.checkUserAuthority();
+    this.props.checkUserAuthority();
   }
 }
 
