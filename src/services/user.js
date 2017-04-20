@@ -13,6 +13,7 @@ export async function getCurRentInfo(){
 }
 
 export async function checkAuthority(){
+  alert('check');
   return await request('/user/checkAuthority',{});
 }
 

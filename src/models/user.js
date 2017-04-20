@@ -71,8 +71,8 @@ export default{
     },
 
     *checkAuthority(action,{call,put}){
+      alert('213');
       var result = yield call(checkAuthority);
-      alert(result);
       if(result){
         var authority = result['authority'];
         yield put({
