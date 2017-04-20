@@ -31,25 +31,28 @@ class RentPage extends React.Component{
       this['props'].getCurRentInfo(()=>{
         var curRentInfo = this['props'].curRentInfo;
         if(curRentInfo.orderId){
-          var c = confirm('您有未支付的订单，请先支付！');
-          if(c){
-            var userId = curRentInfo.userId;
-            var orderId = curRentInfo.orderId;
+          var payobj = this.props.location.query['payobj'];
+          if(!payobj){
+            var c = confirm('您有未支付的订单，请先支付！');
+            if(c){
+              var userId = curRentInfo.userId;
+              var orderId = curRentInfo.orderId;
 
-            payrent().then(result=>{
-              if(result){
-                var info = {
-                  orderId : orderId,
-                  path : '/rent',
-                  userId:userId
+              payrent().then(result=>{
+                if(result){
+                  var info = {
+                    orderId : orderId,
+                    path : '/rent',
+                    userId:userId
+                  }
+                  var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;
+                  var redirect_uri = encodeURI(uri);
+                  var newUri = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4188036aadb09af1&redirect_uri='
+                    + uri + '&response_type=code&scope=snsapi_base#wechat_redirect';
+                  window.location = newUri;
                 }
-                var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;
-                var redirect_uri = encodeURI(uri);
-                var newUri = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4188036aadb09af1&redirect_uri='
-                  + uri + '&response_type=code&scope=snsapi_base#wechat_redirect';
-                window.location = newUri;
-              }
-            })
+              })
+            }
           }
         }
       });
