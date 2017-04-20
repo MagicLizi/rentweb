@@ -78,7 +78,6 @@ class RentPage extends React.Component{
   }
 
   componentDidMount() {
-    alert('123');
     var curRentInfo = this['props'].curRentInfo;
     if(curRentInfo.orderId){
       var c = confirm('您有未支付的订单，请先支付！');
