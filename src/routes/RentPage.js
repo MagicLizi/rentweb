@@ -28,6 +28,7 @@ class RentPage extends React.Component{
     setCurPath('/rent');
 
     this['props'].checkNeedBind(()=>{
+      this['props'].checkUserAuthority();
       this['props'].getCurRentInfo(()=>{
         var curRentInfo = this['props'].curRentInfo;
         if(curRentInfo&&curRentInfo.orderId){
