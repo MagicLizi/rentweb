@@ -27,6 +27,8 @@ class RentPage extends React.Component{
 
     setCurPath('/rent');
 
+    this['props'].checkUserAuthority();
+
     this['props'].checkNeedBind(()=>{
       this['props'].getCurRentInfo(()=>{
         var curRentInfo = this['props'].curRentInfo;
@@ -69,7 +71,7 @@ class RentPage extends React.Component{
 
             alert("支付成功");
             this.closeWeb();
-            // this.props.goQR();
+            // this.props.goQR(
           }
           else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
             // alert("支付取消");
@@ -114,14 +116,14 @@ class RentPage extends React.Component{
         </div>
       )
     }
-    else{
-      return(
-        <div className = {rentPageCss['bg']}
-             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentwarning.jpg!w640)'}}>
-          <div onClick={()=>{this['props'].checkUserAuthority()}} className = {rentPageCss['ball']}/>
-        </div>
-      )
-    }
+    // else{
+    //   return(
+    //     <div className = {rentPageCss['bg']}
+    //          style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentwarning.jpg!w640)'}}>
+    //       <div onClick={()=>{this['props'].checkUserAuthority()}} className = {rentPageCss['ball']}/>
+    //     </div>
+    //   )
+    // }
   }
 
   // checkAuthority(){
