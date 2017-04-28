@@ -55,9 +55,6 @@ class RentPage extends React.Component{
             }
           }
         }
-        else if(curRentInfo){
-          this.props.checkUserAuthority();
-        }
       });
     })
   }
@@ -117,6 +114,10 @@ class RentPage extends React.Component{
         </div>
       )
     }
+  }
+
+  componentDidMount() {
+    this.props.checkUserAuthority();
   }
 
   // checkAuthority(){
