@@ -114,10 +114,14 @@ class RentPage extends React.Component{
         </div>
       )
     }
-  }
-
-  componentDidMount() {
-    this.props.checkUserAuthority();
+    else{
+      return(
+        <div className = {rentPageCss['bg']}
+             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentwarning.jpg!w640)'}}>
+          <div onClick={()=>{this['props'].checkUserAuthority()}} className = {rentPageCss['ball']}/>
+        </div>
+      )
+    }
   }
 
   // checkAuthority(){
