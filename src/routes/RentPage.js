@@ -92,12 +92,13 @@ class RentPage extends React.Component{
 
   render(){
     if(this.state.hasCheck){
-      return(
-        <div className = {rentPageCss['container']}>
-          {this.renderAction()}
-        </div>
-      )
+
     }
+    return(
+      <div className = {rentPageCss['container']}>
+        {this.renderAction()}
+      </div>
+    )
   }
 
   closeWeb(){
