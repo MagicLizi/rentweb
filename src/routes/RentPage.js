@@ -91,6 +91,7 @@ class RentPage extends React.Component{
   }
 
   render(){
+    alert(this.state.hasCheck);
     if(this.state.hasCheck){
 
     }
