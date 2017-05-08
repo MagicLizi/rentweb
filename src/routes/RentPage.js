@@ -10,6 +10,9 @@ class RentPage extends React.Component{
 
   constructor() {
     super();
+    this.state = {
+      hasCheck : false
+    }
   }
 
   componentWillMount() {
@@ -28,6 +31,7 @@ class RentPage extends React.Component{
     setCurPath('/rent');
 
     this['props'].checkNeedBind(()=>{
+      this.setState({hasCheck:true});
       this['props'].getCurRentInfo(()=>{
         var curRentInfo = this['props'].curRentInfo;
         if(curRentInfo&&curRentInfo.orderId){
@@ -87,11 +91,13 @@ class RentPage extends React.Component{
   }
 
   render(){
-    return(
-      <div className = {rentPageCss['container']}>
-        {this.renderAction()}
-      </div>
-    )
+    if(this.state.hasCheck){
+      return(
+        <div className = {rentPageCss['container']}>
+          {this.renderAction()}
+        </div>
+      )
+    }
   }
 
   closeWeb(){

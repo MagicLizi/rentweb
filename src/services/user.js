@@ -7,7 +7,6 @@ export async function refreshUserInfo(){
   return await request('/user',{});
 }
 
-
 export async function getCurRentInfo(){
   return await request('/user/curRentInfo',{});
 }
@@ -32,7 +31,6 @@ export async function tryCancelAuthority(){
 export async function getOrders(){
   return await request('/user/orders',{});
 }
-
 
 export async function getVerifyCode(mobile){
   return await request(`/user/getVerifyCode?mobile=${mobile}`,{});
