@@ -4,7 +4,7 @@ export {urlDomain}
 var domain = 'http://rentapi.magiclizi.com';
 
 var urlDomain = `http://renttest.magiclizi.com`;
-urlDomain =`http://rent.magiclizi.com`;
+// urlDomain =`http://rent.magiclizi.com`;
 function parseJSON(response) {
   return response.json();
 }
