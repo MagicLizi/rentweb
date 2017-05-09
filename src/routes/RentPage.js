@@ -32,7 +32,7 @@ class RentPage extends React.Component{
     //检测是否绑定手机
     this['props'].checkNeedBind(need=>{
       if(need){
-        alert(urlDomain);
+        // alert(urlDomain);
         window.location = `${urlDomain}/bind`;
       }
       else{
