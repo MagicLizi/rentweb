@@ -26,6 +26,7 @@ class QRScanPage extends React.Component {
     var path = this.props.location.pathname;
     var search = this.props.location.search;
     var fullpath = `${urlDomain}${path}${search}`;
+    alert(fullpath);
     wxConfig(fullpath).then(result=>{
       // alert(JSON.stringify(result.config));
 
@@ -42,7 +43,6 @@ class QRScanPage extends React.Component {
       wx.error(function(res){
         alert(JSON.stringify(res));
         // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
-
       });
     })
   }

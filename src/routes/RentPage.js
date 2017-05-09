@@ -118,7 +118,9 @@ class RentPage extends React.Component{
 
   //{curRentInfo['chestLogicId']}_
   renderAction(){
-
+    return(
+      <View />
+    )
   }
 }
 
