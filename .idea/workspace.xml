@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="aca2e0a0-f881-452b-a440-c64dba87f5fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/AuthorityPage.js" afterPath="$PROJECT_DIR$/src/routes/AuthorityPage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/QRScanPage.js" afterPath="$PROJECT_DIR$/src/routes/QRScanPage.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -58,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserPage.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/UserPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="79" column="11" lean-forward="true" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="11" />
+            <state relative-caret-position="203">
+              <caret line="74" column="99" lean-forward="false" selection-start-line="74" selection-start-column="99" selection-end-line="74" selection-end-column="99" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
               </folding>
@@ -92,15 +94,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthorityPage.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AuthorityPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/AuthorityPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="89" column="47" lean-forward="false" selection-start-line="89" selection-start-column="47" selection-end-line="89" selection-end-column="47" />
+            <state relative-caret-position="184">
+              <caret line="34" column="42" lean-forward="false" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="42" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
-                <marker date="1494337785000" expanded="true" signature="1641:1725" ph="..." />
-                <marker date="1494337785000" expanded="true" signature="1884:2006" ph="..." />
+                <marker date="1494338653000" expanded="true" signature="1626:1710" ph="..." />
+                <marker date="1494338653000" expanded="true" signature="1869:1991" ph="..." />
               </folding>
             </state>
           </provider>
@@ -119,10 +121,11 @@
       <file leaf-file-name="QRScanPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/QRScanPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="14" />
+            <state relative-caret-position="325">
+              <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
+                <marker date="1494338565000" expanded="true" signature="978:1024" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -150,8 +153,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dealScanResult</find>
-      <find>ball.jpg</find>
       <find>btn.jpg</find>
       <find>btn</find>
       <find>showUserOrders</find>
@@ -180,6 +181,8 @@
       <find>http://rentapi.magiclizi.com/pay/payment</find>
       <find>/pay/payment</find>
       <find>alert</find>
+      <find>qrScan?direction</find>
+      <find>qrScan</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -213,12 +216,12 @@
         <option value="$PROJECT_DIR$/src/models/user.js" />
         <option value="$PROJECT_DIR$/src/routes/bindMobile.js" />
         <option value="$PROJECT_DIR$/src/utils/request.js" />
-        <option value="$PROJECT_DIR$/src/routes/QRScanPage.js" />
         <option value="$PROJECT_DIR$/src/routes/RentPage.css" />
-        <option value="$PROJECT_DIR$/src/routes/AuthorityPage.js" />
         <option value="$PROJECT_DIR$/src/routes/RentPage.js" />
         <option value="$PROJECT_DIR$/src/routes/RepayPage.js" />
         <option value="$PROJECT_DIR$/src/routes/UserPage.js" />
+        <option value="$PROJECT_DIR$/src/routes/QRScanPage.js" />
+        <option value="$PROJECT_DIR$/src/routes/AuthorityPage.js" />
       </list>
     </option>
   </component>
@@ -450,12 +453,12 @@
       <workItem from="1493898760182" duration="1423000" />
       <workItem from="1494226913050" duration="1619000" />
       <workItem from="1494302157960" duration="1090000" />
-      <workItem from="1494317575578" duration="9695000" />
+      <workItem from="1494317575578" duration="10190000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146088000" />
+    <option name="totallyTimeSpent" value="146583000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -754,7 +757,7 @@
         <state relative-caret-position="247">
           <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
           <folding>
-            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#0#22#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -801,16 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/QRScanPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="14" />
-          <folding>
-            <element signature="e#45#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/RentPage.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="37">
@@ -824,18 +817,6 @@
         <state relative-caret-position="154">
           <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/AuthorityPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="89" column="47" lean-forward="false" selection-start-line="89" selection-start-column="47" selection-end-line="89" selection-end-column="47" />
-          <folding>
-            <element signature="e#45#71#0" expanded="true" />
-            <marker date="1494337785000" expanded="true" signature="1641:1725" ph="..." />
-            <marker date="1494337785000" expanded="true" signature="1884:2006" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -862,10 +843,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/UserPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="79" column="11" lean-forward="true" selection-start-line="79" selection-start-column="11" selection-end-line="79" selection-end-column="11" />
+        <state relative-caret-position="203">
+          <caret line="74" column="99" lean-forward="false" selection-start-line="74" selection-start-column="99" selection-end-line="74" selection-end-column="99" />
           <folding>
             <element signature="e#45#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/QRScanPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+          <folding>
+            <element signature="e#45#71#0" expanded="true" />
+            <marker date="1494338565000" expanded="true" signature="978:1024" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/AuthorityPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="34" column="42" lean-forward="false" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="42" />
+          <folding>
+            <element signature="e#45#71#0" expanded="true" />
+            <marker date="1494338653000" expanded="true" signature="1626:1710" ph="..." />
+            <marker date="1494338653000" expanded="true" signature="1869:1991" ph="..." />
           </folding>
         </state>
       </provider>
