@@ -6,6 +6,7 @@ import {connect} from 'dva';
 import rentPageCss from './RentPage.css';
 import {payAuthority} from '../services/user';
 import {setCurPath} from '../models/path';
+import {urlDomain} from '../utils/request';
 class Authority extends React.Component {
 
   componentWillMount() {
@@ -31,7 +32,7 @@ class Authority extends React.Component {
         WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
           if(res['err_msg'] == "get_brand_wcpay_request:ok"){
             // alert("支付成功");
-            window.location = 'http://rent.magiclizi.com/qrScan?direction=true';
+            window.location = `${urlDomain}/qrScan?direction=true`;
           }
           else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
             // alert("支付取消");

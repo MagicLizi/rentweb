@@ -79,12 +79,10 @@ export default{
           hasAuthority:~~authority
         })
         if(authority === 1){
-          window.location = 'http://rent.magiclizi.com/qrScan'
+          action['callback']&&action['callback'](true);
         }
         else{
-          yield put(
-            routerRedux.push({pathname:'/authority'})
-          )
+          action['callback']&&action['callback'](false);
         }
       }
     },
@@ -119,12 +117,10 @@ export default{
       var result = yield call(checkNeedBind);
       if(result){
         if(result['need']){
-          yield put(
-            routerRedux.push({pathname:'/bind'})
-          )
+          action['callback']&&action['callback'](true);
         }
         else{
-          action['callback']&&action['callback']();
+          action['callback']&&action['callback'](false);
         }
       }
     }

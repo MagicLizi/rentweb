@@ -6,6 +6,7 @@ import {connect} from 'dva';
 import rentPageCss from './RentPage.css';
 import {dealQRResult,wxConfig} from '../services/action';
 import {setCurPath} from '../models/path';
+import {urlDomain} from '../utils/request';
 var wx = require('weixin-js-sdk');
 import Loading from '../components/Loading';
 class QRScanPage extends React.Component {
@@ -24,7 +25,7 @@ class QRScanPage extends React.Component {
     // alert(this.props.location.pathname);
     var path = this.props.location.pathname;
     var search = this.props.location.search;
-    var fullpath = `http://rent.magiclizi.com${path}${search}`;
+    var fullpath = `${urlDomain}${path}${search}`;
     wxConfig(fullpath).then(result=>{
       // alert(JSON.stringify(result.config));
 

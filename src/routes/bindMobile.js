@@ -6,6 +6,7 @@ import {connect} from 'dva';
 import {getVerifyCode,bind} from '../services/user';
 import UserInfoCSS from './userInfo.css';
 import {setCurPath} from '../models/path';
+import {urlDomain} from '../utils/request';
 class BindMobile extends React.Component{
 
   constructor(){
@@ -64,7 +65,7 @@ class BindMobile extends React.Component{
       if(result){
         // this.vtimer&&clearInterval(this.vtimer);
         alert('绑定成功');
-        window.location = 'http://rent.magiclizi.com/rent';
+        window.location = `${urlDomain}/rent`;
       }
     })
   }

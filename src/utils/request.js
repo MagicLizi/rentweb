@@ -1,8 +1,10 @@
 import fetch from 'dva/fetch';
-var domain = 'http://localhost:5002';
-domain = 'http://rentapi.magiclizi.com';
 import {curPath} from '../models/path';
-
+export {urlDomain}
+var domain = `http://localhost:5002`;
+// domain = 'http://rentapi.magiclizi.com';
+var urlDomain = `http://172.26.132.156:8000`;
+// urlDomain =`http://rent.magiclizi.com`;
 function parseJSON(response) {
   return response.json();
 }
@@ -26,6 +28,7 @@ function checkStatus(response) {
  */
 export default function request(url, options,without) {
   var lastUrl = domain + url;
+  console.log(lastUrl);
   if(without){
     lastUrl = url;
   }
