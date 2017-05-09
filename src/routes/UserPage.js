@@ -7,6 +7,7 @@ import userPageCss from './UserPage.css';
 import {setCurPath} from '../models/path';
 import {tryCancelAuthority} from '../services/user';
 import {repay,payrent} from '../services/action';
+import {urlDomain} from '../utils/request';
 class UserPage extends React.Component{
 
   constructor() {
@@ -66,7 +67,7 @@ class UserPage extends React.Component{
                 var userId = result['userId'];
                 var info = {
                   orderId : orderId,
-                  path : '/user',
+                  path : `${urlDomain}/user`,
                   userId:userId
                 }
                 var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;

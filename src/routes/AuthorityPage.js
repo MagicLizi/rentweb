@@ -84,7 +84,7 @@ class Authority extends React.Component {
         var userId = orderInfo['userId'];
         var info = {
           orderId : orderId,
-          path : '/authority',
+          path : `${urlDomain}/authority`,
           userId:userId
         }
         var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;

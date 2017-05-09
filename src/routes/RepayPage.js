@@ -8,6 +8,7 @@ import {repay,payrent} from '../services/action';
 import {setCurPath} from '../models/path';
 import Loading from '../components/Loading';
 import PLoading from '../components/PayLoading';
+import {urlDomain} from '../utils/request';
 class RepayPage extends React.Component {
 
   constructor() {
@@ -104,7 +105,7 @@ class RepayPage extends React.Component {
         var userId = result['userId'];
         var info = {
           orderId : orderId,
-          path : '/repay',
+          path : `${urlDomain}/repay`,
           userId:userId
         }
         var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;
