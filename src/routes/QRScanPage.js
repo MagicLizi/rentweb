@@ -26,7 +26,7 @@ class QRScanPage extends React.Component {
     var path = this.props.location.pathname;
     var search = this.props.location.search;
     var fullpath = `${urlDomain}${path}${search}`;
-    alert(fullpath);
+    // alert(fullpath);
     wxConfig(fullpath).then(result=>{
       // alert(JSON.stringify(result.config));
 
