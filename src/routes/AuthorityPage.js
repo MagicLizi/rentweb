@@ -60,10 +60,20 @@ class Authority extends React.Component {
       <div className = {rentPageCss['container']}>
         <div className = {rentPageCss['bg']}
              style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentAllDetail5.jpg!w640)'}}>
-          <div onClick={()=>{this.payAuthority()}} className = {rentPageCss['ball']}/>
+
+          <div onClick={()=>{this.goZhiMa()}} className = {rentPageCss['authBtn']}>
+            <span>芝麻</span>
+          </div>
+          <div onClick={()=>{this.payAuthority()}} className = {rentPageCss['authBtn']}>
+            <span>直接支付</span>
+          </div>
         </div>
       </div>
     )
+  }
+
+  goZhiMa(){
+    alert('芝麻');
   }
 
   payAuthority(){

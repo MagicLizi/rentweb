@@ -37,3 +37,8 @@
   background-size: cover;
   background-image: url(http://rentservice.b0.upaiyun.com/ball2.png);
 }
+
+.authBtn{
+  width:20vw;
+  height:10vw;
+}
