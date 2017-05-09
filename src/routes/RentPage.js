@@ -37,6 +37,7 @@ class RentPage extends React.Component{
       }
       else{
         this['props'].checkUserAuthority(authority=>{
+          alert(authority);
           if(authority){
             //检查是否有未支付
             this['props'].getCurRentInfo(()=> {
