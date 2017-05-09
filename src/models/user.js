@@ -1,7 +1,7 @@
 /**
  * Created by magiclizi on 2017/4/5.
  */
-import {refreshUserInfo,getCurRentInfo,checkAuthority,getOrders,checkNeedBind} from '../services/user';
+import {refreshUserInfo,getCurRentInfo,checkAuthority,getOrders,checkNeedBind,checkNeedRechargeable} from '../services/user';
 import { routerRedux } from 'dva/router';
 export default{
   namespace:'user',
@@ -123,6 +123,11 @@ export default{
           action['callback']&&action['callback'](false);
         }
       }
+    },
+
+    *checkNeedRechargeable(action,{call,put}){
+      var result = yield call(checkNeedRechargeable);
+      action['callback']&&action['callback'](result);
     }
   }
 }

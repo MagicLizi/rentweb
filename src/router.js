@@ -9,6 +9,7 @@ import OpenInRenting from './routes/OpenInRentingPage';
 import RepayPage from './routes/RepayPage';
 import HelpPage from './routes/HelperPage';
 import OrderPage from './routes/UserOrder';
+import Recharge from './routes/recharge';
 import BindMobile from './routes/bindMobile';
 function RouterConfig({ history }) {
   return (
@@ -23,6 +24,7 @@ function RouterConfig({ history }) {
       <Route path="/help" component={HelpPage} />
       <Route path="/orders" component={OrderPage} />
       <Route path="/bind" component={BindMobile} />
+      <Route path="/recharge" component={Recharge} />
     </Router>
   );
 }

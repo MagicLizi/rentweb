@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
-class IndexPage extends React.Component {
+class recharge extends React.Component {
   constructor(){
     super();
     this.state = {
@@ -15,14 +15,14 @@ class IndexPage extends React.Component {
   render(){
     return (
       <div>
-
+        充值
       </div>
     );
   }
 }
 
-IndexPage.propTypes = {
+recharge.propTypes = {
 
 };
 
-export default connect()(IndexPage);
+export default connect()(recharge);

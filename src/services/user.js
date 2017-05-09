@@ -49,3 +49,8 @@ export async function bind(mobile,verifyCode){
     })
   });
 }
+
+
+export async function checkNeedRechargeable(){
+  return await request(`/user/checkNeedRechargeable`,{});
+}

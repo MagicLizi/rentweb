@@ -32,7 +32,7 @@ class Authority extends React.Component {
         WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
           if(res['err_msg'] == "get_brand_wcpay_request:ok"){
             // alert("支付成功");
-            window.location = `${urlDomain}/qrScan`;
+            window.location = `${urlDomain}/qrScan?first=true`;
           }
           else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
             // alert("支付取消");

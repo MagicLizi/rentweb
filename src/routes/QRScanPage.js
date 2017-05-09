@@ -25,6 +25,7 @@ class QRScanPage extends React.Component {
     // alert(this.props.location.pathname);
     var path = this.props.location.pathname;
     var search = this.props.location.search;
+
     var fullpath = `${urlDomain}${path}${search}`;
     // alert(fullpath);
     wxConfig(fullpath).then(result=>{
@@ -33,9 +34,9 @@ class QRScanPage extends React.Component {
       wx.config(result.config);
 
       wx.ready(function(){
-        // if(search.length>0){
-        //   self.openQRScan();
-        // }
+        if(this.props.location.query.direction){
+          self.openQRScan();
+        }
         // alert('ready');
         // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
       });
@@ -60,21 +61,32 @@ class QRScanPage extends React.Component {
   }
 
   openQRScan(){
-    var self = this;
-    wx.scanQRCode({
-      needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
-      scanType: ["qrCode"], // 可以指定扫二维码还是一维码，默认二者都有
-      success: function (res) {
-        if(res.resultStr){
-          dealQRResult(res.resultStr).then(result=>{
-            if(result){
-              self.setState({boxInfo:result.boxInfo});
-              self.setState({showloading:true});
-            }
-          })
-        }
-      }
-    });
+    //检查是否需要充值
+    if(this.props.location.query.first){
+
+      //第一次需要跳转充值页面
+      window.location = `${urlDomain}/recharge`;
+    }
+    else{
+      this.props.checkNeedRechargeable(r=>{
+
+      })
+    }
+    // var self = this;
+    // wx.scanQRCode({
+    //   needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+    //   scanType: ["qrCode"], // 可以指定扫二维码还是一维码，默认二者都有
+    //   success: function (res) {
+    //     if(res.resultStr){
+    //       dealQRResult(res.resultStr).then(result=>{
+    //         if(result){
+    //           self.setState({boxInfo:result.boxInfo});
+    //           self.setState({showloading:true});
+    //         }
+    //       })
+    //     }
+    //   }
+    // });
   }
 
   renderAction(){
@@ -109,4 +121,12 @@ class QRScanPage extends React.Component {
   }
 }
 
-export default connect()(QRScanPage);
+var mapDispatchToProps = function(dispatch){
+  return{
+    checkNeedRechargeable:(callback)=>{
+      dispatch({type:'user/checkNeedRechargeable',callback:callback})
+    }
+  }
+}
+
+export default connect(null,mapDispatchToProps)(QRScanPage);
