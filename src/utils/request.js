@@ -47,7 +47,7 @@ export default function request(url, options,without) {
       }
       else{
         if(data.code === 9999){
-          var uri = `http://rentapi.magiclizi.com/user/wxlogin?path=${curPath}`;
+          var uri = `http://rentapi.magiclizi.com/user/wxlogin?path=${urlDomain + curPath}`;
           var redirect_uri = encodeURI(uri);
           var appId = 'wx4188036aadb09af1';
           var newUri = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appId}&redirect_uri=${redirect_uri}&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect`
