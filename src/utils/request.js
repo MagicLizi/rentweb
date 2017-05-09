@@ -1,9 +1,9 @@
 import fetch from 'dva/fetch';
 import {curPath} from '../models/path';
 export {urlDomain}
-var domain = `http://localhost:5002`;
-domain = 'http://rentapi.magiclizi.com';
-var urlDomain = `http://172.26.132.156:8000`;
+var domain = 'http://rentapi.magiclizi.com';
+
+var urlDomain = `http://renttest.magiclizi.com`;
 urlDomain =`http://rent.magiclizi.com`;
 function parseJSON(response) {
   return response.json();
