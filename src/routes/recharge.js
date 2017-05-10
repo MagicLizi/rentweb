@@ -28,10 +28,10 @@ class recharge extends React.Component {
     this.props.checkNeedRechargeable(r=> {
       if (r['need']) {
         if(r['balance']>0){
-          alert(`当前余额为:${r['balance']}`);
+          alert(`当前余额为:${(r['balance']/100).toFixed(2)}元`);
         }
         else if(r['balance'] <= 0){
-          alert(`当前余额为:${r['balance']}，需要充值后才能正常使用！`);
+          alert(`当前余额为:${(r['balance']/100).toFixed(2)}元，需要充值后才能正常使用！`);
         }
       }
     })
