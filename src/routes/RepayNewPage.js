@@ -67,7 +67,7 @@ class RepayNewPage extends React.Component {
   renderCloseLoading(){
     if(this.state.showCloseloading){
       return(
-        <TitleLoading title = '查询柜门状态中，请稍后，如果柜门没有关闭请立即关闭！'/>
+        <TitleLoading title = '结算中请稍后，如果柜门没有关闭请立即关闭，否则可能导致无法结算！'/>
       )
     }
   }
@@ -84,9 +84,13 @@ class RepayNewPage extends React.Component {
     this.setState({showCloseloading:true});
     this.beginGetState(state=>{
       if(state === 0){
-        alert('门已经关闭');
-        this.timer&&clearInterval(this.timer);
-        this.setState({showCloseloading:false});
+        payRecharge().then(r=>{
+          if(r){
+            alert('结算成功');
+            this.timer&&clearInterval(this.timer);
+            this.setState({showCloseloading:false});
+          }
+        })
       }
     })
     // var chestLogicId = this.props.curRentInfo.chestLogicId;
