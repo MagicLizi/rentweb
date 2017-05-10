@@ -77,7 +77,7 @@ class recharge extends React.Component {
         orderId : orderId,
         path : path,
         userId:userId,
-        showQR:true
+        showQR:self.props.location.query['showQR']
       }
       var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;
       var redirect_uri = encodeURI(uri);
