@@ -31,6 +31,7 @@ class RepayNewPage extends React.Component {
   }
 
   beginGetState(){
+    alert(JSON.stringify(this.props.curRentInfo));
     var chestLogicId = this.props.curRentInfo.chestLogicId;
     var boxId = this.props.curRentInfo.boxId;
     this.timer&&clearInterval(this.timer);
