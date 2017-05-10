@@ -52,6 +52,9 @@ class recharge extends React.Component {
             if(self.props.location.query['showQR']){
               window.location = `${urlDomain}/qrScan?direction=true`;
             }
+            else{
+              window.location = `${urlDomain}/user`;
+            }
           }
           else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
 
