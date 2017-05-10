@@ -18,7 +18,8 @@ export async function checkAuthority(){
 
 export async function payAuthority(){
   return await request('/user/payAuthority',{
-    method:'POST'
+    method:'POST',
+    v2:true
   });
 }
 
