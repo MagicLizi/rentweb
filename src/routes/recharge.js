@@ -51,7 +51,6 @@ class recharge extends React.Component {
   recharge(rechargeId){
     // alert(rechargeId);
     this.props.createRechargeOrder(rechargeId,r=>{
-      alert(JSON.stringify(r));
       var orderId = r['orderId'];
       var userId = r['userId'];
       var info = {
