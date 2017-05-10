@@ -22,7 +22,7 @@ class RepayNewPage extends React.Component {
         //开门
         openInRenting().then(result=>{
           if(result){
-            alert('开门成功，开始轮询状态');
+            alert(JSON.stringify(this.props.curRentInfo));
           }
         })
       }
