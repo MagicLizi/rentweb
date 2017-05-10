@@ -67,4 +67,4 @@ recharge.propTypes = {
 
 };
 
-export default connect()(recharge);
+export default connect(null,mapDispatchToProps)(recharge);
