@@ -87,8 +87,8 @@ class RepayNewPage extends React.Component {
       }
       else{
 
-        var duration = this.state.orderInfo?(this.state.orderInfo.duration/100).toFixed(2):0;
-        var orderPrice = this.state.orderInfo?(this.state.orderInfo['orderPrice']).toFixed(2):0;
+        var duration = this.state.orderInfo?(this.state.orderInfo.duration).toFixed(2):0;
+        var orderPrice = this.state.orderInfo?(this.state.orderInfo['orderPrice']/100).toFixed(2):0;
 
         return(
           <div className = {rentPageCss['bg']}
