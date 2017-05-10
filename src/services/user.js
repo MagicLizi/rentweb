@@ -77,3 +77,7 @@ export async function getBoxOpenState(chestLogicId,boxId){
 export async function getRentFee(){
   return await request(`/user/getRentFee`,{});
 }
+
+export async function payRecharge(){
+  return await request(`/user/payRecharge`,{});
+}

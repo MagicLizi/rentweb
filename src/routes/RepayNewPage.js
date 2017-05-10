@@ -3,7 +3,7 @@ import { connect } from 'dva';
 import rentPageCss from './RentPage.css';
 import {setCurPath} from '../models/path';
 import {openInRenting} from '../services/action';
-import {getBoxOpenState,getRentFee} from '../services/user';
+import {getBoxOpenState,getRentFee,payRecharge} from '../services/user';
 import TitleLoading from '../components/TitleLoading';
 class RepayNewPage extends React.Component {
   constructor(){
@@ -72,9 +72,13 @@ class RepayNewPage extends React.Component {
 
   goPay(){
     //扣除余额
-
-    this.setState({openBox:true});
-    this.open();
+    payRecharge().then(result=>{
+      if(result){
+        alert('请等待开门，并将球放入后关闭柜门！');
+        this.setState({openBox:true});
+        this.open();
+      }
+    })
   }
 
   renderAction(){
