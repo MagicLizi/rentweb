@@ -28,7 +28,6 @@ class recharge extends React.Component {
 
   onBridgeReady(){
     var payobj = this.props.location.query['payobj'];
-    var self = this;
     if(payobj){
       if(payobj&&payobj.length>0){
         var obj = JSON.parse(payobj);
