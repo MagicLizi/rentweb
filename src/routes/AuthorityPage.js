@@ -4,7 +4,7 @@
 import React from 'react';
 import {connect} from 'dva';
 import rentPageCss from './RentPage.css';
-import {payAuthority} from '../services/user';
+import {payAuthority,queryZhima} from '../services/user';
 import {setCurPath} from '../models/path';
 import {urlDomain} from '../utils/request';
 class Authority extends React.Component {
@@ -73,7 +73,9 @@ class Authority extends React.Component {
   }
 
   goZhiMa(){
-    alert('芝麻');
+    queryZhima().then(r=>{
+
+    })
   }
 
   payAuthority(){

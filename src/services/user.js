@@ -81,3 +81,8 @@ export async function getRentFee(){
 export async function payRecharge(){
   return await request(`/user/payRecharge`,{});
 }
+
+
+export async function queryZhima(){
+  return await request(`/user/queryZhima`,{});
+}
