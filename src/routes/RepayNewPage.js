@@ -3,7 +3,7 @@ import { connect } from 'dva';
 import rentPageCss from './RentPage.css';
 import {setCurPath} from '../models/path';
 import {openInRenting} from '../services/action';
-import {getBoxOpenState} from '../services/user';
+import {getBoxOpenState,getRentFee} from '../services/user';
 import TitleLoading from '../components/TitleLoading';
 class RepayNewPage extends React.Component {
   constructor(){
@@ -20,7 +20,10 @@ class RepayNewPage extends React.Component {
 
     this.props.getCurRentInfo(()=>{
       if(this.props.curRentInfo){
-        //打开租赁中的箱子
+        //查询租赁信息
+        getRentFee().then(result=>{
+
+        })
       }
     });
   }
