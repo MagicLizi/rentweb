@@ -28,14 +28,15 @@ class recharge extends React.Component {
 
   onBridgeReady(){
     var payobj = this.props.location.query['payobj'];
+    var self = this;
     if(payobj){
       if(payobj&&payobj.length>0){
         var obj = JSON.parse(payobj);
         WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
           if(res['err_msg'] == "get_brand_wcpay_request:ok"){
             alert("支付成功");
-            alert(JSON.stringify(this.props.location.query));
-            if(this.props.location.query['showQR']){
+            alert(JSON.stringify(self.props.location.query));
+            if(self.props.location.query['showQR']){
               window.location = `${urlDomain}/qrScan?direction=true`;
             }
           }
