@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
+import Style from './recharge.css';
 class recharge extends React.Component {
   constructor(){
     super();
@@ -14,7 +15,7 @@ class recharge extends React.Component {
 
   render(){
     return (
-      <div>
+      <div style = {Style.container}>
         充值
       </div>
     );
