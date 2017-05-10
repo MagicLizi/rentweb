@@ -8,7 +8,7 @@
 
 .selectContainer{
   width:100vw;
-  height:40vh;
+  height:44vh;
   margin-top:22vh;
   display: flex;
   flex-direction: column;
@@ -16,14 +16,14 @@
 
 .selectRow{
   width:100vw;
-  height:20vh;
+  height:22vh;
   display: flex;
   flex-direction: row;
 }
 
 .selection{
   width:50vw;
-  height:20vh;
+  height:22vh;
   /*background-color: red;*/
   display: flex;
   align-items: center;
@@ -31,8 +31,8 @@
 }
 
 .btn{
-  width: 30vw;
-  height: 30vw;
+  width: 32vw;
+  height: 32vw;
   background-size: cover;
 }
 
