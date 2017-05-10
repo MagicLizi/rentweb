@@ -15,7 +15,10 @@ class recharge extends React.Component {
   }
 
   recharge(rechargeId){
-    alert(rechargeId);
+    // alert(rechargeId);
+    this.props.createRechargeOrder(rechargeId,r=>{
+      alert(JSON.stringify(r));
+    })
   }
 
   render(){
