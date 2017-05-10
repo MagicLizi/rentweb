@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'dva';
 import rentPageCss from './RentPage.css';
 import {setCurPath} from '../models/path';
+import {openInRenting} from '../services/action';
 import TitleLoading from '../components/TitleLoading';
 class RepayNewPage extends React.Component {
   constructor(){
@@ -17,7 +18,13 @@ class RepayNewPage extends React.Component {
     this.props.getCurRentInfo(()=>{
       if(this.props.curRentInfo){
         //打开租赁中的箱子
-        this.setState({showloading:true})
+        this.setState({showloading:true});
+        //开门
+        openInRenting().then(result=>{
+          if(result){
+            alert('开门成功，开始轮询状态');
+          }
+        })
       }
     });
   }
