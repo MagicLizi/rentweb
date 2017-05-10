@@ -22,7 +22,7 @@ class RepayNewPage extends React.Component {
       if(this.props.curRentInfo){
         //查询租赁信息
         getRentFee().then(result=>{
-
+          this.setState({orderInfo:result});
         })
       }
     });
