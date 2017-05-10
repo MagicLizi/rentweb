@@ -34,7 +34,7 @@ class QRScanPage extends React.Component {
       wx.config(result.config);
 
       wx.ready(function(){
-        if(this.props.location.query.direction){
+        if(self.props.location.query.direction){
           self.openQRScan();
         }
         // alert('ready');
