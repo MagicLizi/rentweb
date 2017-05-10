@@ -84,11 +84,12 @@ class RepayNewPage extends React.Component {
     this.setState({showCloseloading:true});
     this.beginGetState(state=>{
       if(state === 0){
+        this.timer&&clearInterval(this.timer);
         payRecharge().then(r=>{
           if(r){
             alert('结算成功');
-            this.timer&&clearInterval(this.timer);
             this.setState({showCloseloading:false});
+            this.closeWeb();
           }
         })
       }
