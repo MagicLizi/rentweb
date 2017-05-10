@@ -36,7 +36,7 @@ class RepayNewPage extends React.Component {
           if(state === 1){
             this.timer&&clearInterval(this.timer);
             this.setState({showloading:false});
-            alert('开门完成，请于放入篮球后关闭，如果柜门没有打开，请联系客服！');
+            alert('开门完成，请于放入篮球后关闭,并点击结算，如果柜门没有打开，请联系客服！');
           }
         });
       }
