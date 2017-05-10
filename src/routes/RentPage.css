@@ -40,7 +40,7 @@
 
 .authBtn{
   width:50vw;
-  height:10vh;
+  height:30vh;
 }
 
 .authBtn:active{
@@ -49,9 +49,9 @@
 
 .authBtnContainer{
   width:100vw;
-  height:10vh;
+  height:30vh;
   background-color: rgba(0,0,0,0);
-  margin-bottom: 13.5vh;
+  /*margin-bottom: 13.5vh;*/
   display: flex;
 
 }
