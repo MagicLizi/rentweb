@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aca2e0a0-f881-452b-a440-c64dba87f5fa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/QRScanPage.js" afterPath="$PROJECT_DIR$/src/routes/QRScanPage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/recharge.js" afterPath="$PROJECT_DIR$/src/routes/recharge.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -72,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QRScanPage.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QRScanPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/QRScanPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="107">
               <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
@@ -87,7 +88,7 @@
       <file leaf-file-name="AuthorityPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/AuthorityPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
+            <state relative-caret-position="175">
               <caret line="34" column="50" lean-forward="false" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="50" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
@@ -109,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recharge.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="recharge.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/recharge.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="38" column="62" lean-forward="false" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="62" />
+            <state relative-caret-position="247">
+              <caret line="37" column="61" lean-forward="false" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -223,8 +224,8 @@
         <option value="$PROJECT_DIR$/src/services/user.js" />
         <option value="$PROJECT_DIR$/src/routes/RentPage.js" />
         <option value="$PROJECT_DIR$/src/routes/AuthorityPage.js" />
-        <option value="$PROJECT_DIR$/src/routes/recharge.js" />
         <option value="$PROJECT_DIR$/src/routes/QRScanPage.js" />
+        <option value="$PROJECT_DIR$/src/routes/recharge.js" />
       </list>
     </option>
   </component>
@@ -474,12 +475,12 @@
       <workItem from="1493898760182" duration="1423000" />
       <workItem from="1494226913050" duration="1619000" />
       <workItem from="1494302157960" duration="1090000" />
-      <workItem from="1494317575578" duration="18896000" />
+      <workItem from="1494317575578" duration="19497000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155289000" />
+    <option name="totallyTimeSpent" value="155890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -836,16 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/RepayPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="e#45#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/UserPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1691">
@@ -867,9 +858,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/QRScanPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+          <folding>
+            <element signature="e#45#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/AuthorityPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
+        <state relative-caret-position="175">
           <caret line="34" column="50" lean-forward="false" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="50" />
           <folding>
             <element signature="e#45#71#0" expanded="true" />
@@ -878,22 +879,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/recharge.js">
+    <entry file="file://$PROJECT_DIR$/src/routes/RepayPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="38" column="62" lean-forward="false" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="62" />
+        <state relative-caret-position="336">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#45#71#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/QRScanPage.js">
+    <entry file="file://$PROJECT_DIR$/src/routes/recharge.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+        <state relative-caret-position="247">
+          <caret line="37" column="61" lean-forward="false" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
           <folding>
-            <element signature="e#45#71#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

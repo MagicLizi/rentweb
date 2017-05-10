@@ -35,6 +35,7 @@ class recharge extends React.Component {
         WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
           if(res['err_msg'] == "get_brand_wcpay_request:ok"){
             alert("支付成功");
+            alert(JSON.stringify(self.props.location.query));
             if(self.props.location.query['showQR']){
               window.location = `${urlDomain}/qrScan?direction=true`;
             }
@@ -56,13 +57,11 @@ class recharge extends React.Component {
       var orderId = r['orderId'];
       var userId = r['userId'];
       var path = `${urlDomain}/recharge`;
-      if(this.props.location.query['showQR']){
-        path = `${path}?showQR=true`;
-      }
       var info = {
         orderId : orderId,
         path : path,
-        userId:userId
+        userId:userId,
+        showQR:true
       }
       var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;
       var redirect_uri = encodeURI(uri);
