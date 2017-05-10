@@ -111,6 +111,12 @@ class RepayNewPage extends React.Component {
     }
   }
 
+  closeWeb(){
+    WeixinJSBridge.invoke('closeWindow',{},function(res){
+
+    });
+  }
+
   componentWillUnMount() {
     this.timer&&clearInterval(this.timer);
   }
