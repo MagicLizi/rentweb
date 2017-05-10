@@ -57,22 +57,22 @@ class UserPage extends React.Component{
 
   cancelAuthority(){
     tryCancelAuthority().then(result=>{
-      if(result){
-        if(result['rentInfo']){
+      if(result) {
+        if (result['rentInfo']) {
           var c = confirm('您有正在进行的订单，请先完成订单后才能退取押金！');
-          if(c){
-            payRecharge().then(r=>{
-              if(r){
+          if (c) {
+            payRecharge().then(r => {
+              if (r) {
                 alert('结算成功');
               }
             })
           }
         }
-        else{
-          if(result['nobalance']){
+        else {
+          if(result['nobalance']) {
             var c = confirm('欠费中，请先充值后才能退取押金！');
-            if(c){
-              window.location = `${urlDomain}/recharge`};
+            if (c) {
+              window.location = `${urlDomain}/recharge`;
             }
           }
           else{
