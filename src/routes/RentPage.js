@@ -5,14 +5,14 @@ import React from 'react';
 import {connect} from 'dva';
 import rentPageCss from './RentPage.css';
 import {setCurPath} from '../models/path';
-import {payrent} from '../services/action';
+import {getRentFee} from '../services/user';
 import {urlDomain} from '../utils/request';
 class RentPage extends React.Component{
 
   constructor() {
     super();
     this.state = {
-
+      orderInfo:null
     }
   }
 
@@ -41,29 +41,10 @@ class RentPage extends React.Component{
             //检查是否有未支付
             this['props'].getCurRentInfo(()=> {
               var curRentInfo = this['props'].curRentInfo;
-              if (curRentInfo && curRentInfo.orderId) {
-                var payobj = this.props.location.query['payobj'];
-                if(!payobj){
-                  var c = confirm('您有未支付的订单，请先支付！');
-                  if(c){
-                    var userId = curRentInfo.userId;
-                    var orderId = curRentInfo.orderId;
-                    payrent().then(result=>{
-                      if(result){
-                        var info = {
-                          orderId : orderId,
-                          path : `${urlDomain}/rent`,
-                          userId:userId
-                        }
-                        var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;
-                        var redirect_uri = encodeURI(uri);
-                        var newUri = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4188036aadb09af1&redirect_uri='
-                          + uri + '&response_type=code&scope=snsapi_base#wechat_redirect';
-                        window.location = newUri;
-                      }
-                    })
-                  }
-                }
+              if (curRentInfo) {
+                getRentFee().then(result=>{
+                  this.setState({orderInfo:result});
+                })
               }
               else {
                 window.location = `${urlDomain}/qrScan`;
@@ -117,9 +98,23 @@ class RentPage extends React.Component{
 
   //{curRentInfo['chestLogicId']}_
   renderAction(){
-    return(
-      <View />
-    )
+    if(this.state.orderInfo){
+      var duration = this.state.orderInfo?this.state.orderInfo.duration:0;
+      var orderPrice = this.state.orderInfo?(this.state.orderInfo['orderPrice']/100).toFixed(2):0;
+
+      return(
+        <div className = {rentPageCss['bg']}
+             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg!w640)'}}>
+          <span style = {{fontSize:25,color:'white'}}>
+            您本次租用时长：{duration} 分钟
+          </span>
+          <span style = {{fontSize:25,color:'white',marginBottom:'24vh'}}>
+            费用共计：{orderPrice}元
+          </span>
+          <div onClick={()=>{this.goPay()}} className = {rentPageCss['ball']}/>
+        </div>
+      )
+    }
   }
 }
 
