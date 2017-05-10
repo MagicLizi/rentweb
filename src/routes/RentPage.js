@@ -111,7 +111,7 @@ class RentPage extends React.Component{
           <span style = {{fontSize:25,color:'white',marginBottom:'24vh'}}>
             费用共计：{orderPrice}元
           </span>
-          <div onClick={()=>{this.goPay()}} className = {rentPageCss['ball']}/>
+          <div onClick={()=>{this.closeWeb()}} className = {rentPageCss['ball']}/>
         </div>
       )
     }
