@@ -21,15 +21,18 @@ class RepayNewPage extends React.Component {
     this.props.getCurRentInfo(()=>{
       if(this.props.curRentInfo){
         //打开租赁中的箱子
-        // this.setState({showloading:true});
-        // //开门
-        // openInRenting().then(result=>{
-        //   if(result){
-        //     this.beginGetState();
-        //   }
-        // })
       }
     });
+  }
+
+  open(){
+    this.setState({showloading:true});
+    //开门
+    openInRenting().then(result=>{
+      if(result){
+        this.beginGetState();
+      }
+    })
   }
 
   beginGetState(){
@@ -92,7 +95,7 @@ class RepayNewPage extends React.Component {
             <span style = {{fontSize:25,color:'white',marginBottom:'24vh'}}>
             费用共计：{orderPrice}元
           </span>
-            <div onClick={()=>{this.setState({openBox:true})}} className = {rentPageCss['ball']}/>
+            <div onClick={()=>{this.setState({openBox:true});this.open();}} className = {rentPageCss['ball']}/>
           </div>
         )
       }
