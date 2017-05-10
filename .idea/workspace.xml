@@ -4,6 +4,8 @@
     <list default="true" id="aca2e0a0-f881-452b-a440-c64dba87f5fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/AuthorityPage.js" afterPath="$PROJECT_DIR$/src/routes/AuthorityPage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/RentPage.css" afterPath="$PROJECT_DIR$/src/routes/RentPage.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/recharge.css" afterPath="$PROJECT_DIR$/src/routes/recharge.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -70,27 +72,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthorityPage.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AuthorityPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/AuthorityPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="52" column="26" lean-forward="false" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
+            <state relative-caret-position="380">
+              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
-                <marker date="1494414605000" expanded="true" signature="1727:1811" ph="..." />
+                <marker date="1494420627000" expanded="true" signature="1727:1802" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recharge.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/recharge.js">
+      <file leaf-file-name="recharge.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/routes/recharge.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="55" column="31" lean-forward="false" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="322">
+              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RentPage.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/routes/RentPage.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="46" column="13" lean-forward="false" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -101,18 +111,6 @@
             <state relative-caret-position="291">
               <caret line="85" column="32" lean-forward="false" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="32" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QRScanPage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/QRScanPage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="72" column="9" lean-forward="true" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
-              <folding>
-                <element signature="e#45#71#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -208,11 +206,9 @@
         <option value="$PROJECT_DIR$/src/components/Loading.js" />
         <option value="$PROJECT_DIR$/src/routes/userInfo.css" />
         <option value="$PROJECT_DIR$/src/routes/bindMobile.js" />
-        <option value="$PROJECT_DIR$/src/routes/RentPage.css" />
         <option value="$PROJECT_DIR$/src/routes/RepayPage.js" />
         <option value="$PROJECT_DIR$/src/routes/IndexPage.js" />
         <option value="$PROJECT_DIR$/src/utils/request.js" />
-        <option value="$PROJECT_DIR$/src/routes/recharge.css" />
         <option value="$PROJECT_DIR$/src/models/user.js" />
         <option value="$PROJECT_DIR$/src/routes/QRScanPage.js" />
         <option value="$PROJECT_DIR$/src/router.js" />
@@ -222,7 +218,9 @@
         <option value="$PROJECT_DIR$/src/routes/recharge.js" />
         <option value="$PROJECT_DIR$/src/routes/UserPage.js" />
         <option value="$PROJECT_DIR$/src/services/user.js" />
+        <option value="$PROJECT_DIR$/src/routes/recharge.css" />
         <option value="$PROJECT_DIR$/src/routes/AuthorityPage.js" />
+        <option value="$PROJECT_DIR$/src/routes/RentPage.css" />
       </list>
     </option>
   </component>
@@ -472,12 +470,12 @@
       <workItem from="1493898760182" duration="1423000" />
       <workItem from="1494226913050" duration="1619000" />
       <workItem from="1494302157960" duration="1090000" />
-      <workItem from="1494317575578" duration="37313000" />
+      <workItem from="1494317575578" duration="38196000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173706000" />
+    <option name="totallyTimeSpent" value="174589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -704,26 +702,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/RentPage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="30" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/userInfo.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
           <caret line="216" column="1" lean-forward="false" selection-start-line="216" selection-start-column="1" selection-end-line="216" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/recharge.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -881,12 +863,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/AuthorityPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="52" column="26" lean-forward="false" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
+        <state relative-caret-position="380">
+          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding>
             <element signature="e#45#71#0" expanded="true" />
-            <marker date="1494414605000" expanded="true" signature="1727:1811" ph="..." />
+            <marker date="1494420627000" expanded="true" signature="1727:1802" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/recharge.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/RentPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="46" column="13" lean-forward="false" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -39,6 +39,20 @@
 }
 
 .authBtn{
-  width:20vw;
-  height:10vw;
+  width:50vw;
+  height:10vh;
 }
+
+.authBtn:active{
+ opacity: 0.6;
+}
+
+.authBtnContainer{
+  width:100vw;
+  height:10vh;
+  background-color: rgba(0,0,0,0);
+  margin-bottom: 13.5vh;
+  display: flex;
+
+}
+
