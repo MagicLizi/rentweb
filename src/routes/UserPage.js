@@ -61,22 +61,7 @@ class UserPage extends React.Component{
         if(result['rentInfo']){
           var c = confirm('您有未支付的订单，请先支付！');
           if(c){
-            payrent().then(result=>{
-              if(result){
-                var orderId = result['orderId'];
-                var userId = result['userId'];
-                var info = {
-                  orderId : orderId,
-                  path : `${urlDomain}/user`,
-                  userId:userId
-                }
-                var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;
-                var redirect_uri = encodeURI(uri);
-                var newUri = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4188036aadb09af1&redirect_uri='
-                  + uri + '&response_type=code&scope=snsapi_base#wechat_redirect';
-                window.location = newUri;
-              }
-            })
+              alert(JSON.stringify(result['rentInfo']));
           }
         }
         else{
