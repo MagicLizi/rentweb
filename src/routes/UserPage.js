@@ -5,7 +5,7 @@ import React from 'react';
 import {connect} from 'dva';
 import userPageCss from './UserPage.css';
 import {setCurPath} from '../models/path';
-import {tryCancelAuthority} from '../services/user';
+import {tryCancelAuthority,payRecharge} from '../services/user';
 import {repay,payrent} from '../services/action';
 import {urlDomain} from '../utils/request';
 class UserPage extends React.Component{
@@ -61,7 +61,11 @@ class UserPage extends React.Component{
         if(result['rentInfo']){
           var c = confirm('您有正在进行的订单，请先完成订单后才能退取押金！');
           if(c){
-              alert(JSON.stringify(result['rentInfo']));
+            payRecharge().then(r=>{
+              if(r){
+                alert('结算成功');
+              }
+            })
           }
         }
         else{
