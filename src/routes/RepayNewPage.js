@@ -2,26 +2,38 @@ import React from 'react';
 import { connect } from 'dva';
 import rentPageCss from './RentPage.css';
 import {setCurPath} from '../models/path';
+import TitleLoading from '../components/TitleLoading';
 class RepayNewPage extends React.Component {
   constructor(){
     super();
     this.state = {
-
+      showloading:false
     }
   }
 
   componentWillMount() {
     setCurPath('/repayNewPage');
 
-    this.props.getCurRentInfo();
+    this.props.getCurRentInfo(()=>{
+      if(this.props.curRentInfo){
+        //打开租赁中的箱子
+      }
+    });
   }
 
   render(){
     return (
       <div className = {rentPageCss['container']}>
         {this.renderAction()}
+        {this.renderLoading()}
       </div>
     );
+  }
+
+  renderLoading(){
+    return(
+      <TitleLoading title = '开门中，请稍后。。。'/>
+    )
   }
 
   goPay(){
