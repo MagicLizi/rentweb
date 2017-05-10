@@ -39,7 +39,7 @@ class Authority extends React.Component {
             this.props.cancelPay();
           }
           else{
-            alert("支付失败:"+res);
+            alert("支付失败:"+JSON.stringify(res));
             this.props.cancelPay();
           }
         });
