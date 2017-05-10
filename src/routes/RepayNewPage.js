@@ -9,7 +9,9 @@ class RepayNewPage extends React.Component {
   constructor(){
     super();
     this.state = {
-      showloading:false
+      showloading:false,
+      openBox:false,
+      orderInfo:null
     }
   }
 
@@ -19,13 +21,13 @@ class RepayNewPage extends React.Component {
     this.props.getCurRentInfo(()=>{
       if(this.props.curRentInfo){
         //打开租赁中的箱子
-        this.setState({showloading:true});
-        //开门
-        openInRenting().then(result=>{
-          if(result){
-            this.beginGetState();
-          }
-        })
+        // this.setState({showloading:true});
+        // //开门
+        // openInRenting().then(result=>{
+        //   if(result){
+        //     this.beginGetState();
+        //   }
+        // })
       }
     });
   }
@@ -40,7 +42,7 @@ class RepayNewPage extends React.Component {
         if(result['openState'] === 1){
           this.timer&&clearInterval(this.timer);
           this.setState({showloading:false});
-          alert('开门完成，如果柜门没有打开，请联系客服！并于放入篮球后关闭！');
+          alert('开门完成，请于放入篮球后关闭，如果柜门没有打开，请联系客服！');
         }
       })
     },3000);
@@ -69,12 +71,25 @@ class RepayNewPage extends React.Component {
 
   renderAction(){
     if(this.props.curRentInfo){
-      return(
+      if(this.state.openBox){
+        return(
+          <div className = {rentPageCss['bg']}
+               style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repaynew1.jpg!w640)'}}>
+          </div>
+        )
+      }
+      else{
         <div className = {rentPageCss['bg']}
-             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repaynew1.jpg!w640)'}}>
-          <div onClick={()=>{this.goPay()}} className = {rentPageCss['ball1']}/>
+             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg!w640)'}}>
+          <span style = {{fontSize:25,color:'white'}}>
+            您本次租用时长：{this.state.orderInfo.duration} 分钟
+          </span>
+          <span style = {{fontSize:25,color:'white',marginBottom:'24vh'}}>
+            费用共计：{(this.state.orderInfo['orderPrice']/100).toFixed(2)}元
+          </span>
+          <div onClick={()=>{this.setState({openBox:true})}} className = {rentPageCss['ball']}/>
         </div>
-      )
+      }
     }
     else{
       return(
