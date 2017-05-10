@@ -4,6 +4,7 @@
     <list default="true" id="aca2e0a0-f881-452b-a440-c64dba87f5fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/RepayNewPage.js" afterPath="$PROJECT_DIR$/src/routes/RepayNewPage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/user.js" afterPath="$PROJECT_DIR$/src/services/user.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,8 +40,8 @@
       <file leaf-file-name="RepayNewPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/RepayNewPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="24" column="55" lean-forward="false" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+            <state relative-caret-position="342">
+              <caret line="40" column="36" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="36" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -61,8 +62,8 @@
       <file leaf-file-name="Loading.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Loading.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="27" column="35" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="196">
+              <caret line="34" column="11" lean-forward="true" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -73,16 +74,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="177">
               <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -108,6 +99,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="67" column="37" lean-forward="false" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="UserPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/UserPage.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -120,14 +121,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QRScanPage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/QRScanPage.js">
+      <file leaf-file-name="action.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/action.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-653">
-              <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-              <folding>
-                <element signature="e#45#71#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="684">
+              <caret line="38" column="22" lean-forward="false" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -210,13 +209,13 @@
         <option value="$PROJECT_DIR$/src/utils/request.js" />
         <option value="$PROJECT_DIR$/src/routes/recharge.css" />
         <option value="$PROJECT_DIR$/src/models/user.js" />
-        <option value="$PROJECT_DIR$/src/services/user.js" />
         <option value="$PROJECT_DIR$/src/routes/RentPage.js" />
         <option value="$PROJECT_DIR$/src/routes/AuthorityPage.js" />
         <option value="$PROJECT_DIR$/src/routes/QRScanPage.js" />
         <option value="$PROJECT_DIR$/src/routes/recharge.js" />
         <option value="$PROJECT_DIR$/src/router.js" />
         <option value="$PROJECT_DIR$/src/components/TitleLoading.js" />
+        <option value="$PROJECT_DIR$/src/services/user.js" />
         <option value="$PROJECT_DIR$/src/routes/RepayNewPage.js" />
       </list>
     </option>
@@ -485,12 +484,12 @@
       <workItem from="1493898760182" duration="1423000" />
       <workItem from="1494226913050" duration="1619000" />
       <workItem from="1494302157960" duration="1090000" />
-      <workItem from="1494317575578" duration="22133000" />
+      <workItem from="1494317575578" duration="22571000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158526000" />
+    <option name="totallyTimeSpent" value="158964000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -759,14 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="48" column="6" lean-forward="true" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/request.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -774,14 +765,6 @@
           <folding>
             <element signature="e#0#30#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="38" column="22" lean-forward="false" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -871,14 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Loading.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="27" column="35" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/TitleLoading.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
@@ -895,10 +870,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="38" column="22" lean-forward="false" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="67" column="37" lean-forward="false" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Loading.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="34" column="11" lean-forward="true" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/RepayNewPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="24" column="55" lean-forward="false" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+        <state relative-caret-position="342">
+          <caret line="40" column="36" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="36" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

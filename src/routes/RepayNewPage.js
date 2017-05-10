@@ -3,6 +3,7 @@ import { connect } from 'dva';
 import rentPageCss from './RentPage.css';
 import {setCurPath} from '../models/path';
 import {openInRenting} from '../services/action';
+import {getBoxOpenState} from '../services/user';
 import TitleLoading from '../components/TitleLoading';
 class RepayNewPage extends React.Component {
   constructor(){
@@ -22,11 +23,26 @@ class RepayNewPage extends React.Component {
         //开门
         openInRenting().then(result=>{
           if(result){
-            alert(JSON.stringify(this.props.curRentInfo));
+            this.beginGetState();
           }
         })
       }
     });
+  }
+
+  beginGetState(){
+    var chestLogicId = this.props.curRentInfo.chestLogicId;
+    var boxId = this.props.curRentInfo.boxId;
+    this.timer&&clearInterval(this.timer);
+    this.timer = setInterval(()=>{
+      getBoxOpenState(chestLogicId,boxId).then(result=>{
+        if(result['openState'] === 1){
+          this.timer&&clearInterval(this.timer);
+          this.setState({showloading:false});
+          alert('开门完成，如果柜门没有打开，请联系客服！并于放入篮球后关闭！');
+        }
+      })
+    },3000);
   }
 
   render(){
@@ -67,6 +83,10 @@ class RepayNewPage extends React.Component {
         </div>
       )
     }
+  }
+
+  componentWillUnMount() {
+    this.timer&&clearInterval(this.timer);
   }
 }
 
