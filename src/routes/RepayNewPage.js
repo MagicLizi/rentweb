@@ -10,6 +10,7 @@ class RepayNewPage extends React.Component {
     super();
     this.state = {
       showloading:false,
+      showCloseloading:false,
       openBox:true,
       orderInfo:null
     }
@@ -31,22 +32,24 @@ class RepayNewPage extends React.Component {
     //开门
     openInRenting().then(result=>{
       if(result){
-        this.beginGetState();
+        this.beginGetState(state=>{
+          if(state === 1){
+            this.timer&&clearInterval(this.timer);
+            this.setState({showloading:false});
+            alert('开门完成，请于放入篮球后关闭，如果柜门没有打开，请联系客服！');
+          }
+        });
       }
     })
   }
 
-  beginGetState(){
+  beginGetState(callback){
     var chestLogicId = this.props.curRentInfo.chestLogicId;
     var boxId = this.props.curRentInfo.boxId;
     this.timer&&clearInterval(this.timer);
     this.timer = setInterval(()=>{
       getBoxOpenState(chestLogicId,boxId).then(result=>{
-        if(result['openState'] === 1){
-          this.timer&&clearInterval(this.timer);
-          this.setState({showloading:false});
-          alert('开门完成，请于放入篮球后关闭，如果柜门没有打开，请联系客服！');
-        }
+        callback(result['openState']);
       })
     },3000);
   }
@@ -56,8 +59,17 @@ class RepayNewPage extends React.Component {
       <div className = {rentPageCss['container']}>
         {this.renderAction()}
         {this.renderLoading()}
+        {this.renderCloseLoading()}
       </div>
     );
+  }
+
+  renderCloseLoading(){
+    if(this.state.showCloseloading){
+      return(
+        <TitleLoading title = '查询柜门状态中，请稍后，如果柜门没有关闭请立即关闭！'/>
+      )
+    }
   }
 
   renderLoading(){
@@ -69,12 +81,29 @@ class RepayNewPage extends React.Component {
   }
 
   goPay(){
-    //扣除余额
-    payRecharge().then(result=>{
-      if(result){
-
+    this.setState({showCloseloading:true});
+    this.beginGetState(state=>{
+      if(state === 0){
+        alert('门已经关闭');
+        this.timer&&clearInterval(this.timer);
+        this.setState({showCloseloading:false});
       }
     })
+    // var chestLogicId = this.props.curRentInfo.chestLogicId;
+    // var boxId = this.props.curRentInfo.boxId;
+    // getBoxOpenState(chestLogicId,boxId).then(result=>{
+    //   if(result['openState'] === 1){
+    //     alert('关上门以后才能结算哦！');
+    //   }
+    //   else{
+    //
+    //   }
+    // })
+    // payRecharge().then(result=>{
+    //   if(result){
+    //
+    //   }
+    // })
   }
 
   renderAction(){
