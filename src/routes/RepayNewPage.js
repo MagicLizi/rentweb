@@ -17,6 +17,7 @@ class RepayNewPage extends React.Component {
     this.props.getCurRentInfo(()=>{
       if(this.props.curRentInfo){
         //打开租赁中的箱子
+        this.setState({showloading:true})
       }
     });
   }
@@ -31,9 +32,11 @@ class RepayNewPage extends React.Component {
   }
 
   renderLoading(){
-    return(
-      <TitleLoading title = '开门中，请稍后。。。'/>
-    )
+    if(this.state.showloading){
+      return(
+        <TitleLoading title = '开门中，请稍后。。。'/>
+      )
+    }
   }
 
   goPay(){
