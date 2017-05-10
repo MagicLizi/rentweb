@@ -48,7 +48,10 @@ class Authority extends React.Component {
   }
 
   componentDidMount() {
-
+    var go = this.props.location.query['go'];
+    if(go){
+      this.payAuthority();
+    }
   }
 
   constructor() {
