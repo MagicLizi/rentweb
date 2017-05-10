@@ -41,7 +41,6 @@ class RepayNewPage extends React.Component {
   beginGetState(){
     var chestLogicId = this.props.curRentInfo.chestLogicId;
     var boxId = this.props.curRentInfo.boxId;
-    // alert(chestLogicId + '_' +boxId);
     this.timer&&clearInterval(this.timer);
     this.timer = setInterval(()=>{
       getBoxOpenState(chestLogicId,boxId).then(result=>{
@@ -72,7 +71,10 @@ class RepayNewPage extends React.Component {
   }
 
   goPay(){
+    //扣除余额
 
+    this.setState({openBox:true});
+    this.open();
   }
 
   renderAction(){
@@ -87,7 +89,7 @@ class RepayNewPage extends React.Component {
       }
       else{
 
-        var duration = this.state.orderInfo?(this.state.orderInfo.duration).toFixed(2):0;
+        var duration = this.state.orderInfo?this.state.orderInfo.duration:0;
         var orderPrice = this.state.orderInfo?(this.state.orderInfo['orderPrice']/100).toFixed(2):0;
 
         return(
@@ -99,7 +101,7 @@ class RepayNewPage extends React.Component {
             <span style = {{fontSize:25,color:'white',marginBottom:'24vh'}}>
             费用共计：{orderPrice}元
           </span>
-            <div onClick={()=>{this.setState({openBox:true});this.open();}} className = {rentPageCss['ball']}/>
+            <div onClick={()=>{this.goPay()}} className = {rentPageCss['ball']}/>
           </div>
         )
       }
