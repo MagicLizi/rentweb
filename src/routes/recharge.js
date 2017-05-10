@@ -28,13 +28,16 @@ class recharge extends React.Component {
 
   onBridgeReady(){
     var payobj = this.props.location.query['payobj'];
+    var self = this;
     if(payobj){
       if(payobj&&payobj.length>0){
         var obj = JSON.parse(payobj);
         WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
           if(res['err_msg'] == "get_brand_wcpay_request:ok"){
             alert("支付成功");
-            window.location = `${urlDomain}/qrScan?direction=true`;
+            if(self.props.location.query['showQR']){
+              window.location = `${urlDomain}/qrScan?direction=true`;
+            }
           }
           else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
 
@@ -52,9 +55,13 @@ class recharge extends React.Component {
     this.props.createRechargeOrder(rechargeId,r=>{
       var orderId = r['orderId'];
       var userId = r['userId'];
+      var path = `${urlDomain}/recharge`;
+      if(this.props.location.query['showQR']){
+        path = `${path}?showQR=true`;
+      }
       var info = {
         orderId : orderId,
-        path : `${urlDomain}/recharge`,
+        path : path,
         userId:userId
       }
       var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;
