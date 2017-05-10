@@ -25,24 +25,24 @@ class recharge extends React.Component {
           <div className={Style['selectRow']}>
             <div className={Style['selection']}>
               <div className={Style['btn']}
-                   onClick={this.recharge(1)}
+                   onClick={()=>{this.recharge(1)}}
                    style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/recharge2.png)',marginLeft:'5vw'}}/>
             </div>
             <div className={Style['selection']}>
               <div className={Style['btn']}
-                   onClick={this.recharge(2)}
+                   onClick={()=>{this.recharge(2)}}
                    style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/recharge5.png)',marginRight:'5vw'}}/>
             </div>
           </div>
           <div className={Style['selectRow']}>
             <div className={Style['selection']}>
               <div className={Style['btn']}
-                   onClick={this.recharge(3)}
+                   onClick={()=>{this.recharge(3)}}
                    style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/recharge10.png)',marginLeft:'5vw'}}/>
             </div>
             <div className={Style['selection']}>
               <div className={Style['btn']}
-                   onClick={this.recharge(4)}
+                   onClick={()=>{this.recharge(4)}}
                    style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/recharge20.png)',marginRight:'5vw'}}/>
             </div>
           </div>
