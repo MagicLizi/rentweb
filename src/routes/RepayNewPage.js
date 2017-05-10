@@ -10,7 +10,7 @@ class RepayNewPage extends React.Component {
     super();
     this.state = {
       showloading:false,
-      openBox:false,
+      openBox:true,
       orderInfo:null
     }
   }
@@ -20,10 +20,8 @@ class RepayNewPage extends React.Component {
 
     this.props.getCurRentInfo(()=>{
       if(this.props.curRentInfo){
-        //查询租赁信息
-        getRentFee().then(result=>{
-          this.setState({orderInfo:result});
-        })
+        //开门
+        this.open();
       }
     });
   }
@@ -74,9 +72,7 @@ class RepayNewPage extends React.Component {
     //扣除余额
     payRecharge().then(result=>{
       if(result){
-        alert('请等待开门，并将球放入后关闭柜门！');
-        this.setState({openBox:true});
-        this.open();
+
       }
     })
   }
@@ -87,7 +83,11 @@ class RepayNewPage extends React.Component {
         return(
           <div className = {rentPageCss['bg']}
                style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repaynew1.jpg!w640)'}}>
-            <div onClick={()=>{this.closeWeb()}} className = {rentPageCss['ball']}/>
+            <div onClick={()=>{
+              getRentFee().then(result=>{
+                 this.setState({orderInfo:result,openBox:false});
+              })
+            }} className = {rentPageCss['ball1']}/>
           </div>
         )
       }

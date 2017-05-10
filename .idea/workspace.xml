@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="aca2e0a0-f881-452b-a440-c64dba87f5fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/RentPage.js" afterPath="$PROJECT_DIR$/src/routes/RentPage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/RepayNewPage.js" afterPath="$PROJECT_DIR$/src/routes/RepayNewPage.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,7 +27,7 @@
       <file leaf-file-name="RepayPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/RepayPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
+            <state relative-caret-position="373">
               <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="164" selection-end-column="3" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
@@ -36,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RepayNewPage.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RepayNewPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/RepayNewPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="74" column="11" lean-forward="false" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+            <state relative-caret-position="221">
+              <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -48,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RentPage.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RentPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/RentPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="113" column="44" lean-forward="false" selection-start-line="113" selection-start-column="44" selection-end-line="113" selection-end-column="44" />
+            <state relative-caret-position="950">
+              <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
                 <marker date="1494401026000" expanded="true" signature="2211:2254" ph="..." />
@@ -171,9 +171,9 @@
       <find>direction</find>
       <find>recharge</find>
       <find>openQRScan</find>
-      <find>closeWeb</find>
       <find>alert</find>
       <find>goPay</find>
+      <find>closeWeb</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -215,8 +215,8 @@
         <option value="$PROJECT_DIR$/src/router.js" />
         <option value="$PROJECT_DIR$/src/components/TitleLoading.js" />
         <option value="$PROJECT_DIR$/src/services/user.js" />
-        <option value="$PROJECT_DIR$/src/routes/RepayNewPage.js" />
         <option value="$PROJECT_DIR$/src/routes/RentPage.js" />
+        <option value="$PROJECT_DIR$/src/routes/RepayNewPage.js" />
       </list>
     </option>
   </component>
@@ -484,12 +484,12 @@
       <workItem from="1493898760182" duration="1423000" />
       <workItem from="1494226913050" duration="1619000" />
       <workItem from="1494302157960" duration="1090000" />
-      <workItem from="1494317575578" duration="27842000" />
+      <workItem from="1494317575578" duration="28088000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164235000" />
+    <option name="totallyTimeSpent" value="164481000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -855,16 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/RepayPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="164" selection-end-column="3" />
-          <folding>
-            <element signature="e#45#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/services/action.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-203">
@@ -881,23 +871,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/RepayNewPage.js">
+    <entry file="file://$PROJECT_DIR$/src/routes/RentPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="74" column="11" lean-forward="false" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+        <state relative-caret-position="950">
+          <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#45#71#0" expanded="true" />
+            <marker date="1494401026000" expanded="true" signature="2211:2254" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/RentPage.js">
+    <entry file="file://$PROJECT_DIR$/src/routes/RepayPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="113" column="44" lean-forward="false" selection-start-line="113" selection-start-column="44" selection-end-line="113" selection-end-column="44" />
+        <state relative-caret-position="373">
+          <caret line="160" column="0" lean-forward="false" selection-start-line="160" selection-start-column="0" selection-end-line="164" selection-end-column="3" />
           <folding>
             <element signature="e#45#71#0" expanded="true" />
-            <marker date="1494401026000" expanded="true" signature="2211:2254" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/RepayNewPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
