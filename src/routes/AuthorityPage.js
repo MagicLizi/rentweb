@@ -74,7 +74,8 @@ class Authority extends React.Component {
 
   goZhiMa(){
     queryZhima().then(r=>{
-
+      var url = r['url'];
+      window.location = url;
     })
   }
 
