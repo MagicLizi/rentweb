@@ -54,3 +54,13 @@ export async function bind(mobile,verifyCode){
 export async function checkNeedRechargeable(){
   return await request(`/user/checkNeedRechargeable`,{});
 }
+
+
+export async function createRechargeOrder(rechargeId){
+  return await request('/user/createRechargeOrder',{
+    method:'POST',
+    body:JSON.stringify({
+      rechargeId:rechargeId
+    })
+  })
+}

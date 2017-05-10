@@ -52,6 +52,14 @@ class recharge extends React.Component {
   }
 }
 
+var mapDispatchToProps = function(dispatch){
+  return{
+    createRechargeOrder:(rechargeId,callback)=>{
+      dispatch({type:'user/createRechargeOrder',callback:callback,rechargeId:rechargeId})
+    },
+  }
+}
+
 recharge.propTypes = {
 
 };
