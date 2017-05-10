@@ -1,46 +1,28 @@
-/**
- * Created by magiclizi on 2016/12/24.
- */
 import React from 'react';
-
-import ReactNative from 'react-native';
-
-var {View, StyleSheet} = ReactNative;
-
-var {Component} = React;
-
-export default class RepayNewPage extends Component {
-
-    static propTypes = {};
-
-    static defaultProps = {};
-
-    constructor(props) {
-        super(props);
-
-        this['state'] = {}
-    }
-
-    componentWillMount() {
+import { connect } from 'dva';
+class RepayNewPage extends React.Component {
+  constructor(){
+    super();
+    this.state = {
 
     }
+  }
 
-    render() {
-        return (
-            <View>
-              还球
-            </View>
-        )
-    }
+  componentWillMount() {
 
+  }
 
-    componentDidMount() {
-
-    }
-
-    componentWillUnmount() {
-
-    }
+  render(){
+    return (
+      <div>
+        还球
+      </div>
+    );
+  }
 }
 
-const styles = StyleSheet.create({});
+RepayNewPage.propTypes = {
+
+};
+
+export default connect()(RepayNewPage);
