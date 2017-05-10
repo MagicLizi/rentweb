@@ -115,6 +115,14 @@ class UserPage extends React.Component{
             </div>
           </div>
 
+          <div onClick={()=>{window.location = `${urlDomain}/recharge`}} className = {userPageCss['cell']} style = {{marginTop:'5vh'}}>
+            <span style = {{fontSize:15,color:'#2b2c2d',width:'46.5vw',marginLeft:'3.5vw'}}>余额充值</span>
+            <div style = {{width:'50vw',height:'8vh',display:'flex',
+              alignItems:'center',justifyContent:'flex-end'}}>
+              <img src = {require('../assets/right.png')} style = {{width:'1.05vh',height:'2vh',marginRight:'3.5vw'}}/>
+            </div>
+          </div>
+
           <div onClick={()=>{this.cancelAuthority()}} className = {userPageCss['cell']} style = {{marginTop:'5vh'}}>
             <span style = {{fontSize:15,color:'#2b2c2d',width:'46.5vw',marginLeft:'3.5vw'}}>我的押金
               <span style = {{fontSize:15,color:'red'}}>{hasAuthority===0?'「未支付」':' 「点击退还」'}</span>
