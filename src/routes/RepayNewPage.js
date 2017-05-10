@@ -79,14 +79,18 @@ class RepayNewPage extends React.Component {
         )
       }
       else{
+
+        var duration = this.state.orderInfo?this.state.orderInfo.duration:0;
+        var orderPrice = this.state.orderInfo?(this.state.orderInfo['orderPrice']/100).toFixed(2):0;
+
         return(
           <div className = {rentPageCss['bg']}
                style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg!w640)'}}>
           <span style = {{fontSize:25,color:'white'}}>
-            您本次租用时长：{this.state.orderInfo.duration} 分钟
+            您本次租用时长：{duration} 分钟
           </span>
             <span style = {{fontSize:25,color:'white',marginBottom:'24vh'}}>
-            费用共计：{(this.state.orderInfo['orderPrice']/100).toFixed(2)}元
+            费用共计：{orderPrice}元
           </span>
             <div onClick={()=>{this.setState({openBox:true})}} className = {rentPageCss['ball']}/>
           </div>
