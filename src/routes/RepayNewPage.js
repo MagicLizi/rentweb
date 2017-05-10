@@ -78,6 +78,7 @@ class RepayNewPage extends React.Component {
         return(
           <div className = {rentPageCss['bg']}
                style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repaynew1.jpg!w640)'}}>
+            <div onClick={()=>{this.closeWeb()}} className = {rentPageCss['ball']}/>
           </div>
         )
       }
