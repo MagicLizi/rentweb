@@ -66,5 +66,10 @@ export async function createRechargeOrder(rechargeId){
 }
 
 export async function getBoxOpenState(chestLogicId,boxId){
-  return await request('/user/rentBoxOpenState',{chestLogicId:chestLogicId,boxId:boxId});
+  return await request('/user/rentBoxOpenState',{
+    method:'POST',
+    body:JSON.stringify({
+      chestLogicId:chestLogicId,boxId:boxId
+    })
+  });
 }
