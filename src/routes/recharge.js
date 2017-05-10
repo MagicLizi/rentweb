@@ -12,7 +12,40 @@ class recharge extends React.Component {
   }
 
   componentWillMount() {
+    if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+
+    }
+    else {
+      if (document.addEventListener) {
+        document.addEventListener("WeixinJSBridgeReady", ()=>{this.onBridgeReady()}, false);
+      } else if (document.attachEvent) {
+        document.attachEvent("WeixinJSBridgeReady", ()=>{this.onBridgeReady()});
+      }
+    }
+
     setCurPath('/recharge');
+  }
+
+  onBridgeReady(){
+    var payobj = this.props.location.query['payobj'];
+    if(payobj){
+      if(payobj&&payobj.length>0){
+        var obj = JSON.parse(payobj);
+        WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
+          if(res['err_msg'] == "get_brand_wcpay_request:ok"){
+
+            alert("支付成功");
+            this.closeWeb();
+          }
+          else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
+
+          }
+          else{
+            alert("支付失败:"+res);
+          }
+        });
+      }
+    }
   }
 
   recharge(rechargeId){

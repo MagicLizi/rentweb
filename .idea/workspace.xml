@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aca2e0a0-f881-452b-a440-c64dba87f5fa" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/RentPage.js" afterPath="$PROJECT_DIR$/src/routes/RentPage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/recharge.js" afterPath="$PROJECT_DIR$/src/routes/recharge.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -29,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/src/routes/RepayPage.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
-              <caret line="114" column="33" lean-forward="true" selection-start-line="103" selection-start-column="7" selection-end-line="114" selection-end-column="33" />
+              <caret line="33" column="5" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
               </folding>
@@ -52,8 +50,8 @@
       <file leaf-file-name="RentPage.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/RentPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="61" column="49" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="61" selection-end-column="49" />
+            <state relative-caret-position="361">
+              <caret line="100" column="3" lean-forward="true" selection-start-line="80" selection-start-column="2" selection-end-line="100" selection-end-column="3" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
                 <marker date="1494385278000" expanded="true" signature="3181:3224" ph="..." />
@@ -99,8 +97,8 @@
       <file leaf-file-name="recharge.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/recharge.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+            <state relative-caret-position="424">
+              <caret line="48" column="3" lean-forward="false" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -471,12 +469,12 @@
       <workItem from="1493898760182" duration="1423000" />
       <workItem from="1494226913050" duration="1619000" />
       <workItem from="1494302157960" duration="1090000" />
-      <workItem from="1494317575578" duration="16280000" />
+      <workItem from="1494317575578" duration="16386000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152673000" />
+    <option name="totallyTimeSpent" value="152779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -847,16 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/RepayPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="114" column="33" lean-forward="true" selection-start-line="103" selection-start-column="7" selection-end-line="114" selection-end-column="33" />
-          <folding>
-            <element signature="e#45#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/request.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -875,10 +863,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/RepayPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="e#45#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/RentPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="61" column="49" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="61" selection-end-column="49" />
+        <state relative-caret-position="361">
+          <caret line="100" column="3" lean-forward="true" selection-start-line="80" selection-start-column="2" selection-end-line="100" selection-end-column="3" />
           <folding>
             <element signature="e#45#71#0" expanded="true" />
             <marker date="1494385278000" expanded="true" signature="3181:3224" ph="..." />
@@ -888,8 +886,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/recharge.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="25" column="37" lean-forward="false" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+        <state relative-caret-position="424">
+          <caret line="48" column="3" lean-forward="false" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
