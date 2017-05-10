@@ -69,24 +69,28 @@ class QRScanPage extends React.Component {
     }
     else{
       this.props.checkNeedRechargeable(r=>{
-
+        if(r['need']){
+          window.location = `${urlDomain}/recharge`;
+        }
+        else{
+          var self = this;
+          wx.scanQRCode({
+            needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+            scanType: ["qrCode"], // 可以指定扫二维码还是一维码，默认二者都有
+            success: function (res) {
+              if(res.resultStr){
+                dealQRResult(res.resultStr).then(result=>{
+                  if(result){
+                    self.setState({boxInfo:result.boxInfo});
+                    self.setState({showloading:true});
+                  }
+                })
+              }
+            }
+          });
+        }
       })
     }
-    // var self = this;
-    // wx.scanQRCode({
-    //   needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
-    //   scanType: ["qrCode"], // 可以指定扫二维码还是一维码，默认二者都有
-    //   success: function (res) {
-    //     if(res.resultStr){
-    //       dealQRResult(res.resultStr).then(result=>{
-    //         if(result){
-    //           self.setState({boxInfo:result.boxInfo});
-    //           self.setState({showloading:true});
-    //         }
-    //       })
-    //     }
-    //   }
-    // });
   }
 
   renderAction(){
