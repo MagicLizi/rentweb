@@ -33,9 +33,10 @@ class recharge extends React.Component {
         var obj = JSON.parse(payobj);
         WeixinJSBridge.invoke('getBrandWCPayRequest', obj, res=>{
           if(res['err_msg'] == "get_brand_wcpay_request:ok"){
-
             alert("支付成功");
-            this.closeWeb();
+            if(this.props.location.query['showQR']){
+              window.location = `${urlDomain}/qrScan?direction=true`;
+            }
           }
           else if(res['err_msg'] == "get_brand_wcpay_request:cancel"){
 

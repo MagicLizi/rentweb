@@ -63,14 +63,13 @@ class QRScanPage extends React.Component {
   openQRScan(){
     //检查是否需要充值
     if(this.props.location.query.first){
-
       //第一次需要跳转充值页面
-      window.location = `${urlDomain}/recharge`;
+      window.location = `${urlDomain}/recharge?showQR=true`;
     }
     else{
       this.props.checkNeedRechargeable(r=>{
         if(r['need']){
-          window.location = `${urlDomain}/recharge`;
+          window.location = `${urlDomain}/recharge?showQR=true`;
         }
         else{
           var self = this;
