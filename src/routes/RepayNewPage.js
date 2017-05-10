@@ -38,7 +38,7 @@ class RepayNewPage extends React.Component {
   beginGetState(){
     var chestLogicId = this.props.curRentInfo.chestLogicId;
     var boxId = this.props.curRentInfo.boxId;
-    alert(chestLogicId + '_' +boxId);
+    // alert(chestLogicId + '_' +boxId);
     this.timer&&clearInterval(this.timer);
     this.timer = setInterval(()=>{
       getBoxOpenState(chestLogicId,boxId).then(result=>{
