@@ -69,7 +69,15 @@ class UserPage extends React.Component{
           }
         }
         else{
-          alert('退还押金申请成功，押金将会在1个工作日内返还到您的支付账户中！');
+          if(result['nobalance']){
+            var c = confirm('欠费中，请先充值后才能退取押金！');
+            if(c){
+              window.location = `${urlDomain}/recharge`};
+            }
+          }
+          else{
+            alert('退还押金申请成功，押金将会在1个工作日内返还到您的支付账户中！');
+          }
         }
       }
     })
