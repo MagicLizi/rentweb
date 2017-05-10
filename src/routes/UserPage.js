@@ -59,7 +59,7 @@ class UserPage extends React.Component{
     tryCancelAuthority().then(result=>{
       if(result){
         if(result['rentInfo']){
-          var c = confirm('您有未支付的订单，请先支付！');
+          var c = confirm('您有正在进行的订单，请先完成订单后才能退取押金！');
           if(c){
               alert(JSON.stringify(result['rentInfo']));
           }
