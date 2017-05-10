@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'dva';
 import Style from './recharge.css';
 import {setCurPath} from '../models/path';
+import {urlDomain} from '../utils/request';
 class recharge extends React.Component {
   constructor(){
     super();
@@ -18,6 +19,18 @@ class recharge extends React.Component {
     // alert(rechargeId);
     this.props.createRechargeOrder(rechargeId,r=>{
       alert(JSON.stringify(r));
+      var orderId = r['orderId'];
+      var userId = r['userId'];
+      var info = {
+        orderId : orderId,
+        path : `${urlDomain}/recharge`,
+        userId:userId
+      }
+      var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;
+      var redirect_uri = encodeURI(uri);
+      var newUri = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4188036aadb09af1&redirect_uri='
+        + uri + '&response_type=code&scope=snsapi_base#wechat_redirect';
+      window.location = newUri;
     })
   }
 

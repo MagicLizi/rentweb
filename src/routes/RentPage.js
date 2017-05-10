@@ -52,7 +52,7 @@ class RentPage extends React.Component{
                       if(result){
                         var info = {
                           orderId : orderId,
-                          path : `${ur}/rent`,
+                          path : `${urlDomain}/rent`,
                           userId:userId
                         }
                         var uri = `http://rentapi.magiclizi.com/pay/payment?info=${JSON.stringify(info)}`;
