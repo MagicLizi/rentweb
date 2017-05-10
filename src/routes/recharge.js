@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'dva';
 import Style from './recharge.css';
+import {setCurPath} from '../models/path';
 class recharge extends React.Component {
   constructor(){
     super();
@@ -10,7 +11,7 @@ class recharge extends React.Component {
   }
 
   componentWillMount() {
-
+    setCurPath('/recharge');
   }
 
   recharge(rechargeId){
