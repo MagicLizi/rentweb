@@ -64,6 +64,7 @@ class UserPage extends React.Component{
             payRecharge().then(r => {
               if (r) {
                 alert('结算成功');
+                this.props.refreshUserInfo();
               }
             })
           }
