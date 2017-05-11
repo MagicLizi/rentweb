@@ -34,7 +34,7 @@ class RepayNewPage extends React.Component {
     tryRepay().then(result=>{
       if(result['lock']){
         setTimeout(()=>{
-          alert('该订单已经点击过还球，请联系客服进行结算！');
+          alert('该订单已经点击过还球但是没有完成结算，请联系客服进行结算！');
         },300);
       }
       else{
@@ -112,7 +112,7 @@ class RepayNewPage extends React.Component {
                 })
               }
               else{
-                alert('该订单已经点击过还球，请联系客服进行结算！');
+                alert('该订单已经点击过还球但是没有完成结算，请联系客服进行结算！');
               }
             }} className = {rentPageCss['ball1']}/>
           </div>
