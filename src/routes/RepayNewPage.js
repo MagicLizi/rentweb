@@ -33,7 +33,9 @@ class RepayNewPage extends React.Component {
     //开门并且标记状态
     tryRepay().then(result=>{
       if(result['lock']){
-        alert('该订单已经点击过还球，请联系客服进行结算！');
+        setTimeout(()=>{
+          alert('该订单已经点击过还球，请联系客服进行结算！');
+        },300);
       }
       else{
         this.setState({showloading:true});
