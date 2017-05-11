@@ -3,6 +3,7 @@ import { connect } from 'dva';
 import rentPageCss from './RentPage.css';
 import {setCurPath} from '../models/path';
 import {openInRenting} from '../services/action';
+import Loading from '../components/Loading';
 import {getBoxOpenState,getRentFee,payRecharge} from '../services/user';
 import TitleLoading from '../components/TitleLoading';
 class RepayNewPage extends React.Component {
@@ -29,17 +30,17 @@ class RepayNewPage extends React.Component {
 
   open(){
     this.setState({showloading:true});
-    //开门
+   // 开门
     openInRenting().then(result=>{
-      if(result){
-        this.beginGetState(state=>{
-          if(state === 1){
-            this.timer&&clearInterval(this.timer);
-            this.setState({showloading:false});
-            alert('开门完成，请于放入篮球后关闭,并点击结算，如果柜门没有打开，请联系客服！');
-          }
-        });
-      }
+      // if(result){
+      //   this.beginGetState(state=>{
+      //     if(state === 1){
+      //       this.timer&&clearInterval(this.timer);
+      //       this.setState({showloading:false});
+      //       alert('开门完成，请于放入篮球后关闭,并点击结算，如果柜门没有打开，请联系客服！');
+      //     }
+      //   });
+      // }
     })
   }
 
@@ -75,7 +76,10 @@ class RepayNewPage extends React.Component {
   renderLoading(){
     if(this.state.showloading){
       return(
-        <TitleLoading title = '开门中，请稍后。。。'/>
+        <Loading duration = {10} cancelAlert = {true} closeLoading = {()=>{
+          alert('开门完成，请于放入篮球后关闭,并点击结算，如果柜门没有打开，请联系客服！');
+          this.setState({showloading:false});
+        }}/>
       )
     }
   }
