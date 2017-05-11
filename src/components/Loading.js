@@ -25,7 +25,7 @@ class Loading extends React.Component {
         this.setState({total:cur});
       }
       else{
-        if(this['props']['cancelAlert']){
+        if(!this['props']['cancelAlert']){
           alert('开门完成，如果柜门没有打开，请联系客服！');
         }
         this.timer&&clearInterval(this.timer);
