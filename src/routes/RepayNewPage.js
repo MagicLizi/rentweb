@@ -111,6 +111,9 @@ class RepayNewPage extends React.Component {
                   this.setState({orderInfo:result,openBox:false});
                 })
               }
+              else{
+                alert('该订单已经点击过还球，请联系客服进行结算！');
+              }
             }} className = {rentPageCss['ball1']}/>
           </div>
         )
