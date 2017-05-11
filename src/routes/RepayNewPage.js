@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'dva';
 import rentPageCss from './RentPage.css';
 import {setCurPath} from '../models/path';
-import {openInRenting} from '../services/action';
+// import {openInRenting} from '../services/action';
 import Loading from '../components/Loading';
-import {getBoxOpenState,getRentFee,payRecharge} from '../services/user';
+import {getBoxOpenState,getRentFee,payRecharge,tryRepay} from '../services/user';
 import TitleLoading from '../components/TitleLoading';
 class RepayNewPage extends React.Component {
   constructor(){
@@ -13,7 +13,8 @@ class RepayNewPage extends React.Component {
       showloading:false,
       showCloseloading:false,
       openBox:true,
-      orderInfo:null
+      orderInfo:null,
+      pressLock:true
     }
   }
 
@@ -29,18 +30,14 @@ class RepayNewPage extends React.Component {
   }
 
   open(){
-    this.setState({showloading:true});
-   // 开门
-    openInRenting().then(result=>{
-      // if(result){
-      //   this.beginGetState(state=>{
-      //     if(state === 1){
-      //       this.timer&&clearInterval(this.timer);
-      //       this.setState({showloading:false});
-      //       alert('开门完成，请于放入篮球后关闭,并点击结算，如果柜门没有打开，请联系客服！');
-      //     }
-      //   });
-      // }
+    //开门并且标记状态
+    tryRepay().then(result=>{
+      if(result['lock']){
+        alert('该订单已经点击过还球，请联系客服进行结算！');
+      }
+      else{
+        this.setState({showloading:true});
+      }
     })
   }
 
@@ -78,7 +75,7 @@ class RepayNewPage extends React.Component {
       return(
         <Loading duration = {10} cancelAlert = {true} closeLoading = {()=>{
           alert('开门完成，请于放入篮球后关闭,并点击结算，如果柜门没有打开，请联系客服！');
-          this.setState({showloading:false});
+          this.setState({showloading:false,pressLock:false});
         }}/>
       )
     }
@@ -98,21 +95,6 @@ class RepayNewPage extends React.Component {
         })
       }
     })
-    // var chestLogicId = this.props.curRentInfo.chestLogicId;
-    // var boxId = this.props.curRentInfo.boxId;
-    // getBoxOpenState(chestLogicId,boxId).then(result=>{
-    //   if(result['openState'] === 1){
-    //     alert('关上门以后才能结算哦！');
-    //   }
-    //   else{
-    //
-    //   }
-    // })
-    // payRecharge().then(result=>{
-    //   if(result){
-    //
-    //   }
-    // })
   }
 
   renderAction(){
@@ -122,9 +104,11 @@ class RepayNewPage extends React.Component {
           <div className = {rentPageCss['bg']}
                style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repaynew1.jpg!w640)'}}>
             <div onClick={()=>{
-              getRentFee().then(result=>{
-                 this.setState({orderInfo:result,openBox:false});
-              })
+              if(!this.state.pressLock){
+                getRentFee().then(result=>{
+                  this.setState({orderInfo:result,openBox:false});
+                })
+              }
             }} className = {rentPageCss['ball1']}/>
           </div>
         )

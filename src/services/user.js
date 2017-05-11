@@ -89,3 +89,7 @@ export async function payRecharge(){
 export async function queryZhima(){
   return await request(`/user/queryZhima`,{});
 }
+
+export async function tryRepay(){
+  return await request(`/user/tryRepay`,{method:'POST'});
+}
