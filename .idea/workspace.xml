@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="aca2e0a0-f881-452b-a440-c64dba87f5fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/user.js" afterPath="$PROJECT_DIR$/src/services/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/UserOrder.js" afterPath="$PROJECT_DIR$/src/routes/UserOrder.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -68,12 +68,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/services/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="80" column="42" lean-forward="false" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+            <state relative-caret-position="335">
+              <caret line="89" column="46" lean-forward="true" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="46" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserOrder.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/routes/UserOrder.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="55" column="111" lean-forward="false" selection-start-line="55" selection-start-column="111" selection-end-line="55" selection-end-column="111" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,7 +175,6 @@
         <option value="$PROJECT_DIR$/src/routes/UserPage.css" />
         <option value="$PROJECT_DIR$/src/routes/UserOrder.css" />
         <option value="$PROJECT_DIR$/src/routes/HelperPage.js" />
-        <option value="$PROJECT_DIR$/src/routes/UserOrder.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/components/PayLoading.js" />
         <option value="$PROJECT_DIR$/src/routes/OpenInRentingPage.js" />
@@ -186,6 +197,7 @@
         <option value="$PROJECT_DIR$/src/routes/UserPage.js" />
         <option value="$PROJECT_DIR$/src/routes/RepayNewPage.js" />
         <option value="$PROJECT_DIR$/src/services/user.js" />
+        <option value="$PROJECT_DIR$/src/routes/UserOrder.js" />
       </list>
     </option>
   </component>
@@ -455,12 +467,12 @@
       <workItem from="1494302157960" duration="1090000" />
       <workItem from="1494317575578" duration="43417000" />
       <workItem from="1494488051568" duration="9101000" />
-      <workItem from="1494815112013" duration="6367000" />
+      <workItem from="1494815112013" duration="6730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195278000" />
+    <option name="totallyTimeSpent" value="195641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -598,9 +610,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="80" column="42" lean-forward="false" selection-start-line="80" selection-start-column="42" selection-end-line="80" selection-end-column="42" />
+        <state relative-caret-position="335">
+          <caret line="89" column="46" lean-forward="true" selection-start-line="89" selection-start-column="46" selection-end-line="89" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/UserOrder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="55" column="111" lean-forward="false" selection-start-line="55" selection-start-column="111" selection-end-line="55" selection-end-column="111" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

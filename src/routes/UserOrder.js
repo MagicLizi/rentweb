@@ -39,18 +39,23 @@ class UserOrder extends React.Component{
           </div>
         )
       }
-      else{
-        var str = '使用中';
-        if(data.startAt){
-          str = `${moment(data.startAt * 1000).format('YYYY/MM/DD HH:mm:ss')} 至 ${moment(data.endAt * 1000).format('YYYY/MM/DD HH:mm:ss')}`;
-        }
+      else if(data['orderType'] === 'recharge'){
         return(
           <div key = {i} style = {{width:'94vw',borderRadius:4,backgroundColor:'white',display:'flex',marginTop:'4vw',flexDirection:'column'}}>
             <span style = {{marginTop:'2vh',marginLeft:'3vw',color:'rgb(38,38,38)',fontSize:14}}>订单编号 : {data.orderId.split('_')[1]}</span>
             <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单类型 : 租金</span>
             <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单金额 : {(data.orderPrice/100).toFixed(2)}元</span>
             <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单状态 : {payStr}</span>
-            <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13,marginBottom:'2vh'}}>租赁状态 : {str}</span>
+          </div>
+        )
+      }
+      else if(data['orderType'] === 'rechargeRent'){
+        return(
+          <div key = {i} style = {{width:'94vw',borderRadius:4,backgroundColor:'white',display:'flex',marginTop:'4vw',flexDirection:'column'}}>
+            <span style = {{marginTop:'2vh',marginLeft:'3vw',color:'rgb(38,38,38)',fontSize:14}}>订单编号 : {data.orderId.split('_')[1]}</span>
+            <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单类型 : 余额支付</span>
+            <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单金额 : {(data.orderPrice/100).toFixed(2)}元</span>
+            <span style = {{marginTop:'1vh',marginLeft:'3vw',color:'rgb(110,109,103)',fontSize:13}}>订单状态 : {payStr}</span>
           </div>
         )
       }
