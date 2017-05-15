@@ -103,6 +103,7 @@ class RepayNewPage extends React.Component {
             <div onClick={()=>{
               if(!this.state.pressLock){
                 alert('结算成功');
+                this.closeWeb();
               }
               else{
                 alert('该订单已经点击过还球但是没有完成结算，请联系客服进行结算！');
