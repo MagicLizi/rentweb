@@ -24,6 +24,7 @@ class RepayNewPage extends React.Component {
     this.props.getCurRentInfo(()=>{
       if(this.props.curRentInfo){
         //开门
+        alert('点击确认后柜门会自动打开，请将篮球放入后关好柜门并且前往结算！');
         this.open();
       }
     });
@@ -32,14 +33,7 @@ class RepayNewPage extends React.Component {
   open(){
     //开门并且标记状态
     tryRepay().then(result=>{
-      if(result['lock']){
-        setTimeout(()=>{
-          alert('该订单已经点击过还球但是没有完成结算，请联系客服进行结算！');
-        },300);
-      }
-      else{
-        this.setState({showloading:true});
-      }
+      this.setState({showloading:true});
     })
   }
 
@@ -84,19 +78,20 @@ class RepayNewPage extends React.Component {
   }
 
   goPay(){
-    this.setState({showCloseloading:true});
-    this.beginGetState(state=>{
-      if(state === 0){
-        this.timer&&clearInterval(this.timer);
-        payRecharge().then(r=>{
-          if(r){
-            alert('结算成功');
-            this.setState({showCloseloading:false});
-            this.closeWeb();
-          }
-        })
-      }
-    })
+    alert('结算成功');
+    // this.setState({showCloseloading:true});
+    // this.beginGetState(state=>{
+    //   if(state === 0){
+    //     this.timer&&clearInterval(this.timer);
+    //     payRecharge().then(r=>{
+    //       if(r){
+    //         alert('结算成功');
+    //         this.setState({showCloseloading:false});
+    //         this.closeWeb();
+    //       }
+    //     })
+    //   }
+    // })
   }
 
   renderAction(){
