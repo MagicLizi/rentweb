@@ -102,9 +102,7 @@ class RepayNewPage extends React.Component {
                style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repaynew1.jpg!w640)'}}>
             <div onClick={()=>{
               if(!this.state.pressLock){
-                getRentFee().then(result=>{
-                  this.setState({orderInfo:result,openBox:false});
-                })
+                alert('结算成功');
               }
               else{
                 alert('该订单已经点击过还球但是没有完成结算，请联系客服进行结算！');
