@@ -24,7 +24,7 @@ class RepayNewPage extends React.Component {
     this.props.getCurRentInfo(()=>{
       if(this.props.curRentInfo){
         //开门
-        // alert('点击确认后柜门会自动打开，请将篮球放入后关好柜门并且前往结算！');
+        alert('点击确认后柜门会自动打开，请将篮球放入后关好柜门并且前往结算！');
         this.open();
       }
     });
