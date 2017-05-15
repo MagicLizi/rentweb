@@ -77,6 +77,15 @@ export async function getBoxOpenState(chestLogicId,boxId){
   });
 }
 
+export async function getRentFeeV2(rId){
+  return await request(`/user/getRentFee`,{
+    method:'POST',
+    body:JSON.stringify({
+      rId:rId
+    })
+  });
+}
+
 export async function getRentFee(){
   return await request(`/user/getRentFee`,{});
 }

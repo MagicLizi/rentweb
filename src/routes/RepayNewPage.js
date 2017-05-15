@@ -4,7 +4,7 @@ import rentPageCss from './RentPage.css';
 import {setCurPath} from '../models/path';
 // import {openInRenting} from '../services/action';
 import Loading from '../components/Loading';
-import {getBoxOpenState,getRentFee,payRecharge,tryRepay} from '../services/user';
+import {getBoxOpenState,getRentFee,getRentFeeV2,payRecharge,tryRepay} from '../services/user';
 import TitleLoading from '../components/TitleLoading';
 class RepayNewPage extends React.Component {
   constructor(){
@@ -79,6 +79,7 @@ class RepayNewPage extends React.Component {
 
   goPay(){
     alert('结算成功');
+    this.closeWeb();
     // this.setState({showCloseloading:true});
     // this.beginGetState(state=>{
     //   if(state === 0){
@@ -102,8 +103,9 @@ class RepayNewPage extends React.Component {
                style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repaynew1.jpg!w640)'}}>
             <div onClick={()=>{
               if(!this.state.pressLock){
-                alert('结算成功');
-                this.closeWeb();
+                getRentFeeV2(this.props.curRentInfo.id).then(result=>{
+                  this.setState({orderInfo:result,openBox:false});
+                })
               }
               else{
                 alert('该订单已经点击过还球但是没有完成结算，请联系客服进行结算！');
