@@ -53,7 +53,9 @@ export default function request(url, options,without) {
           // request(newUri,{},true);
         }
         else if(data.code === 10000){
-          alert(data.message);
+          setTimeout(()=>{
+            alert(data.message);
+          },1000);
         }
         else{
           alert(data.message);
