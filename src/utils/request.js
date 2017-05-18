@@ -52,6 +52,9 @@ export default function request(url, options,without) {
           window.location = newUri;
           // request(newUri,{},true);
         }
+        else if(data.code === 10000){
+          alert(data.message);
+        }
         else{
           alert(data.message);
           console.error(`请求出错:${JSON.stringify(data)}`);
