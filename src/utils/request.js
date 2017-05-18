@@ -55,7 +55,7 @@ export default function request(url, options,without) {
         else if(data.code === 10000){
           setTimeout(()=>{
             alert(data.message);
-          },1000);
+          },200);
         }
         else{
           alert(data.message);
