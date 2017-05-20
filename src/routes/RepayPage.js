@@ -52,13 +52,6 @@ class RepayPage extends React.Component {
         }
       }
     });
-    // var payobj = this.props.location.query['payobj'];
-    // if(!payobj) {
-    //   this.setState({showloading:true});
-    // }
-    // else{
-    //   this.setState({showPay:true});
-    // }
   }
 
   onBridgeReady(){
