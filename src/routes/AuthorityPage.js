@@ -4,7 +4,7 @@
 import React from 'react';
 import {connect} from 'dva';
 import rentPageCss from './RentPage.css';
-import {payAuthority,queryZhima} from '../services/user';
+import {payAuthority,queryZhima,checkCancel,stopCancel} from '../services/user';
 import {setCurPath} from '../models/path';
 import {urlDomain} from '../utils/request';
 class Authority extends React.Component {
@@ -52,6 +52,10 @@ class Authority extends React.Component {
     if(go){
       this.payAuthority();
     }
+
+    checkCancel().then(r=>{
+      alert(r['has']);
+    })
   }
 
   constructor() {

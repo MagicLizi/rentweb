@@ -102,3 +102,12 @@ export async function queryZhima(){
 export async function tryRepay(){
   return await request(`/user/tryRepay`,{method:'POST'});
 }
+
+
+export async function checkCancel(){
+  return await request(`/user/checkCancel`,{});
+}
+
+export async function stopCancel(){
+  return await request(`/user/stopCancel`,{method:'POST'});
+}
