@@ -125,6 +125,7 @@ class QRScanPage extends React.Component {
       }
       else{
         var price = this.state.price.split('_');
+        alert(price);
         if(price.length < 3){
           return(
             <div className = {rentPageCss['bg']}
