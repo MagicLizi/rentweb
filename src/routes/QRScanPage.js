@@ -21,6 +21,7 @@ class QRScanPage extends React.Component {
   }
 
   componentWillMount() {
+    var self = this;
     setCurPath('/qrScan');
     var path = this.props.location.pathname;
     var search = this.props.location.search;
