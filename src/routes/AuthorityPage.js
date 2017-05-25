@@ -10,7 +10,7 @@ import {urlDomain} from '../utils/request';
 class Authority extends React.Component {
 
   componentWillMount() {
-
+    this.canPay = false;
     if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
 
     }
@@ -62,10 +62,15 @@ class Authority extends React.Component {
           })
         }
         else{
-          WeixinJSBridge.invoke('closeWindow',{},function(res){
+          setTimeout(()=>{
+            WeixinJSBridge.invoke('closeWindow',{},function(res){
 
-          });
+            });
+          },20)
         }
+      }
+      else{
+        this.canPay = true;
       }
     })
   }
@@ -81,7 +86,15 @@ class Authority extends React.Component {
              style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/bottomauth.jpg!w640)'}}>
         <div className = {rentPageCss['authBtnContainer']}>
           <div onClick={()=>{
-            this.payAuthority();
+            if(this.canPay){
+              this.payAuthority();
+            }
+            else{
+              alert('不要重复支付！');
+              WeixinJSBridge.invoke('closeWindow',{},function(res){
+
+              });
+            }
           }} className = {rentPageCss['abtn1']}
                style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/goauthbtn.png!w640)'}}/>
             <div onClick={()=>{
