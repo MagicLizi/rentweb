@@ -15,7 +15,8 @@ class QRScanPage extends React.Component {
     super();
     this['state'] = {
       boxInfo:null,
-      showloading:false
+      showloading:false,
+      step:-1
     }
   }
 
@@ -61,6 +62,7 @@ class QRScanPage extends React.Component {
   }
 
   openQRScan(){
+    var self = this;
     //检查是否需要充值
     if(this.props.location.query.first){
       //第一次需要跳转充值页面
@@ -78,14 +80,14 @@ class QRScanPage extends React.Component {
             scanType: ["qrCode"], // 可以指定扫二维码还是一维码，默认二者都有
             success: function (res) {
               if(res.resultStr){
+                self.qr = res.resultStr;
                 boxPrice(res.resultStr).then(r=>{
-                  alert(JSON.stringify(r));
-                })
-
-                dealQRResult(res.resultStr).then(result=>{
-                  if(result){
-                    self.setState({boxInfo:result.boxInfo});
-                    self.setState({showloading:true});
+                  var price = r['price'].split("_");
+                  if(price.length === 1){
+                    self.setState({step:1});
+                  }
+                  else{
+                    self.setState({step:2});
                   }
                 })
               }
@@ -112,15 +114,35 @@ class QRScanPage extends React.Component {
       )
     }
     else{
-      return(
-        <div className = {rentPageCss['bg']}
-             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg!w640)'}}>
+      if(this.state.step === -1){
+        return(
+          <div className = {rentPageCss['bg']}
+               style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg!w640)'}}>
           <span style = {{fontSize:25,color:'white'}}>
             点击扫码
           </span>
-          <div onClick={()=>{this.openQRScan()}} className = {rentPageCss['ball']}/>
-        </div>
-      )
+            <div onClick={()=>{this.openQRScan()}} className = {rentPageCss['ball']}/>
+          </div>
+        )
+      }
+      else if(this.state.step === 1){
+        return(
+          <div className = {rentPageCss['bg']}
+               style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentDetail5.jpg'}}>
+            <div onClick={()=>{
+              dealQRResult(this.qr).then(result=>{
+                if(result){
+                  self.setState({boxInfo:result.boxInfo});
+                  self.setState({showloading:true});
+                }
+              })
+            }} className = {rentPageCss['ball']}/>
+          </div>
+        )
+      }
+      else if(this.state.step === 2){
+
+      }
     }
   }
 
