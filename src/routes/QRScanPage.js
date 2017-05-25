@@ -4,7 +4,7 @@
 import React from 'react';
 import {connect} from 'dva';
 import rentPageCss from './RentPage.css';
-import {dealQRResult,wxConfig} from '../services/action';
+import {dealQRResult,wxConfig,boxPrice} from '../services/action';
 import {setCurPath} from '../models/path';
 import {urlDomain} from '../utils/request';
 var wx = require('weixin-js-sdk');
@@ -78,6 +78,10 @@ class QRScanPage extends React.Component {
             scanType: ["qrCode"], // 可以指定扫二维码还是一维码，默认二者都有
             success: function (res) {
               if(res.resultStr){
+                boxPrice(res.resultStr).then(r=>{
+                  alert(JSON.stringify(r));
+                })
+
                 dealQRResult(res.resultStr).then(result=>{
                   if(result){
                     self.setState({boxInfo:result.boxInfo});
@@ -110,7 +114,10 @@ class QRScanPage extends React.Component {
     else{
       return(
         <div className = {rentPageCss['bg']}
-             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentDetail5.jpg!w640)'}}>
+             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg!w640)'}}>
+          <span style = {{fontSize:25,color:'white'}}>
+            点击扫码
+          </span>
           <div onClick={()=>{this.openQRScan()}} className = {rentPageCss['ball']}/>
         </div>
       )

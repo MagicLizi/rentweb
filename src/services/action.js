@@ -42,3 +42,12 @@ export async function payrent(){
   })
 }
 
+export async function boxPrice(qr){
+  return await request('/action/boxPrice',{
+    method:'POST',
+    body:JSON.stringify({
+      qr:qr
+    })
+  })
+}
+
