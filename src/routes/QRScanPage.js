@@ -75,14 +75,15 @@ class QRScanPage extends React.Component {
           window.location = `${urlDomain}/recharge?showQR=true`;
         }
         else{
+          var self = this;
           wx.scanQRCode({
             needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
             scanType: ["qrCode"], // 可以指定扫二维码还是一维码，默认二者都有
             success: function (res) {
               if(res.resultStr){
                 boxPrice(res.resultStr).then(r=>{
-                  // var price = r['price'].split('_');
-                  // self.setState({step:1});
+                  var price = r['price'].split('_');
+                  self.setState({step:1});
                 })
 
                 // dealQRResult(res.resultStr).then(result=>{
