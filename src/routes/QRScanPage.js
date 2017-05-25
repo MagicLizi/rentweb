@@ -159,8 +159,8 @@ class QRScanPage extends React.Component {
                 {`之后每小时:${~~prices[1]/100*60}元`}
               </span>
 
-              <span style = {{marginBottom:'40vh',fontSize:25,color:'white'}}>
-                {`封顶:${~~prices[2]/100*60}元`}
+              <span style = {{marginBottom:'30',fontSize:28,color:'white'}}>
+                {`封顶:${~~prices[2]/100}元`}
               </span>
 
               <div onClick={()=>{this.openQRScan()}} className = {rentPageCss['ball']}/>
