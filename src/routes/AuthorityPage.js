@@ -54,7 +54,19 @@ class Authority extends React.Component {
     }
 
     checkCancel().then(r=>{
-      alert(r['has']);
+      if(r['has']){
+        var c = confirm('当前有正在退款中的押金，是否需要终止退款继续使用服务？');
+        if (c) {
+          stopCancel().then(r=>{
+            window.location = `${urlDomain}/qrScan`;
+          })
+        }
+        else{
+          WeixinJSBridge.invoke('closeWindow',{},function(res){
+
+          });
+        }
+      }
     })
   }
 
