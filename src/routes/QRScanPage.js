@@ -85,12 +85,12 @@ class QRScanPage extends React.Component {
                   }
                 })
 
-                dealQRResult(res.resultStr).then(result=>{
-                  if(result){
-                    self.setState({boxInfo:result.boxInfo});
-                    self.setState({showloading:true});
-                  }
-                })
+                // dealQRResult(res.resultStr).then(result=>{
+                //   if(result){
+                //     self.setState({boxInfo:result.boxInfo});
+                //     self.setState({showloading:true});
+                //   }
+                // })
               }
             }
           });
@@ -101,7 +101,7 @@ class QRScanPage extends React.Component {
 
   renderAction(){
     // console.log(this.state.boxInfo);
-
+    var self = this;
     if(this.state.boxInfo){
       var boxId = this.state.boxInfo.split('_')[1];
       return(
