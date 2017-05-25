@@ -16,7 +16,7 @@ class QRScanPage extends React.Component {
     this['state'] = {
       boxInfo:null,
       showloading:false,
-      price:null
+      step:-1
     }
   }
 
@@ -78,8 +78,11 @@ class QRScanPage extends React.Component {
             success: function (res) {
               if(res.resultStr){
                 boxPrice(res.resultStr).then(r=>{
+                  var price = r['price'].split('_');
                   self.qr = res.resultStr
-                  self.setState({price:r['price']});
+                  if(price.length === 1){
+                    self.setState({step:1});
+                  }
                 })
 
                 // dealQRResult(res.resultStr).then(result=>{
@@ -124,9 +127,7 @@ class QRScanPage extends React.Component {
         )
       }
       else{
-        var price = this.state.price.split('_');
-        alert(price);
-        if(price.length < 3){
+        if(this.state.step === 1){
           return(
             <div className = {rentPageCss['bg']}
                  style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentDetail5.jpg!w640)'}}>
@@ -141,12 +142,12 @@ class QRScanPage extends React.Component {
             </div>
           )
         }
-        else{
+        else if(this.state.step === 2){
           return(
             <div className = {rentPageCss['bg']}
                  style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg!w640)'}}>
               <span style = {{marginBottom:'40vh',fontSize:25,color:'white'}}>
-                {price}
+
               </span>
               <div onClick={()=>{this.openQRScan()}} className = {rentPageCss['ball']}/>
             </div>
