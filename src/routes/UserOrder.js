@@ -29,6 +29,9 @@ class UserOrder extends React.Component{
       else if(payState === 2){
         payStr = '已退款';
       }
+      else if(payState === 3){
+        payStr = '退款中（大约10个工作日）';
+      }
       if(data['orderType'] === 'authority'){
         return(
           <div key = {i} style = {{width:'94vw',borderRadius:4,backgroundColor:'white',display:'flex',marginTop:'4vw',flexDirection:'column'}}>
