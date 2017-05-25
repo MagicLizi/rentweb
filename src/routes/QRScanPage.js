@@ -163,7 +163,14 @@ class QRScanPage extends React.Component {
                 {`封顶:${(~~prices[2]/100).toFixed(2)}元`}
               </span>
 
-              <div onClick={()=>{this.openQRScan()}} className = {rentPageCss['ball']}/>
+              <div onClick={()=>{
+                dealQRResult(self.qr).then(result=>{
+                  if(result){
+                    self.setState({boxInfo:result.boxInfo});
+                    self.setState({showloading:true});
+                  }
+                })}
+              } className = {rentPageCss['ball']}/>
             </div>
           )
         }
