@@ -79,7 +79,7 @@ class QRScanPage extends React.Component {
               if(res.resultStr){
                 boxPrice(res.resultStr).then(r=>{
                   var price = r['price'].split('_');
-                  alert(price.length);
+                  self.qr = res.resultStr
                   if(price.length === 1){
                     self.setState({step:1});
                   }
@@ -132,7 +132,7 @@ class QRScanPage extends React.Component {
             <div className = {rentPageCss['bg']}
                  style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentDetail5.jpg!w640)'}}>
               <div onClick={()=>{
-                dealQRResult(res.resultStr).then(result=>{
+                dealQRResult(self.qr).then(result=>{
                   if(result){
                     self.setState({boxInfo:result.boxInfo});
                     self.setState({showloading:true});
