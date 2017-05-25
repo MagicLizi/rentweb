@@ -79,9 +79,7 @@ class QRScanPage extends React.Component {
             success: function (res) {
               if(res.resultStr){
                 boxPrice(res.resultStr).then(r=>{
-                  alert(JSON.stringify(r));
                   var price = r['price'];
-
                 })
 
                 dealQRResult(res.resultStr).then(result=>{
