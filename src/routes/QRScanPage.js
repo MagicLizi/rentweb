@@ -145,7 +145,7 @@ class QRScanPage extends React.Component {
             <div className = {rentPageCss['bg']}
                  style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg!w640)'}}>
               <span style = {{marginBottom:'40vh',fontSize:25,color:'white'}}>
-
+                {price}
               </span>
               <div onClick={()=>{this.openQRScan()}} className = {rentPageCss['ball']}/>
             </div>
