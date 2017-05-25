@@ -15,8 +15,7 @@ class QRScanPage extends React.Component {
     super();
     this['state'] = {
       boxInfo:null,
-      showloading:false,
-      step:-1
+      showloading:false
     }
   }
 
@@ -35,10 +34,9 @@ class QRScanPage extends React.Component {
       wx.config(result.config);
 
       wx.ready(function(){
-        // if(self.props.location.query.direction){
-        //   self.openQRScan();
-        // }
-        self.openQRScan();
+        if(self.props.location.query.direction){
+          self.openQRScan();
+        }
         // alert('ready');
         // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
       });
@@ -80,14 +78,16 @@ class QRScanPage extends React.Component {
             scanType: ["qrCode"], // 可以指定扫二维码还是一维码，默认二者都有
             success: function (res) {
               if(res.resultStr){
-                self.qr = res.resultStr;
                 boxPrice(res.resultStr).then(r=>{
-                  var price = r['price'].split("_");
-                  if(price.length === 1){
-                    self.setState({step:1});
-                  }
-                  else{
-                    self.setState({step:2});
+                  alert(JSON.stringify(r));
+                  var price = r['price'];
+
+                })
+
+                dealQRResult(res.resultStr).then(result=>{
+                  if(result){
+                    self.setState({boxInfo:result.boxInfo});
+                    self.setState({showloading:true});
                   }
                 })
               }
@@ -114,35 +114,15 @@ class QRScanPage extends React.Component {
       )
     }
     else{
-      if(this.state.step === -1){
-        return(
-          <div className = {rentPageCss['bg']}
-               style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg!w640)'}}>
+      return(
+        <div className = {rentPageCss['bg']}
+             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg!w640)'}}>
           <span style = {{fontSize:25,color:'white'}}>
             点击扫码
           </span>
-            <div onClick={()=>{this.openQRScan()}} className = {rentPageCss['ball']}/>
-          </div>
-        )
-      }
-      else if(this.state.step === 1){
-        return(
-          <div className = {rentPageCss['bg']}
-               style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rentDetail5.jpg'}}>
-            <div onClick={()=>{
-              dealQRResult(this.qr).then(result=>{
-                if(result){
-                  self.setState({boxInfo:result.boxInfo});
-                  self.setState({showloading:true});
-                }
-              })
-            }} className = {rentPageCss['ball']}/>
-          </div>
-        )
-      }
-      else if(this.state.step === 2){
-
-      }
+          <div onClick={()=>{this.openQRScan()}} className = {rentPageCss['ball']}/>
+        </div>
+      )
     }
   }
 
