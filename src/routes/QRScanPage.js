@@ -147,12 +147,22 @@ class QRScanPage extends React.Component {
           )
         }
         else if(this.state.step === 2){
+          var prices = this.state.price.split('_');
           return(
             <div className = {rentPageCss['bg']}
                  style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg!w640)'}}>
               <span style = {{marginBottom:'40vh',fontSize:25,color:'white'}}>
-                {this.state.price}
+                {`第一小时:${~~prices[0]/100*60}元`}
               </span>
+
+              <span style = {{fontSize:25,color:'white'}}>
+                {`之后每小时:${~~prices[1]/100*60}元`}
+              </span>
+
+              <span style = {{fontSize:25,color:'white'}}>
+                {`封顶:${~~prices[2]/100*60}元`}
+              </span>
+
               <div onClick={()=>{this.openQRScan()}} className = {rentPageCss['ball']}/>
             </div>
           )
