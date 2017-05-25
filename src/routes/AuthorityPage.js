@@ -90,7 +90,6 @@ class Authority extends React.Component {
               this.payAuthority();
             }
             else{
-              alert('不要重复支付！');
               WeixinJSBridge.invoke('closeWindow',{},function(res){
 
               });

@@ -101,8 +101,8 @@
       <file leaf-file-name="AuthorityPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/AuthorityPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="93" column="40" lean-forward="true" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
+            <state relative-caret-position="190">
+              <caret line="91" column="17" lean-forward="false" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="17" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#45#71#0" expanded="true" />
@@ -495,12 +495,12 @@
       <workItem from="1495111471752" duration="444000" />
       <workItem from="1495287855986" duration="2027000" />
       <workItem from="1495421511727" duration="96000" />
-      <workItem from="1495681662906" duration="5687000" />
+      <workItem from="1495681662906" duration="5706000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212514000" />
+    <option name="totallyTimeSpent" value="212533000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -943,8 +943,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/AuthorityPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="93" column="40" lean-forward="true" selection-start-line="93" selection-start-column="40" selection-end-line="93" selection-end-column="40" />
+        <state relative-caret-position="190">
+          <caret line="91" column="17" lean-forward="false" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="17" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#45#71#0" expanded="true" />
