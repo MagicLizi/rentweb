@@ -38,20 +38,34 @@
   background-image: url(http://rentservice.b0.upaiyun.com/ball2.png);
 }
 
-.authBtn{
-  width:50vw;
-  height:30vh;
-}
-
-.authBtn:active{
- opacity: 0.6;
-}
 
 .authBtnContainer{
   width:100vw;
-  height:30vh;
+  height:32vh;
   background-color: rgba(0,0,0,0);
-  /*margin-bottom: 13.5vh;*/
+  position: absolute;
+  bottom: 0;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.abtn1{
+  width:70vw;
+  height:19vw;
+  background-size: cover;
+}
+
+.abtn2{
+  width:40vw;
+  height:11vw;
+  background-size: cover;
+}
+
+.abtn1:active{
+  opacity: 0.6;
+}
+
+.abtn2:active{
+  opacity:0.6;
+}
