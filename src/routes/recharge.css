@@ -19,6 +19,7 @@
   height:46vw;
   display: flex;
   flex-direction: row;
+  background-color: red;
 }
 
 .selection{
