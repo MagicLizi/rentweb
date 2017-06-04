@@ -41,7 +41,7 @@ class recharge extends React.Component {
     }
 
     getRechargeConfig().then(data=>{
-      alert(JSON.stringify(data));
+      this.setState({rechargeConfig:data})
     })
   }
 
@@ -94,34 +94,53 @@ class recharge extends React.Component {
     })
   }
 
-  render(){
-    return (
-      <div className = {Style['container']}>
-        <div className = {Style['selectContainer']}>
+  renderConfig(){
+    if(this.state.rechargeConfig){
+      return(
+        <div>
           <div className={Style['selectRow']}>
             <div className={Style['selection']}>
               <div className={Style['btn']}
                    onClick={()=>{this.recharge(1)}}
-                   style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/recharge2.png)',marginLeft:'5vw'}}/>
+                   style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rechargeBtn.png)',marginLeft:'5vw'}}>
+                <span>{~~(this.state.rechargeConfig['1'].price/100)}</span>
+              </div>
             </div>
             <div className={Style['selection']}>
               <div className={Style['btn']}
                    onClick={()=>{this.recharge(2)}}
-                   style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/recharge5.png)',marginRight:'5vw'}}/>
+                   style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rechargeBtn.png)',marginRight:'5vw'}}>
+                <span>{~~(this.state.rechargeConfig['2'].price/100)}</span>
+              </div>
             </div>
           </div>
           <div className={Style['selectRow']}>
             <div className={Style['selection']}>
               <div className={Style['btn']}
                    onClick={()=>{this.recharge(3)}}
-                   style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/recharge10.png)',marginLeft:'5vw'}}/>
+                   style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rechargeBtn.png)',marginLeft:'5vw'}}>
+                <span>{~~(this.state.rechargeConfig['3'].price/100)}</span>
+              </div>
             </div>
             <div className={Style['selection']}>
               <div className={Style['btn']}
                    onClick={()=>{this.recharge(4)}}
-                   style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/recharge20.png)',marginRight:'5vw'}}/>
+                   style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rechargeBtn.png)',marginRight:'5vw'}}>
+                <span>{~~(this.state.rechargeConfig['4'].price/100)}</span>
+              </div>
             </div>
           </div>
+        </div>
+      )
+    }
+    return null;
+  }
+
+  render(){
+    return (
+      <div className = {Style['container']}>
+        <div className = {Style['selectContainer']}>
+          {this.renderConfig()}
         </div>
       </div>
     );
