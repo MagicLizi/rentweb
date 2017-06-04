@@ -89,15 +89,15 @@
       <file leaf-file-name="QRScanPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/QRScanPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="203" column="78" lean-forward="true" selection-start-line="203" selection-start-column="78" selection-end-line="203" selection-end-column="78" />
+            <state relative-caret-position="308">
+              <caret line="207" column="46" lean-forward="false" selection-start-line="207" selection-start-column="46" selection-end-line="207" selection-end-column="46" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#45#71#0" expanded="true" />
-                <element signature="e#4344#4886#0" expanded="false" />
-                <element signature="e#4925#5963#0" expanded="false" />
-                <marker date="1496599193000" expanded="true" signature="6681:6730" ph="..." />
-                <marker date="1496599193000" expanded="true" signature="6730:6748" ph="..." />
+                <element signature="e#4377#4919#0" expanded="false" />
+                <element signature="e#4958#5996#0" expanded="false" />
+                <marker date="1496599377000" expanded="true" signature="6714:6743" ph="..." />
+                <marker date="1496599377000" expanded="true" signature="6743:6761" ph="..." />
               </folding>
             </state>
           </provider>
@@ -504,12 +504,12 @@
       <workItem from="1495681662906" duration="12539000" />
       <workItem from="1495767057921" duration="437000" />
       <workItem from="1496151889582" duration="104000" />
-      <workItem from="1496592521738" duration="6636000" />
+      <workItem from="1496592521738" duration="6815000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226543000" />
+    <option name="totallyTimeSpent" value="226722000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -923,15 +923,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/QRScanPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="203" column="78" lean-forward="true" selection-start-line="203" selection-start-column="78" selection-end-line="203" selection-end-column="78" />
+        <state relative-caret-position="308">
+          <caret line="207" column="46" lean-forward="false" selection-start-line="207" selection-start-column="46" selection-end-line="207" selection-end-column="46" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#45#71#0" expanded="true" />
-            <element signature="e#4344#4886#0" expanded="false" />
-            <element signature="e#4925#5963#0" expanded="false" />
-            <marker date="1496599193000" expanded="true" signature="6681:6730" ph="..." />
-            <marker date="1496599193000" expanded="true" signature="6730:6748" ph="..." />
+            <element signature="e#4377#4919#0" expanded="false" />
+            <element signature="e#4958#5996#0" expanded="false" />
+            <marker date="1496599377000" expanded="true" signature="6714:6743" ph="..." />
+            <marker date="1496599377000" expanded="true" signature="6743:6761" ph="..." />
           </folding>
         </state>
       </provider>

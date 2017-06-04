@@ -84,7 +84,8 @@ class QRScanPage extends React.Component {
                       freemin:r.freemin,
                       beginmin:r.beginmin,
                       beginfee:r.beginfee,
-                      lastfee:r.lastfee
+                      lastfee:r.lastfee,
+                      max:r.max
                     }});
                   }
                   else{
@@ -201,8 +202,11 @@ class QRScanPage extends React.Component {
                 {`起步费${(prices.beginfee/100.0).toFixed(2)}元 ${hour}`}
               </span>
 
-              <span style = {{marginBottom:'28vh',fontSize:25,color:'white'}}>
-                {`超过${hour}后，每小时${((prices.lastfee*60/100.0)).toFixed(2)}元,封顶${(prices.max/100.0).toFixed(2)}元`}
+              <span style = {{fontSize:25,color:'white'}}>
+                {`超过${hour}后，每小时${((prices.lastfee*60/100.0)).toFixed(2)}元`}
+              </span>
+              <span style = {{marginBottom:'24vh',fontSize:25,color:'white'}}>
+                {`封顶${(prices.max/100.0).toFixed(2)}元`}
               </span>
 
               <div onClick={()=>{
