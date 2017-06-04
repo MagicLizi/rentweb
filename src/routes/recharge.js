@@ -105,7 +105,7 @@ class recharge extends React.Component {
                    style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rechargeBtn.png)',marginLeft:'5vw'}}>
                 <span className={Style['priceTitle']}>{this.state.rechargeConfig["1"].price/100}元</span>
               </div>
-              <span className={Style['additionTitle']}>充{this.state.rechargeConfig["1"].price/100}元 赠送送{this.state.rechargeConfig["1"]['addition']/100}元</span>
+              <span className={Style['additionTitle']}>充{this.state.rechargeConfig["1"].price/100}元 赠送{this.state.rechargeConfig["1"]['addition']/100}元</span>
             </div>
             <div className={Style['selection']}>
               <div className={Style['btn']}
