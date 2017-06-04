@@ -79,6 +79,7 @@ class QRScanPage extends React.Component {
             success: function (res) {
               if(res.resultStr){
                 boxPrice(res.resultStr).then(r=>{
+                  self.qr = res.resultStr;
                   if(r.freemin){
                     self.setState({step:3,price:{
                       freemin:r.freemin,
@@ -90,7 +91,6 @@ class QRScanPage extends React.Component {
                   }
                   else{
                     var price = r['price'].split('_');
-                    self.qr = res.resultStr
                     if(price.length < 3){
                       self.setState({step:1,price:r['price']});
                     }
