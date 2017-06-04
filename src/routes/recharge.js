@@ -96,7 +96,7 @@ class recharge extends React.Component {
 
   renderConfig(){
     if(this.state.rechargeConfig){
-      alert(this.state.rechargeConfig["1"]);
+      alert(JSON.stringify(this.state.rechargeConfig));
       return(
         <div className = {Style['selectContainer']}>
           <div className={Style['selectRow']}>
