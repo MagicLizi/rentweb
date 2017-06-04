@@ -188,7 +188,7 @@ class QRScanPage extends React.Component {
           var prices = this.state.price;
           var hour = `${~~(prices.beginmin/60)}小时`;
           if(prices.beginmin%60!==0){
-            hour = `${(prices.beginmin/60).toFixed(2)}小时`;
+            hour = `${(prices.beginmin/60).toFixed(1)}小时`;
           }
           return(
             <div className = {rentPageCss['bg']}
