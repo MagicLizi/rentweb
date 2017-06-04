@@ -41,7 +41,7 @@ class recharge extends React.Component {
     }
 
     getRechargeConfig().then(data=>{
-      this.setState({rechargeConfig:data})
+      this.setState({rechargeConfig:data.rechargeConfig})
     })
   }
 
@@ -96,7 +96,7 @@ class recharge extends React.Component {
 
   renderConfig(){
     if(this.state.rechargeConfig){
-      alert(JSON.stringify(this.state.rechargeConfig));
+      alert(this.state.rechargeConfig["1"]);
       return(
         <div className = {Style['selectContainer']}>
           <div className={Style['selectRow']}>
