@@ -79,7 +79,6 @@ class QRScanPage extends React.Component {
             success: function (res) {
               if(res.resultStr){
                 boxPrice(res.resultStr).then(r=>{
-                  alert(JSON.stringify(r))
                   if(r.freemin){
                     self.setState({step:3,price:{
                       freemin:r.freemin,
@@ -195,11 +194,11 @@ class QRScanPage extends React.Component {
               </span>
 
               <span style = {{fontSize:25,color:'white'}}>
-                {`起步费${(prices.beginfee/100.0).toFixed(2)} ${(prices.beginmin/60)}小时`}
+                {`起步费${(prices.beginfee/100.0).toFixed(2)}元 ${(prices.beginmin/60).toFixed(2)}小时`}
               </span>
 
-              <span style = {{marginBottom:'28vh',fontSize:28,color:'white'}}>
-                {`超过${(prices.beginmin/60)}小时后，每小时${((prices.lastfee*60/100.0)).toFixed(2)}元`}
+              <span style = {{marginBottom:'28vh',fontSize:25,color:'white'}}>
+                {`超过${(prices.beginmin/60).toFixed(2)}小时后，每小时${((prices.lastfee*60/100.0)).toFixed(2)}元`}
               </span>
 
               <div onClick={()=>{
