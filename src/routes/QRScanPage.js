@@ -135,7 +135,7 @@ class QRScanPage extends React.Component {
           <div className = {rentPageCss['bg']}
                style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg!w640)'}}>
           <span style = {{marginBottom:'40vh',fontSize:25,color:'white'}}>
-            点击扫码
+            点击OK按钮，扫码开门
           </span>
             <div onClick={()=>{this.openQRScan()}} className = {rentPageCss['ball']}/>
           </div>
