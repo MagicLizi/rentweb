@@ -79,13 +79,23 @@ class QRScanPage extends React.Component {
             success: function (res) {
               if(res.resultStr){
                 boxPrice(res.resultStr).then(r=>{
-                  var price = r['price'].split('_');
-                  self.qr = res.resultStr
-                  if(price.length < 3){
-                    self.setState({step:1,price:r['price']});
+                  if(r.freemin){
+                    self.setState({step:3,price:{
+                      freemin:r.freemin,
+                      beginmin:r.beginmin,
+                      beginfee:r.beginfee,
+                      lastfee:r.lastfee
+                    }});
                   }
                   else{
-                    self.setState({step:2,price:r['price']});
+                    var price = r['price'].split('_');
+                    self.qr = res.resultStr
+                    if(price.length < 3){
+                      self.setState({step:1,price:r['price']});
+                    }
+                    else{
+                      self.setState({step:2,price:r['price']});
+                    }
                   }
                 })
 
@@ -161,6 +171,34 @@ class QRScanPage extends React.Component {
 
               <span style = {{marginBottom:'28vh',fontSize:28,color:'white'}}>
                 {`封顶:${(prices[2]/100.0).toFixed(2)}元`}
+              </span>
+
+              <div onClick={()=>{
+                dealQRResult(self.qr).then(result=>{
+                  if(result){
+                    self.setState({boxInfo:result.boxInfo});
+                    self.setState({showloading:true});
+                  }
+                })}
+              } className = {rentPageCss['ball']}/>
+            </div>
+          )
+        }
+        else if(this.state.step === 3){
+          var prices = this.state.price;
+          return(
+            <div className = {rentPageCss['bg']}
+                 style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg!w640)'}}>
+              <span style = {{fontSize:25,color:'white'}}>
+                {`${prices.freemin}分钟内免费`}
+              </span>
+
+              <span style = {{fontSize:25,color:'white'}}>
+                {`起步费${(prices.beginfee/100.0).toFixed(2)} ${(prices.beginmin/60)}小时`}
+              </span>
+
+              <span style = {{marginBottom:'28vh',fontSize:28,color:'white'}}>
+                {`超过${(prices.beginmin/60)}小时后，每小时${((prices.lastfee*60/100.0)).toFixed(2)}元`}
               </span>
 
               <div onClick={()=>{
