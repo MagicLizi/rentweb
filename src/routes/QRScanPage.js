@@ -205,7 +205,7 @@ class QRScanPage extends React.Component {
               <span style = {{fontSize:25,color:'white'}}>
                 {`超过${hour}后，每小时${((prices.lastfee*60/100.0)).toFixed(2)}元`}
               </span>
-              <span style = {{marginBottom:'24vh',fontSize:25,color:'white'}}>
+              <span style = {{marginBottom:'23vh',fontSize:28,color:'white'}}>
                 {`封顶${(prices.max/100.0).toFixed(2)}元`}
               </span>
 
