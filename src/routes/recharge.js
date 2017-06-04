@@ -3,11 +3,12 @@ import { connect } from 'dva';
 import Style from './recharge.css';
 import {setCurPath} from '../models/path';
 import {urlDomain} from '../utils/request';
+import {getRechargeConfig} from '../services/user';
 class recharge extends React.Component {
   constructor(){
     super();
     this.state = {
-
+      rechargeConfig:null
     }
   }
 
@@ -38,6 +39,10 @@ class recharge extends React.Component {
         }
       })
     }
+
+    getRechargeConfig().then(data=>{
+      alert(JSON.stringify(data));
+    })
   }
 
   onBridgeReady(){

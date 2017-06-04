@@ -111,3 +111,7 @@ export async function checkCancel(){
 export async function stopCancel(){
   return await request(`/user/stopCancel`,{method:'POST'});
 }
+
+export async function getRechargeConfig(){
+  return await request(`/user/rechargeConfig`,{})
+}
