@@ -152,15 +152,15 @@ class QRScanPage extends React.Component {
             <div className = {rentPageCss['bg']}
                  style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg!w640)'}}>
               <span style = {{fontSize:25,color:'white'}}>
-                {`第一小时:${((prices[0]*60/100)).toFixed(2)}元`}
+                {`第一小时:${((prices[0]*60/100.0)).toFixed(2)}元`}
               </span>
 
               <span style = {{fontSize:25,color:'white'}}>
-                {`之后每小时:${((prices[1]*60/100)).toFixed(2)}元`}
+                {`之后每小时:${((prices[1]*60/100.0)).toFixed(2)}元`}
               </span>
 
               <span style = {{marginBottom:'28vh',fontSize:28,color:'white'}}>
-                {`封顶:${(prices[2]/100).toFixed(2)}元`}
+                {`封顶:${(prices[2]/100.0).toFixed(2)}元`}
               </span>
 
               <div onClick={()=>{
