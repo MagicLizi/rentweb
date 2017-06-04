@@ -23,7 +23,7 @@
 
 .selection{
   width:50vw;
-  height:22vh;
+  height:46vw;
   /*background-color: red;*/
   display: flex;
   align-items: center;
@@ -44,6 +44,11 @@
 }
 
 .priceTitle{
-  font-size: 0.8rem;
+  font-size: 1rem;
+  color:white
+}
+
+.additionTitle{
+  font-size: 1rem;
   color:white
 }
