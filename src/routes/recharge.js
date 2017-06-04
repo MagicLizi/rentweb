@@ -95,7 +95,6 @@ class recharge extends React.Component {
   }
 
   renderConfig(){
-    alert(this.state.rechargeConfig);
     if(this.state.rechargeConfig){
       return(
         <div className = {Style['selectContainer']}>
@@ -104,14 +103,14 @@ class recharge extends React.Component {
               <div className={Style['btn']}
                    onClick={()=>{this.recharge(1)}}
                    style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rechargeBtn.png)',marginLeft:'5vw'}}>
-                <span>{~~(this.state.rechargeConfig['1'].price/100)}</span>
+
               </div>
             </div>
             <div className={Style['selection']}>
               <div className={Style['btn']}
                    onClick={()=>{this.recharge(2)}}
                    style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rechargeBtn.png)',marginRight:'5vw'}}>
-                <span>{~~(this.state.rechargeConfig['2'].price/100)}</span>
+
               </div>
             </div>
           </div>
@@ -120,14 +119,14 @@ class recharge extends React.Component {
               <div className={Style['btn']}
                    onClick={()=>{this.recharge(3)}}
                    style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rechargeBtn.png)',marginLeft:'5vw'}}>
-                <span>{~~(this.state.rechargeConfig['3'].price/100)}</span>
+
               </div>
             </div>
             <div className={Style['selection']}>
               <div className={Style['btn']}
                    onClick={()=>{this.recharge(4)}}
                    style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rechargeBtn.png)',marginRight:'5vw'}}>
-                <span>{~~(this.state.rechargeConfig['4'].price/100)}</span>
+
               </div>
             </div>
           </div>
