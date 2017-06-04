@@ -186,6 +186,10 @@ class QRScanPage extends React.Component {
         }
         else if(this.state.step === 3){
           var prices = this.state.price;
+          var hour = `${~~(prices.beginmin/60)}小时`;
+          if(prices.beginmin%60!==0){
+            hour = `${(prices.beginmin/60).toFixed(2)}小时`;
+          }
           return(
             <div className = {rentPageCss['bg']}
                  style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/repay.jpeg!w640)'}}>
@@ -194,11 +198,11 @@ class QRScanPage extends React.Component {
               </span>
 
               <span style = {{fontSize:25,color:'white'}}>
-                {`起步费${(prices.beginfee/100.0).toFixed(2)}元 ${(prices.beginmin/60).toFixed(2)}小时`}
+                {`起步费${(prices.beginfee/100.0).toFixed(2)}元 ${hour}`}
               </span>
 
               <span style = {{marginBottom:'28vh',fontSize:25,color:'white'}}>
-                {`超过${(prices.beginmin/60).toFixed(2)}小时后，每小时${((prices.lastfee*60/100.0)).toFixed(2)}元`}
+                {`超过${hour}后，每小时${((prices.lastfee*60/100.0)).toFixed(2)}元`}
               </span>
 
               <div onClick={()=>{
