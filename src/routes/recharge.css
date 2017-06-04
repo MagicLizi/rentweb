@@ -31,9 +31,12 @@
 }
 
 .btn{
-  width: 32vw;
-  height: 32vw;
+  width: 34vw;
+  height: 34vw;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn:active{
