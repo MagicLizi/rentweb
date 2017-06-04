@@ -105,12 +105,20 @@ class recharge extends React.Component {
                    style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/btnrecharge.png)',marginLeft:'5vw'}}>
                 <span className={Style['priceTitle']}>{this.state.rechargeConfig["1"].price/100}元</span>
               </div>
-              <span className={Style['additionTitle']}>充{this.state.rechargeConfig["1"].price/100}元 赠送{this.state.rechargeConfig["1"]['addition']/100}元</span>
+              <div  className={Style['additionTitle']} style = {{marginLeft:'5vw'}}>
+                {this.state.rechargeConfig["1"]['addition']>0?
+                  `充${this.state.rechargeConfig["1"].price/100}元 送${this.state.rechargeConfig["1"]['addition']/100}元`:''}
+              </div>
             </div>
             <div className={Style['selection']}>
               <div className={Style['btn']}
                    onClick={()=>{this.recharge(2)}}
                    style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/btnrecharge.png)',marginRight:'5vw'}}>
+                <span className={Style['priceTitle']}>{this.state.rechargeConfig["2"].price/100}元</span>
+              </div>
+              <div  className={Style['additionTitle']} style = {{marginRight:'5vw'}}>
+                {this.state.rechargeConfig["2"]['addition']>0?
+                  `充${this.state.rechargeConfig["2"].price/100}元 送${this.state.rechargeConfig["2"]['addition']/100}元`:''}
               </div>
             </div>
           </div>
@@ -118,14 +126,23 @@ class recharge extends React.Component {
             <div className={Style['selection']}>
               <div className={Style['btn']}
                    onClick={()=>{this.recharge(3)}}
-                   style = {{backgroundImage:'http://rentservice.b0.upaiyun.com/btnrecharge.png)',marginLeft:'5vw'}}>
+                   style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/btnrecharge.png)',marginLeft:'5vw'}}>
+                <span className={Style['priceTitle']}>{this.state.rechargeConfig["3"].price/100}元</span>
+              </div>
+              <div  className={Style['additionTitle']} style = {{marginLeft:'5vw'}}>
+                {this.state.rechargeConfig["3"]['addition']>0?
+                  `充${this.state.rechargeConfig["3"].price/100}元 送${this.state.rechargeConfig["3"]['addition']/100}元`:''}
               </div>
             </div>
             <div className={Style['selection']}>
               <div className={Style['btn']}
                    onClick={()=>{this.recharge(4)}}
-                   style = {{backgroundImage:'http://rentservice.b0.upaiyun.com/btnrecharge.png)',marginRight:'5vw'}}>
-
+                   style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/btnrecharge.png)',marginRight:'5vw'}}>
+                <span className={Style['priceTitle']}>{this.state.rechargeConfig["4"].price/100}元</span>
+              </div>
+              <div  className={Style['additionTitle']} style = {{marginRight:'5vw'}}>
+                {this.state.rechargeConfig["4"]['addition']>0?
+                  `充${this.state.rechargeConfig["4"].price/100}元 送${this.state.rechargeConfig["4"]['addition']/100}元，经常打球推荐`:''}
               </div>
             </div>
           </div>
