@@ -79,6 +79,7 @@ class QRScanPage extends React.Component {
             success: function (res) {
               if(res.resultStr){
                 boxPrice(res.resultStr).then(r=>{
+                  alert(JSON.stringify(r))
                   if(r.freemin){
                     self.setState({step:3,price:{
                       freemin:r.freemin,
