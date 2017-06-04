@@ -96,7 +96,6 @@ class recharge extends React.Component {
 
   renderConfig(){
     if(this.state.rechargeConfig){
-      alert(this.state.rechargeConfig["1"]);
       return(
         <div className = {Style['selectContainer']}>
           <div className={Style['selectRow']}>
@@ -104,7 +103,7 @@ class recharge extends React.Component {
               <div className={Style['btn']}
                    onClick={()=>{this.recharge(1)}}
                    style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rechargeBtn.png)',marginLeft:'5vw'}}>
-                <span>{1}</span>
+                <span>{this.state.rechargeConfig["1"].price/100}元</span>
               </div>
             </div>
             <div className={Style['selection']}>
