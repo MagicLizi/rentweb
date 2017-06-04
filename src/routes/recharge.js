@@ -119,7 +119,6 @@ class recharge extends React.Component {
               <div className={Style['btn']}
                    onClick={()=>{this.recharge(3)}}
                    style = {{backgroundImage:'http://rentservice.b0.upaiyun.com/btnrecharge.png)',marginLeft:'5vw'}}>
-
               </div>
             </div>
             <div className={Style['selection']}>

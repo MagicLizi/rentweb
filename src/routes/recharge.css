@@ -16,7 +16,7 @@
 
 .selectRow{
   width:100vw;
-  height:22vh;
+  height:46vw;
   display: flex;
   flex-direction: row;
 }
@@ -50,8 +50,10 @@
 }
 
 .additionTitle{
+  margin-top: 10px;
   font-size: 0.9rem;
-  width:50vw;
+  width:30vw;
+  background-color: red;
   color:white;
   text-align: center;
 }
