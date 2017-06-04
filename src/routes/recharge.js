@@ -102,7 +102,7 @@ class recharge extends React.Component {
             <div className={Style['selection']}>
               <div className={Style['btn']}
                    onClick={()=>{this.recharge(1)}}
-                   style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rechargeBtn.png)',marginLeft:'5vw'}}>
+                   style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/btnrecharge.png)',marginLeft:'5vw'}}>
                 <span className={Style['priceTitle']}>{this.state.rechargeConfig["1"].price/100}元</span>
               </div>
               <span className={Style['additionTitle']}>充{this.state.rechargeConfig["1"].price/100}元 赠送{this.state.rechargeConfig["1"]['addition']/100}元</span>
@@ -110,7 +110,7 @@ class recharge extends React.Component {
             <div className={Style['selection']}>
               <div className={Style['btn']}
                    onClick={()=>{this.recharge(2)}}
-                   style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rechargeBtn.png)',marginRight:'5vw'}}>
+                   style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/btnrecharge.png)',marginRight:'5vw'}}>
               </div>
             </div>
           </div>
@@ -118,14 +118,14 @@ class recharge extends React.Component {
             <div className={Style['selection']}>
               <div className={Style['btn']}
                    onClick={()=>{this.recharge(3)}}
-                   style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rechargeBtn.png)',marginLeft:'5vw'}}>
+                   style = {{backgroundImage:'http://rentservice.b0.upaiyun.com/btnrecharge.png)',marginLeft:'5vw'}}>
 
               </div>
             </div>
             <div className={Style['selection']}>
               <div className={Style['btn']}
                    onClick={()=>{this.recharge(4)}}
-                   style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/rechargeBtn.png)',marginRight:'5vw'}}>
+                   style = {{backgroundImage:'http://rentservice.b0.upaiyun.com/btnrecharge.png)',marginRight:'5vw'}}>
 
               </div>
             </div>
