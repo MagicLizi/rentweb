@@ -95,6 +95,7 @@ class recharge extends React.Component {
   }
 
   renderConfig(){
+    alert(this.state.rechargeConfig);
     if(this.state.rechargeConfig){
       return(
         <div className = {Style['selectContainer']}>
@@ -141,7 +142,7 @@ class recharge extends React.Component {
   render(){
     return (
       <div className = {Style['container']}>
-          {this.renderConfig()}
+         {this.renderConfig()}
       </div>
     );
   }
