@@ -3,7 +3,7 @@ import { connect } from 'dva';
 import Style from './recharge.css';
 import {setCurPath} from '../models/path';
 import {urlDomain} from '../utils/request';
-import {getRechargeConfig} from '../services/user';
+import {getRechargeConfig,createMemberOrder} from '../services/user';
 class recharge extends React.Component {
   constructor(){
     super();
@@ -94,6 +94,13 @@ class recharge extends React.Component {
     })
   }
 
+  bemember(){
+    createMemberOrder().then(r=>{
+      alert('服务尚未开启，敬请期待！');
+    })
+  }
+
+
   renderConfig(){
     if(this.state.rechargeConfig){
       return(
@@ -158,7 +165,7 @@ class recharge extends React.Component {
     return (
       <div className = {Style['container']} style = {{backgroundImage: 'url(http://rentservice.b0.upaiyun.com/rechargeBB.jpg!w640)'}}>
         <div onClick={()=>{
-          alert('服务尚未开启，敬请期待！');
+          this.bemember();
         }} className = {Style['member']} style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/memberBtn.png!w640)'}}>
         </div>
 
