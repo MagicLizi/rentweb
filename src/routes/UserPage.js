@@ -5,9 +5,10 @@ import React from 'react';
 import {connect} from 'dva';
 import userPageCss from './UserPage.css';
 import {setCurPath} from '../models/path';
-import {tryCancelAuthority,payRecharge} from '../services/user';
+import {tryCancelAuthority,payRecharge,getUserMemberInfo} from '../services/user';
 import {repay,payrent} from '../services/action';
 import {urlDomain} from '../utils/request';
+import moment from 'moment';
 class UserPage extends React.Component{
 
   constructor() {
@@ -126,6 +127,26 @@ class UserPage extends React.Component{
           <div className = {userPageCss['cellline']}/>
           <div onClick={()=>{window.location = `${urlDomain}/recharge`}} className = {userPageCss['cell']}>
             <span style = {{fontSize:15,color:'#2b2c2d',width:'46.5vw',marginLeft:'3.5vw'}}>余额充值</span>
+            <div style = {{width:'50vw',height:'8vh',display:'flex',
+              alignItems:'center',justifyContent:'flex-end'}}>
+              <img src = {require('../assets/right.png')} style = {{width:'1.05vh',height:'2vh',marginRight:'3.5vw'}}/>
+            </div>
+          </div>
+          <div className = {userPageCss['cellline']}/>
+          <div onClick={()=>{
+            getUserMemberInfo().then(r=>{
+              if(r){
+                if(!r['endAt']){
+                  alert('用户没有包年会员信息！');
+                }
+                else{
+                  alert(`用户会员至${moment(~~r['endAt']*1000).format('YYYY-MM-DD HH:mm')}`)
+                }
+              }
+            })
+          }
+          } className = {userPageCss['cell']}>
+            <span style = {{fontSize:15,color:'#2b2c2d',width:'46.5vw',marginLeft:'3.5vw'}}>会员信息</span>
             <div style = {{width:'50vw',height:'8vh',display:'flex',
               alignItems:'center',justifyContent:'flex-end'}}>
               <img src = {require('../assets/right.png')} style = {{width:'1.05vh',height:'2vh',marginRight:'3.5vw'}}/>

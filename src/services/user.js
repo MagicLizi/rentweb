@@ -109,6 +109,9 @@ export async function tryRepay(){
   return await request(`/user/tryRepay`,{method:'POST'});
 }
 
+export async function getUserMemberInfo(){
+  return await request(`/user/userMemberInfo`,{});
+}
 
 export async function checkCancel(){
   return await request(`/user/checkCancel`,{});
