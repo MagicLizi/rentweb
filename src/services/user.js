@@ -68,6 +68,12 @@ export async function createRechargeOrder(rechargeId){
   })
 }
 
+export async function createMemberOrder(){
+  return await request('/user/createMemberOrder',{
+    method:'POST'
+  })
+}
+
 export async function getBoxOpenState(chestLogicId,boxId){
   return await request('/user/rentBoxOpenState',{
     method:'POST',

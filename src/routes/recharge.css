@@ -2,8 +2,9 @@
   width :100vw;
   height: 177.8vw;
   background-size: cover;
-  background-image: url(http://rentservice.b0.upaiyun.com/rechargecontainer.jpg);
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .selectContainer{
@@ -56,4 +57,26 @@
   font-weight: 500;
   color:white;
   text-align: center;
+}
+
+.member{
+  width :80vw;
+  height: 60vw;
+  background-size: cover;
+  margin-top: 24vh;
+}
+
+.member:active{
+  opacity: 0.6;
+}
+
+.newBtn{
+  width:50vw;
+  height:13.2vw;
+  background-size: cover;
+  margin-top: 1vh;
+}
+
+.newBtn:active{
+  opacity: 0.6;
 }
