@@ -187,16 +187,16 @@ class recharge extends React.Component {
         </div>
 
         <span style = {{width:'68vw',fontSize:13,color:'white',fontWeight:300}}>
-          每天限打2次每次限五小时 包年除我司不能提供服务的特殊情况外 不能申请退款如我司不能继续服务 则按剩余时间比例进行对款
+          每天限打1次每次限4小时 包年除我司不能提供服务的特殊情况外 不能申请退款 如我司不能继续服务 则按剩余时间比例进行退款
         </span>
 
-        <div onClick={()=>{this.recharge(1)}} className = {Style['newBtn']} style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/5btn.png)',marginTop:'3vw'}}>
+        <div onClick={()=>{this.recharge(3)}} className = {Style['newBtn']} style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/20btn.png)'}}>
         </div>
 
         <div onClick={()=>{this.recharge(2)}} className = {Style['newBtn']} style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/10btn.png)'}}>
         </div>
 
-        <div onClick={()=>{this.recharge(3)}} className = {Style['newBtn']} style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/20btn.png)'}}>
+        <div onClick={()=>{this.recharge(1)}} className = {Style['newBtn']} style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/5btn.png)',marginTop:'3vw'}}>
         </div>
 
       </div>
