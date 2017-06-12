@@ -81,8 +81,8 @@
       <file leaf-file-name="userInvitation.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/userInvitation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+            <state relative-caret-position="188">
+              <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
               <folding>
                 <element signature="e#46#72#0" expanded="true" />
               </folding>
@@ -103,8 +103,8 @@
       <file leaf-file-name="qrcode.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/qrcode-npm/qrcode.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="446" column="4" lean-forward="false" selection-start-line="446" selection-start-column="4" selection-end-line="446" selection-end-column="4" />
+            <state relative-caret-position="197">
+              <caret line="386" column="21" lean-forward="false" selection-start-line="386" selection-start-column="21" selection-end-line="386" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -145,7 +145,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>closeWeb</find>
       <find>/recharge</find>
       <find>repay</find>
       <find>renttest</find>
@@ -175,6 +174,7 @@
       <find>bottomauth</find>
       <find>当前余额</find>
       <find>qrContainer</find>
+      <find>aler</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -508,12 +508,12 @@
       <workItem from="1496803072982" duration="263000" />
       <workItem from="1496916611080" duration="647000" />
       <workItem from="1497234876593" duration="6163000" />
-      <workItem from="1497252756224" duration="2039000" />
+      <workItem from="1497252756224" duration="2142000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246051000" />
+    <option name="totallyTimeSpent" value="246154000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -919,14 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/qrcode-npm/qrcode.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="446" column="4" lean-forward="false" selection-start-line="446" selection-start-column="4" selection-end-line="446" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -935,10 +927,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/qrcode-npm/qrcode.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="386" column="21" lean-forward="false" selection-start-line="386" selection-start-column="21" selection-end-line="386" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/userInvitation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        <state relative-caret-position="188">
+          <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
           <folding>
             <element signature="e#46#72#0" expanded="true" />
           </folding>
