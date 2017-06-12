@@ -71,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userInvitation.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="userInvitation.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/userInvitation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="27" column="37" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="37" />
+            <state relative-caret-position="304">
+              <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
               <folding>
                 <element signature="e#46#72#0" expanded="true" />
               </folding>
@@ -93,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userInvitation.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="userInvitation.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/userInvitation.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+            <state relative-caret-position="247">
+              <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -221,8 +221,8 @@
         <option value="$PROJECT_DIR$/src/routes/recharge.js" />
         <option value="$PROJECT_DIR$/src/router.js" />
         <option value="$PROJECT_DIR$/src/services/user.js" />
-        <option value="$PROJECT_DIR$/src/routes/userInvitation.js" />
         <option value="$PROJECT_DIR$/src/routes/userInvitation.css" />
+        <option value="$PROJECT_DIR$/src/routes/userInvitation.js" />
       </list>
     </option>
   </component>
@@ -510,12 +510,12 @@
       <workItem from="1496717874254" duration="508000" />
       <workItem from="1496803072982" duration="263000" />
       <workItem from="1496916611080" duration="647000" />
-      <workItem from="1497234876593" duration="3081000" />
+      <workItem from="1497234876593" duration="3200000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="240930000" />
+    <option name="totallyTimeSpent" value="241049000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -933,21 +933,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/userInvitation.js">
+    <entry file="file://$PROJECT_DIR$/src/routes/userInvitation.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="27" column="37" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="37" />
-          <folding>
-            <element signature="e#46#72#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="247">
+          <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/userInvitation.css">
+    <entry file="file://$PROJECT_DIR$/src/routes/userInvitation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="304">
+          <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+          <folding>
+            <element signature="e#46#72#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

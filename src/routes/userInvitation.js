@@ -24,7 +24,7 @@ class UserInvitation extends React.Component{
     return(
       <div className = {Style.container}>
         {this.state.qr?(
-        <div>
+        <div className={Style['qrContainer']}>
           <div className={Style.title}>分享邀请码给你的朋友，你们都能获得3元充值奖励</div>
           <QRCode value={this.state.qr} size = {256}/>
         </div>

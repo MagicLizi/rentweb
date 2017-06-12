@@ -10,3 +10,11 @@
   fontSize:1rem;
   margin-bottom: 4vh;
 }
+
+.qrContainer{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
