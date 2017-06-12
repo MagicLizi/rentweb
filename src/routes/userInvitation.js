@@ -5,6 +5,7 @@ import React from 'react';
 import Style from './userInvitation.css';
 import {getUserInvitation} from '../services/user';
 var QRCode = require('qrcode.react');
+import {setCurPath} from '../models/path';
 class UserInvitation extends React.Component{
 
   constructor(){
@@ -15,6 +16,7 @@ class UserInvitation extends React.Component{
   }
 
   componentWillMount() {
+    setCurPath('/userInvitation');
     getUserInvitation().then(result=>{
       this.setState({qr:result.qr})
     })

@@ -9,8 +9,9 @@
 .title{
   fontSize:1rem;
   color: black;
-  width: 84vw;
+  width: 80vw;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .qrContainer{
