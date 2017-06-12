@@ -4,6 +4,7 @@
 import React from 'react';
 import Style from './userInvitation.css';
 import {getUserInvitation} from '../services/user';
+var qrCode = require('qrcode-npm')
 var QRCode = require('qrcode.react');
 import {setCurPath} from '../models/path';
 class UserInvitation extends React.Component{
@@ -11,24 +12,29 @@ class UserInvitation extends React.Component{
   constructor(){
     super();
     this.state = {
-      qr:null
+      qr:null,
+      imgTag:null
     }
   }
 
   componentWillMount() {
     setCurPath('/userInvitation');
     getUserInvitation().then(result=>{
-      this.setState({qr:result.qr})
+      var qr = qrCode.qrcode(6, 'M');
+      qr.addData(result.qr);
+      qr.make();
+      var imgTag = qr.createImgTag(6);
+      this.setState({imgTag:imgTag});
     })
   }
 
   render(){
     return(
       <div className = {Style.container}>
-        {this.state.qr?(
+        {this.state.imgTag?(
         <div className={Style['qrContainer']}>
           <div className={Style.title}>分享邀请码给你的朋友，你们分别能获得0.5元和3元的余额奖励哦！</div>
-          <QRCode value={this.state.qr} size = {256}/>
+          <div dangerouslySetInnerHTML={{ __html: this.state.imgTag }} />
         </div>
         ):null}
       </div>
