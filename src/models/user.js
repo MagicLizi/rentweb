@@ -112,7 +112,11 @@ export default{
         routerRedux.push({pathname:'/orders'})
       )
     },
-
+    *showUserInvite(action,{call,put}){
+      yield put(
+        routerRedux.push({pathname:'/userInvitation'})
+      )
+    },
     *checkNeedBind(action,{call,put}){
       var result = yield call(checkNeedBind);
       if(result){
