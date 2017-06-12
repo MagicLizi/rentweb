@@ -9,7 +9,8 @@
 .title{
   fontSize:1rem;
   color: black;
-  width: 92vw;
+  width: 84vw;
+  margin-bottom: 10px;
 }
 
 .qrContainer{
