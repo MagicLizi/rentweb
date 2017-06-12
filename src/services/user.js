@@ -124,3 +124,7 @@ export async function stopCancel(){
 export async function getRechargeConfig(){
   return await request(`/user/rechargeConfig`,{})
 }
+
+export async function getUserInvitation(){
+  return await request(`/user/userInvitation`,{})
+}
