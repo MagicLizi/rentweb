@@ -29,7 +29,7 @@ class UserInvitation extends React.Component{
   componentDidMount() {
     getUserInvitation().then(result=>{
       try{
-        var qr = qrCode.qrcode(6, 'M');
+        var qr = qrCode.qrcode(6, 'L');
         qr.addData(result.qr.toString());
         alert(result.qr.toString());
         qr.make();
