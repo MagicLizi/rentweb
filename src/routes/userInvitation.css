@@ -5,3 +5,8 @@
   align-items: center;
   justify-content: center;
 }
+
+.title{
+  fontSize:1rem;
+  margin-bottom: 4vh;
+}
