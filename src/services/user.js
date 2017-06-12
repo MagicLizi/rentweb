@@ -43,12 +43,13 @@ export async function checkNeedBind(){
   return await request(`/user/userneedbind`,{});
 }
 
-export async function bind(mobile,verifyCode){
+export async function bind(mobile,verifyCode,qr){
   return await request(`/user/bind`,{
     method:'POST',
     body:JSON.stringify({
       mobile:mobile,
-      verifyCode:verifyCode
+      verifyCode:verifyCode,
+      qr:qr
     })
   });
 }

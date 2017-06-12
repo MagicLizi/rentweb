@@ -19,7 +19,6 @@ class BindMobile extends React.Component{
   }
 
   componentWillMount() {
-    alert(this.props.location.query.qr);
     setCurPath('/rent');
   }
 
@@ -61,7 +60,7 @@ class BindMobile extends React.Component{
   }
 
   bind(){
-    bind(this.state.mobile,this.state.verifyCode).then(result=>{
+    bind(this.state.mobile,this.state.verifyCode,this.props.location.query.qr).then(result=>{
       if(result){
         // this.vtimer&&clearInterval(this.vtimer);
         alert('绑定成功');
