@@ -30,6 +30,7 @@ class UserInvitation extends React.Component{
     getUserInvitation().then(result=>{
       var qr = qrCode.qrcode(6, 'M');
       qr.addData(result.qr.toString());
+      alert(result.qr.toString());
       qr.make();
       alert(result.qr.toString());
       var imgTag = qr.createImgTag(6);
