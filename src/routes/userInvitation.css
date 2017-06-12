@@ -8,16 +8,14 @@
 
 .title{
   fontSize:1rem;
-  margin-bottom: 4vh;
   color: black;
   width: 92vw;
 }
 
 .qrContainer{
-  flex-direction: column;
   width: 100vw;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
