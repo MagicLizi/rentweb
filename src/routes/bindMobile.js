@@ -19,6 +19,7 @@ class BindMobile extends React.Component{
   }
 
   componentWillMount() {
+    alert(this.props.location.query.qr);
     setCurPath('/rent');
   }
 
@@ -26,7 +27,6 @@ class BindMobile extends React.Component{
     if(this['state'].verifyTime<0){
       if(this['state'].mobile.length === 11){
         getVerifyCode(this['state'].mobile).then(data=>{
-          console.log(data);
           if(data){
             this.setState({verifyTime:60});
             setTimeout(()=>{
@@ -71,7 +71,6 @@ class BindMobile extends React.Component{
   }
 
   render(){
-
     var verifyMsg = '发送验证码';
     if(this['state'].verifyTime>0){
       verifyMsg = `${this['state'].verifyTime}秒后重发`;
