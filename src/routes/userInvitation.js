@@ -21,8 +21,8 @@ class UserInvitation extends React.Component{
     setCurPath('/userInvitation');
     getUserInvitation().then(result=>{
       var qr = qrCode.qrcode(6, 'M');
-      alert(result.qr)
-      qr.addData(result.qr);
+      alert(result.code)
+      qr.addData(result.code);
       qr.make();
       var imgTag = qr.createImgTag(6);
       alert(imgTag);
