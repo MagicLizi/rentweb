@@ -81,8 +81,8 @@
       <file leaf-file-name="userInvitation.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/userInvitation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="32" column="34" lean-forward="false" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+            <state relative-caret-position="454">
+              <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
               <folding>
                 <element signature="e#46#72#0" expanded="true" />
               </folding>
@@ -104,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/node_modules/qrcode-npm/qrcode.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="197">
-              <caret line="386" column="21" lean-forward="false" selection-start-line="386" selection-start-column="21" selection-end-line="386" selection-end-column="21" />
+              <caret line="403" column="9" lean-forward="true" selection-start-line="403" selection-start-column="9" selection-end-line="403" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -508,12 +508,12 @@
       <workItem from="1496803072982" duration="263000" />
       <workItem from="1496916611080" duration="647000" />
       <workItem from="1497234876593" duration="6163000" />
-      <workItem from="1497252756224" duration="2305000" />
+      <workItem from="1497252756224" duration="2390000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246317000" />
+    <option name="totallyTimeSpent" value="246402000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -930,15 +930,15 @@
     <entry file="file://$PROJECT_DIR$/node_modules/qrcode-npm/qrcode.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
-          <caret line="386" column="21" lean-forward="false" selection-start-line="386" selection-start-column="21" selection-end-line="386" selection-end-column="21" />
+          <caret line="403" column="9" lean-forward="true" selection-start-line="403" selection-start-column="9" selection-end-line="403" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/userInvitation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="32" column="34" lean-forward="false" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+        <state relative-caret-position="454">
+          <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
           <folding>
             <element signature="e#46#72#0" expanded="true" />
           </folding>
