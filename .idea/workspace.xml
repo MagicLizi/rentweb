@@ -82,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/src/routes/userInvitation.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="223">
-              <caret line="48" column="86" lean-forward="false" selection-start-line="48" selection-start-column="86" selection-end-line="48" selection-end-column="86" />
+              <caret line="48" column="79" lean-forward="false" selection-start-line="48" selection-start-column="79" selection-end-line="48" selection-end-column="79" />
               <folding>
                 <element signature="e#46#72#0" expanded="true" />
               </folding>
@@ -508,12 +508,12 @@
       <workItem from="1496803072982" duration="263000" />
       <workItem from="1496916611080" duration="647000" />
       <workItem from="1497234876593" duration="6163000" />
-      <workItem from="1497252756224" duration="3902000" />
+      <workItem from="1497252756224" duration="3926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247914000" />
+    <option name="totallyTimeSpent" value="247938000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -938,7 +938,7 @@
     <entry file="file://$PROJECT_DIR$/src/routes/userInvitation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
-          <caret line="48" column="86" lean-forward="false" selection-start-line="48" selection-start-column="86" selection-end-line="48" selection-end-column="86" />
+          <caret line="48" column="79" lean-forward="false" selection-start-line="48" selection-start-column="79" selection-end-line="48" selection-end-column="79" />
           <folding>
             <element signature="e#46#72#0" expanded="true" />
           </folding>

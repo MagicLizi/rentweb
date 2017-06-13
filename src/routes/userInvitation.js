@@ -46,7 +46,7 @@ class UserInvitation extends React.Component{
       <div className = {Style.container}>
         {this.state.imgTag?(
         <div className={Style['qrContainer']}>
-          <div className={Style.title}>分享邀请码给你的朋友，你们分别能获得0.5元和3元的余额奖励哦！关注猪了个球公众号体验更多篮球优质服务！</div>
+          <div className={Style.title}>分享邀请码给你的朋友，你们分别能获得0.5元和3元的余额奖励哦！关注「猪了个球」公众号体验更多篮球优质服务！</div>
           <div dangerouslySetInnerHTML={{ __html: this.state.imgTag }} />
         </div>
         ):null}
