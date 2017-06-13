@@ -19,7 +19,9 @@ class BindMobile extends React.Component{
   }
 
   componentWillMount() {
-    setCurPath('/rent');
+    var qr = this.props.location.query.qr;
+    alert(qr);
+    setCurPath('/bind');
   }
 
   getVerifyCode(){
