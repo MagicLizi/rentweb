@@ -28,6 +28,10 @@ class BindMobile extends React.Component{
     }
   }
 
+  componentDidMount() {
+    this.props.refreshUserInfo();
+  }
+
   getVerifyCode(){
     if(this['state'].verifyTime<0){
       if(this['state'].mobile.length === 11){
@@ -122,5 +126,14 @@ class BindMobile extends React.Component{
   }
 }
 
+var mapDispatchToProps = function(dispatch) {
+  return {
+    refreshUserInfo: () => {
+      dispatch({
+        type: 'user/refreshUserInfo'
+      })
+    },
+  }
+}
 
-export default connect()(BindMobile)
+export default connect(null,mapDispatchToProps)(BindMobile)
