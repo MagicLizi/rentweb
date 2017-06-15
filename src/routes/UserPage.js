@@ -57,7 +57,6 @@ class UserPage extends React.Component{
   }
 
   cancelAuthority(){
-
     var hasAuthority = this.props['hasAuthority'];
     var iscancel = this.props['iscancel'];
     if(hasAuthority === 1){
@@ -90,12 +89,12 @@ class UserPage extends React.Component{
           }
         })
       }
-      else{
-        if(iscancel === 1){
-          tryCancelAuthority().then(result=>{
+    }
+    else{
+      if(iscancel === 1){
+        tryCancelAuthority().then(result=>{
 
-          })
-        }
+        })
       }
     }
   }
