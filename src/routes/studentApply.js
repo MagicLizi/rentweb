@@ -21,7 +21,7 @@ class studentApply extends React.Component{
 
   componentWillMount() {
     setCurPath('/studentApply');
-    // this.props.refreshUserInfo();
+    this.props.refreshUserInfo();
   }
 
   closeWeb(){
@@ -43,7 +43,7 @@ class studentApply extends React.Component{
     var options = {
       baseUrl: 'http://139.196.210.143:7777/upload',
       chooseAndUpload: true,
-      fileFieldName: 'userCre',
+      fileFieldName: this.props.token,
       chooseFile: function (files) {
         console.log('you choose', typeof files == 'string' ? files : files[0].name);
         self.setState({needLoading: true});
@@ -53,7 +53,7 @@ class studentApply extends React.Component{
       },
       uploading: function (progress) {
         console.log('loading...', progress.loaded / progress.total + '%')
-        var persent =progress.loaded / progress.total;
+        var persent =~~(progress.loaded / progress.total);
         self.setState({loadingTitle:`上传中：${persent}%`})
       },
       uploadSuccess: function (resp) {
@@ -102,4 +102,8 @@ var mapDispatchToProps = function(dispatch) {
   }
 }
 
-export default connect(null,mapDispatchToProps)(studentApply);
+var mapStateToProps = function(state){
+  return state['user'];
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(studentApply);
