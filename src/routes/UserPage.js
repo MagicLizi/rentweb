@@ -85,6 +85,7 @@ class UserPage extends React.Component{
               }
               else{
                 alert('退还押金申请成功，押金将会在5个工作日后返还到您的支付账户中！');
+                this.props.refreshUserInfo();
               }
             }
           }

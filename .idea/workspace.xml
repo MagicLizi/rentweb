@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="aca2e0a0-f881-452b-a440-c64dba87f5fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/UserPage.js" afterPath="$PROJECT_DIR$/src/routes/UserPage.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,11 +27,10 @@
       <file leaf-file-name="UserPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/UserPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="361">
+              <caret line="87" column="45" lean-forward="false" selection-start-line="87" selection-start-column="45" selection-end-line="87" selection-end-column="45" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
-                <element signature="e#1846#2694#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -513,12 +513,12 @@
       <workItem from="1496916611080" duration="647000" />
       <workItem from="1497234876593" duration="6163000" />
       <workItem from="1497252756224" duration="6287000" />
-      <workItem from="1497508696803" duration="2962000" />
+      <workItem from="1497508696803" duration="3098000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253261000" />
+    <option name="totallyTimeSpent" value="253397000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -950,11 +950,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/UserPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="361">
+          <caret line="87" column="45" lean-forward="false" selection-start-line="87" selection-start-column="45" selection-end-line="87" selection-end-column="45" />
           <folding>
             <element signature="e#45#71#0" expanded="true" />
-            <element signature="e#1846#2694#0" expanded="false" />
           </folding>
         </state>
       </provider>
