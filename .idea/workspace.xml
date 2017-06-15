@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="aca2e0a0-f881-452b-a440-c64dba87f5fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/AuthorityPage.js" afterPath="$PROJECT_DIR$/src/routes/AuthorityPage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/RentPage.css" afterPath="$PROJECT_DIR$/src/routes/RentPage.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -74,8 +73,8 @@
       <file leaf-file-name="RentPage.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/RentPage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="80" column="14" lean-forward="false" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
+            <state relative-caret-position="338">
+              <caret line="75" column="19" lean-forward="false" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -510,12 +509,12 @@
       <workItem from="1496916611080" duration="647000" />
       <workItem from="1497234876593" duration="6163000" />
       <workItem from="1497252756224" duration="6287000" />
-      <workItem from="1497508696803" duration="538000" />
+      <workItem from="1497508696803" duration="634000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250837000" />
+    <option name="totallyTimeSpent" value="250933000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -938,8 +937,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/RentPage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="80" column="14" lean-forward="false" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
+        <state relative-caret-position="338">
+          <caret line="75" column="19" lean-forward="false" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
           <folding />
         </state>
       </provider>
