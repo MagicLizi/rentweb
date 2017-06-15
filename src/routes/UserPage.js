@@ -59,8 +59,6 @@ class UserPage extends React.Component{
   cancelAuthority(){
     var hasAuthority = this.props['hasAuthority'];
     var iscancel = this.props['iscancel'];
-    alert(hasAuthority)
-    alert(iscancel);
     if(hasAuthority === 1){
       var c1 = confirm('当前押金为69元，点击确认申请退还！');
       if(c1){
