@@ -6,6 +6,7 @@ import { routerRedux } from 'dva/router';
 export default{
   namespace:'user',
   state:{
+    userId:'none',
     nickname:'',
     headImg:'',
     token:null,
@@ -40,6 +41,7 @@ export default{
         yield put({
           type:'setCurUserInfo',
           curUserInfo:{
+            userId:result['unionId'],
             nickname:result['nickname'],
             headImg:result['headImg'],
             iscancel:result['iscancel'],
