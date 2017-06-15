@@ -57,32 +57,35 @@ class UserPage extends React.Component{
   }
 
   cancelAuthority(){
-    tryCancelAuthority().then(result=>{
-      if(result) {
-        if (result['rentInfo']) {
-          var c = confirm('您有正在进行的订单，请先完成订单后才能退取押金！');
-          if (c) {
-            payRecharge().then(r => {
-              if (r) {
-                alert('结算成功');
-                this.props.refreshUserInfo();
-              }
-            })
-          }
-        }
-        else {
-          if(result['nobalance']) {
-            var c = confirm('欠费中，请先充值后才能退取押金！');
+    var c1 = confirm('当前押金为69元，点击确认申请退还！');
+    if(c1){
+      tryCancelAuthority().then(result=>{
+        if(result) {
+          if (result['rentInfo']) {
+            var c = confirm('您有正在进行的订单，请先完成订单后才能退取押金！');
             if (c) {
-              window.location = `${urlDomain}/recharge`;
+              payRecharge().then(r => {
+                if (r) {
+                  alert('结算成功');
+                  this.props.refreshUserInfo();
+                }
+              })
             }
           }
-          else{
-            alert('退还押金申请成功，押金将会在10个工作日后返还到您的支付账户中！');
+          else {
+            if(result['nobalance']) {
+              var c = confirm('欠费中，请先充值后才能退取押金！');
+              if (c) {
+                window.location = `${urlDomain}/recharge`;
+              }
+            }
+            else{
+              alert('退还押金申请成功，押金将会在5个工作日后返还到您的支付账户中！');
+            }
           }
         }
-      }
-    })
+      })
+    }
   }
 
   render(){
