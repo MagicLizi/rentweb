@@ -69,3 +69,14 @@
 .abtn2:active{
   opacity:0.6;
 }
+
+.payAuthBtn{
+  width :28vw;
+  height: 28vw;
+  margin-bottom: 15vh;
+  background-size: cover;
+}
+
+.payAuthBtn:active{
+  opacity:0.6;
+}

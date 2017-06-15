@@ -83,8 +83,7 @@ class Authority extends React.Component {
     return(
       <div className = {rentPageCss['container']}>
         <div className = {rentPageCss['bg']}
-             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/aubottom.jpg)'}}>
-        <div className = {rentPageCss['authBtnContainer']}>
+             style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/authBottomNew1.jpg!w640)'}}>
           <div onClick={()=>{
             if(this.canPay){
               this.payAuthority();
@@ -94,15 +93,8 @@ class Authority extends React.Component {
 
               });
             }
-          }} className = {rentPageCss['abtn1']}
-               style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/goauthbtn.png!w640)'}}/>
-            <div onClick={()=>{
-              WeixinJSBridge.invoke('closeWindow',{},function(res){
-
-              });
-            }} className = {rentPageCss['abtn2']}
-                 style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/cancelauth.png!w640)'}}/>
-        </div>
+          }} className = {rentPageCss['payAuthBtn']}
+               style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/payauthbtn.png!w640)'}}/>
 
         </div>
       </div>
