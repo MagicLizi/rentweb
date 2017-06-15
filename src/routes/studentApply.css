@@ -1,0 +1,38 @@
+.container{
+  width:100vw;
+  height:100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+
+.btn{
+  width:60vw;
+  height:16.75vw;
+  background-color: rgba(0,0,0,0.5);
+  margin-top: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title{
+  font-size: 1rem;
+  font-weight: 300;
+  color:white;
+  opacity: 0.8;
+}
+
+.btn:active{
+  opacity:0.6;
+}
+
+
+.creImgInput{
+  width:60vw;
+  height:16.75vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

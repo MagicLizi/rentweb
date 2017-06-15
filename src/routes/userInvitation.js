@@ -19,11 +19,6 @@ class UserInvitation extends React.Component{
 
   componentWillMount() {
     setCurPath('/userInvitation');
-    // var qr = qrCode.qrcode(6, 'M');
-    // qr.addData('32132131231');
-    // qr.make();
-    // var imgTag = qr.createImgTag(6);
-    // this.setState({imgTag:imgTag});
   }
 
   componentDidMount() {

@@ -129,3 +129,12 @@ export async function getRechargeConfig(){
 export async function getUserInvitation(){
   return await request(`/user/userInvitation`,{})
 }
+
+export async function applyStudent(creUrl){
+  return await request(`/user/applyStudent`,{
+    method:'POST',
+    body:JSON.stringify({
+      creUrl:creUrl
+    })
+  });
+}

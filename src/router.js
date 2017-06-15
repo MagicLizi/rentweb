@@ -13,6 +13,7 @@ import Recharge from './routes/recharge';
 import BindMobile from './routes/bindMobile';
 import RepayNewPage from './routes/RepayNewPage';
 import UserInvitation from './routes/userInvitation';
+import StudentApply from './routes/studentApply';
 function RouterConfig({ history }) {
   return (
     <Router history={history}>
@@ -29,6 +30,7 @@ function RouterConfig({ history }) {
       <Route path="/recharge" component={Recharge} />
       <Route path="/repayNewPage" component={RepayNewPage} />
       <Route path="/userInvitation" component={UserInvitation} />
+      <Route path="/studentApply" component={StudentApply} />
     </Router>
   );
 }
