@@ -14,6 +14,7 @@ export default{
 
     ],
     hasAuthority:0,
+    iscancel:0,
     curRentInfo:null
   },
 
@@ -41,6 +42,7 @@ export default{
           curUserInfo:{
             nickname:result['nickname'],
             headImg:result['headImg'],
+            iscancel:result['iscancel'],
             hasAuthority:result['authority'],
             balance:parseFloat(result['balance']/100).toFixed(2)
           }
