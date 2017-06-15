@@ -44,7 +44,7 @@ class studentApply extends React.Component{
     var options = {
       baseUrl: 'http://139.196.210.143:7777/upload',
       chooseAndUpload: true,
-      fileFieldName: self.props.userId,
+      fileFieldName: 'userCre',
       chooseFile: function (files) {
         console.log('you choose', typeof files == 'string' ? files : files[0].name);
         self.setState({needLoading: true});
