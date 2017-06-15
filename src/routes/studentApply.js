@@ -6,7 +6,7 @@ import Style from './studentApply.css';
 import Loading from '../components/TitleLoading';
 import FileUpload from 'react-fileupload';
 import {connect} from 'dva';
-import {applyStudent} from '../services/user';
+import {applyStudent,isStudent} from '../services/user';
 import {setCurPath} from '../models/path';
 class studentApply extends React.Component{
 
@@ -23,6 +23,17 @@ class studentApply extends React.Component{
     setCurPath('/studentApply');
     this.props.refreshUserInfo();
 
+  }
+
+  componentDidMount() {
+    setTimeout(()=>{
+      isStudent().then(r=>{
+        if(r['isStudent'] === 1){
+          alert('您已经是学生用户了，不要重复申请！');
+          this.closeWeb();
+        }
+      })
+    },50);
   }
 
   closeWeb(){

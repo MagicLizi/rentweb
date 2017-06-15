@@ -138,3 +138,8 @@ export async function applyStudent(creUrl){
     })
   });
 }
+
+
+export async function isStudent(){
+  return await request(`/user/userInvitation`,{})
+}
