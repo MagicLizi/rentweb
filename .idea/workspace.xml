@@ -61,14 +61,14 @@
       <file leaf-file-name="studentApply.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/studentApply.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="45" column="37" lean-forward="false" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+            <state relative-caret-position="288">
+              <caret line="42" column="28" lean-forward="false" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
               <folding>
                 <element signature="e#46#72#0" expanded="true" />
-                <marker date="1497516843000" expanded="true" signature="2148:2586" ph="..." />
-                <marker date="1497516843000" expanded="false" signature="2168:2251" ph="..." />
-                <marker date="1497516843000" expanded="true" signature="2294:2542" ph="..." />
-                <marker date="1497516843000" expanded="true" signature="2337:2525" ph="..." />
+                <marker date="1497516964000" expanded="true" signature="2177:2615" ph="..." />
+                <marker date="1497516964000" expanded="false" signature="2197:2280" ph="..." />
+                <marker date="1497516964000" expanded="true" signature="2323:2571" ph="..." />
+                <marker date="1497516964000" expanded="true" signature="2366:2554" ph="..." />
               </folding>
             </state>
           </provider>
@@ -519,12 +519,12 @@
       <workItem from="1496916611080" duration="647000" />
       <workItem from="1497234876593" duration="6163000" />
       <workItem from="1497252756224" duration="6287000" />
-      <workItem from="1497508696803" duration="8039000" />
+      <workItem from="1497508696803" duration="8161000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="258338000" />
+    <option name="totallyTimeSpent" value="258460000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -964,14 +964,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/studentApply.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="45" column="37" lean-forward="false" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+        <state relative-caret-position="288">
+          <caret line="42" column="28" lean-forward="false" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
           <folding>
             <element signature="e#46#72#0" expanded="true" />
-            <marker date="1497516843000" expanded="true" signature="2148:2586" ph="..." />
-            <marker date="1497516843000" expanded="false" signature="2168:2251" ph="..." />
-            <marker date="1497516843000" expanded="true" signature="2294:2542" ph="..." />
-            <marker date="1497516843000" expanded="true" signature="2337:2525" ph="..." />
+            <marker date="1497516964000" expanded="true" signature="2177:2615" ph="..." />
+            <marker date="1497516964000" expanded="false" signature="2197:2280" ph="..." />
+            <marker date="1497516964000" expanded="true" signature="2323:2571" ph="..." />
+            <marker date="1497516964000" expanded="true" signature="2366:2554" ph="..." />
           </folding>
         </state>
       </provider>
