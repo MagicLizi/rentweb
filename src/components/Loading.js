@@ -42,7 +42,7 @@ class Loading extends React.Component {
         justifyContent:'center',flexDirection:'column',
         backgroundColor:'rgba(0,0,0,0.6)',position:'absolute',top:0,left:0}}>
         <LoadingTarget type='spin' color='white' />
-        <span style = {{fontSize:14,color:'white',marginTop:'3vh',fontWeight:300}}>{title}</span>
+        <span style = {{width:'84vw',textAlign:'center',fontSize:14,color:'white',marginTop:'3vh',fontWeight:300}}>{title}</span>
       </div>
     );
   }
