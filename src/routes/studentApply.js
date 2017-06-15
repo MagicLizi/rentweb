@@ -21,7 +21,7 @@ class studentApply extends React.Component{
 
   componentWillMount() {
     setCurPath('/studentApply');
-    this.props.refreshUserInfo();
+    // this.props.refreshUserInfo();
   }
 
   closeWeb(){
