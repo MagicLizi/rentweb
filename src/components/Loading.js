@@ -35,7 +35,8 @@ class Loading extends React.Component {
   }
 
   render(){
-    var title = this['props'].title?this['props'].title:`开门中，请稍后..剩余 ${this.state.total} 秒`;
+    var addition = this['props'].addition?this['props'].addition:'';
+    var title = this['props'].title?this['props'].title:`开门中，请稍后..剩余 ${this.state.total} 秒 ${addition}`;
     return (
       <div style = {{width:'100vw',height:'100vh',display:'flex',alignItems:'center',
         justifyContent:'center',flexDirection:'column',

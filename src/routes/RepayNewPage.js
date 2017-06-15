@@ -69,7 +69,7 @@ class RepayNewPage extends React.Component {
   renderLoading(){
     if(this.state.showloading){
       return(
-        <Loading duration = {10} cancelAlert = {true} closeLoading = {()=>{
+        <Loading addition="若无法正常还球，请及时与客服人员联系，否则造成物品丢失将扣除您的押金。" duration = {10} cancelAlert = {true} closeLoading = {()=>{
           alert('开门完成，请于放入篮球后关闭,并点击结算，如果柜门没有打开，请联系客服！');
           this.setState({showloading:false,pressLock:false});
         }}/>
