@@ -91,7 +91,7 @@ class UserPage extends React.Component{
         })
       }
       else{
-        if(iscancel === '1'){
+        if(iscancel === 1){
           tryCancelAuthority().then(result=>{
 
           })

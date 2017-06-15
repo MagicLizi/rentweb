@@ -27,8 +27,8 @@
       <file leaf-file-name="UserPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/UserPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="96" column="12" lean-forward="false" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+            <state relative-caret-position="318">
+              <caret line="93" column="25" lean-forward="false" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
               </folding>
@@ -511,12 +511,12 @@
       <workItem from="1496916611080" duration="647000" />
       <workItem from="1497234876593" duration="6163000" />
       <workItem from="1497252756224" duration="6287000" />
-      <workItem from="1497508696803" duration="2181000" />
+      <workItem from="1497508696803" duration="2222000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252480000" />
+    <option name="totallyTimeSpent" value="252521000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -946,8 +946,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/UserPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="96" column="12" lean-forward="false" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+        <state relative-caret-position="318">
+          <caret line="93" column="25" lean-forward="false" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
           <folding>
             <element signature="e#45#71#0" expanded="true" />
           </folding>
