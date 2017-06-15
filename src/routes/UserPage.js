@@ -57,34 +57,46 @@ class UserPage extends React.Component{
   }
 
   cancelAuthority(){
-    var c1 = confirm('当前押金为69元，点击确认申请退还！');
-    if(c1){
-      tryCancelAuthority().then(result=>{
-        if(result) {
-          if (result['rentInfo']) {
-            var c = confirm('您有正在进行的订单，请先完成订单后才能退取押金！');
-            if (c) {
-              payRecharge().then(r => {
-                if (r) {
-                  alert('结算成功');
-                  this.props.refreshUserInfo();
-                }
-              })
-            }
-          }
-          else {
-            if(result['nobalance']) {
-              var c = confirm('欠费中，请先充值后才能退取押金！');
+
+    var hasAuthority = this.props['hasAuthority'];
+    var iscancel = this.props['iscancel'];
+    if(hasAuthority === 1){
+      var c1 = confirm('当前押金为69元，点击确认申请退还！');
+      if(c1){
+        tryCancelAuthority().then(result=>{
+          if(result) {
+            if (result['rentInfo']) {
+              var c = confirm('您有正在进行的订单，请先完成订单后才能退取押金！');
               if (c) {
-                window.location = `${urlDomain}/recharge`;
+                payRecharge().then(r => {
+                  if (r) {
+                    alert('结算成功');
+                    this.props.refreshUserInfo();
+                  }
+                })
               }
             }
-            else{
-              alert('退还押金申请成功，押金将会在5个工作日后返还到您的支付账户中！');
+            else {
+              if(result['nobalance']) {
+                var c = confirm('欠费中，请先充值后才能退取押金！');
+                if (c) {
+                  window.location = `${urlDomain}/recharge`;
+                }
+              }
+              else{
+                alert('退还押金申请成功，押金将会在5个工作日后返还到您的支付账户中！');
+              }
             }
           }
+        })
+      }
+      else{
+        if(iscancel === '1'){
+          tryCancelAuthority().then(result=>{
+
+          })
         }
-      })
+      }
     }
   }
 
@@ -92,7 +104,20 @@ class UserPage extends React.Component{
     var nickname = this.props['nickname'];
     var avata = `url(${this.props['headImg']})`;
     var hasAuthority = this.props['hasAuthority'];
+    var iscancel = this.props['iscancel'];
     var balance = this.props['balance'];
+    var aStr = '';
+    if(hasAuthority===0){
+      if(iscancel === 0){
+        aStr= '「未支付」'
+      }
+      else{
+        aStr = '「退款中」'
+      }
+    }
+    else{
+      aStr = ' 「点击退还」'
+    }
     return(
       <div className = {userPageCss['container']}>
         <div className = {userPageCss['userInfo']}>
@@ -128,7 +153,7 @@ class UserPage extends React.Component{
 
           <div onClick={()=>{this.cancelAuthority()}} className = {userPageCss['cell']} style = {{marginTop:'5vh'}}>
             <span style = {{fontSize:15,color:'#2b2c2d',width:'46.5vw',marginLeft:'3.5vw'}}>我的押金
-              <span style = {{fontSize:15,color:'red'}}>{hasAuthority===0?'「未支付」':' 「点击退还」'}</span>
+              <span style = {{fontSize:15,color:'red'}}>{aStr}</span>
             </span>
             <div style = {{width:'50vw',height:'8vh',display:'flex',
               alignItems:'center',justifyContent:'flex-end'}}>
