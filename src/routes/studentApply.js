@@ -30,8 +30,13 @@ class studentApply extends React.Component{
       isStudent().then(r=>{
         if(r['isStudent'] === 1){
           alert('您已经是学生用户了，不要重复申请！');
-
           this.closeWeb();
+        }
+        else{
+          if(r['hascancel'] === 1){
+            alert('您曾经在学生特权下申请过退除押金，所以一年之内无法再次申请该特权！');
+            this.closeWeb();
+          }
         }
       })
     },50);

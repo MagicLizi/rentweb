@@ -12,6 +12,7 @@ export default{
     token:null,
     balance:0,
     isStudent:0,
+    hascancel:0,
     orders:[
 
     ],
@@ -43,6 +44,7 @@ export default{
           type:'setCurUserInfo',
           curUserInfo:{
             isStudent:result['isStudent'],
+            hascancel:result['hascencel'],
             userId:result['unionId'],
             nickname:result['nickname'],
             headImg:result['headImg'],
