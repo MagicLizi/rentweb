@@ -11,6 +11,7 @@ export default{
     headImg:'',
     token:null,
     balance:0,
+    isStudent:0,
     orders:[
 
     ],
@@ -41,6 +42,7 @@ export default{
         yield put({
           type:'setCurUserInfo',
           curUserInfo:{
+            isStudent:result['isStudent'],
             userId:result['unionId'],
             nickname:result['nickname'],
             headImg:result['headImg'],

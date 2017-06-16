@@ -56,8 +56,23 @@ class UserPage extends React.Component{
     }
   }
 
-  cancelAuthority(){
+  checkStudentAuthority(){
+    var isStudent = this.props['isStudent'];
+    if(isStudent === 0){
+      this.cancelAuthority();
+    }
+    else{
+      var c1 = confirm('学生认证用户，押金退还后不再享受免费打球特权，并且一年之内不能再次开启该特权！');
+      if(c1){
+        this.cancelAuthority();
+      }
+      else{
 
+      }
+    }
+  }
+
+  cancelAuthority(){
     var hasAuthority = this.props['hasAuthority'];
     var iscancel = this.props['iscancel'];
     if(hasAuthority === 1){
