@@ -167,7 +167,7 @@ class UserPage extends React.Component{
           </div>
 
 
-          <div onClick={()=>{this.cancelAuthority()}} className = {userPageCss['cell']} style = {{marginTop:'5vh'}}>
+          <div onClick={()=>{this.checkStudentAuthority()}} className = {userPageCss['cell']} style = {{marginTop:'5vh'}}>
             <span style = {{fontSize:15,color:'#2b2c2d',width:'46.5vw',marginLeft:'3.5vw'}}>我的押金
               <span style = {{fontSize:15,color:'red'}}>{aStr}</span>
             </span>
