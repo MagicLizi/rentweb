@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="aca2e0a0-f881-452b-a440-c64dba87f5fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/user.js" afterPath="$PROJECT_DIR$/src/models/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/studentApply.js" afterPath="$PROJECT_DIR$/src/routes/studentApply.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/UserPage.js" afterPath="$PROJECT_DIR$/src/routes/UserPage.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,14 +24,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserPage.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserPage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/routes/UserPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="169" column="55" lean-forward="false" selection-start-line="169" selection-start-column="55" selection-end-line="169" selection-end-column="55" />
+            <state relative-caret-position="497">
+              <caret line="143" column="11" lean-forward="false" selection-start-line="143" selection-start-column="11" selection-end-line="143" selection-end-column="11" />
               <folding>
                 <element signature="e#45#71#0" expanded="true" />
-                <element signature="e#2245#3020#0" expanded="false" />
+                <element signature="e#2323#3150#0" expanded="false" />
+                <element signature="e#3381#4260#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -60,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="studentApply.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="studentApply.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/routes/studentApply.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="36" column="52" lean-forward="false" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
+            <state relative-caret-position="608">
+              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
               <folding>
                 <element signature="e#46#72#0" expanded="true" />
                 <marker date="1497587260000" expanded="true" signature="2516:2949" ph="..." />
@@ -229,9 +229,9 @@
         <option value="$PROJECT_DIR$/src/router.js" />
         <option value="$PROJECT_DIR$/src/routes/studentApply.css" />
         <option value="$PROJECT_DIR$/src/services/user.js" />
-        <option value="$PROJECT_DIR$/src/routes/UserPage.js" />
         <option value="$PROJECT_DIR$/src/models/user.js" />
         <option value="$PROJECT_DIR$/src/routes/studentApply.js" />
+        <option value="$PROJECT_DIR$/src/routes/UserPage.js" />
       </list>
     </option>
   </component>
@@ -523,12 +523,12 @@
       <workItem from="1497252756224" duration="6287000" />
       <workItem from="1497508696803" duration="11674000" />
       <workItem from="1497555834952" duration="2802000" />
-      <workItem from="1497585088784" duration="1819000" />
+      <workItem from="1497585088784" duration="3403000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="266594000" />
+    <option name="totallyTimeSpent" value="268178000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -928,17 +928,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/routes/UserPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="169" column="55" lean-forward="false" selection-start-line="169" selection-start-column="55" selection-end-line="169" selection-end-column="55" />
-          <folding>
-            <element signature="e#45#71#0" expanded="true" />
-            <element signature="e#2245#3020#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -957,14 +946,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/studentApply.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="36" column="52" lean-forward="false" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
+        <state relative-caret-position="608">
+          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
           <folding>
             <element signature="e#46#72#0" expanded="true" />
             <marker date="1497587260000" expanded="true" signature="2516:2949" ph="..." />
             <marker date="1497587260000" expanded="true" signature="2536:2614" ph="..." />
             <marker date="1497587260000" expanded="true" signature="2657:2905" ph="..." />
             <marker date="1497587260000" expanded="true" signature="2700:2888" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/routes/UserPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="143" column="11" lean-forward="false" selection-start-line="143" selection-start-column="11" selection-end-line="143" selection-end-column="11" />
+          <folding>
+            <element signature="e#45#71#0" expanded="true" />
+            <element signature="e#2323#3150#0" expanded="false" />
+            <element signature="e#3381#4260#0" expanded="false" />
           </folding>
         </state>
       </provider>

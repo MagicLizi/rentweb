@@ -75,36 +75,74 @@ class UserPage extends React.Component{
   cancelAuthority(){
     var hasAuthority = this.props['hasAuthority'];
     var iscancel = this.props['iscancel'];
+    var isStudent = this.props['isStudent'];
     if(hasAuthority === 1){
-      var c1 = confirm('当前押金为69元，点击确认申请退还！');
-      if(c1){
-        tryCancelAuthority().then(result=>{
-          if(result) {
-            if (result['rentInfo']) {
-              var c = confirm('您有正在进行的订单，请先完成订单后才能退取押金！');
-              if (c) {
-                payRecharge().then(r => {
-                  if (r) {
-                    alert('结算成功');
-                    this.props.refreshUserInfo();
-                  }
-                })
-              }
-            }
-            else {
-              if(result['nobalance']) {
-                var c = confirm('欠费中，请先充值后才能退取押金！');
+      if(isStudent === 0){
+        var c1 = confirm('当前押金为69元，点击确认申请退还！');
+        if(c1){
+          tryCancelAuthority().then(result=>{
+            if(result) {
+              if (result['rentInfo']) {
+                var c = confirm('您有正在进行的订单，请先完成订单后才能退取押金！');
                 if (c) {
-                  window.location = `${urlDomain}/recharge`;
+                  payRecharge().then(r => {
+                    if (r) {
+                      alert('结算成功');
+                      this.props.refreshUserInfo();
+                    }
+                  })
                 }
               }
-              else{
-                alert('退还押金申请成功，押金将会在5个工作日后返还到您的支付账户中！');
-                this.props.refreshUserInfo();
+              else {
+                if(result['nobalance']) {
+                  var c = confirm('欠费中，请先充值后才能退取押金！');
+                  if (c) {
+                    window.location = `${urlDomain}/recharge`;
+                  }
+                }
+                else{
+                  alert('退还押金申请成功，押金将会在5个工作日后返还到您的支付账户中！');
+                  this.props.refreshUserInfo();
+                }
               }
             }
+          })
+        }
+      }
+      else{
+        var c2 = confirm('学生认证用户，押金退还后不再享受免费打球特权，并且一年之内不能再次开启该特权！');
+        if(c2){
+          var c1 = confirm('当前押金为69元，点击确认申请退还！');
+          if(c1){
+            tryCancelAuthority().then(result=>{
+              if(result) {
+                if (result['rentInfo']) {
+                  var c = confirm('您有正在进行的订单，请先完成订单后才能退取押金！');
+                  if (c) {
+                    payRecharge().then(r => {
+                      if (r) {
+                        alert('结算成功');
+                        this.props.refreshUserInfo();
+                      }
+                    })
+                  }
+                }
+                else {
+                  if(result['nobalance']) {
+                    var c = confirm('欠费中，请先充值后才能退取押金！');
+                    if (c) {
+                      window.location = `${urlDomain}/recharge`;
+                    }
+                  }
+                  else{
+                    alert('退还押金申请成功，押金将会在5个工作日后返还到您的支付账户中！');
+                    this.props.refreshUserInfo();
+                  }
+                }
+              }
+            })
           }
-        })
+        }
       }
     }
     else{
@@ -167,7 +205,7 @@ class UserPage extends React.Component{
           </div>
 
 
-          <div onClick={()=>{this.checkStudentAuthority()}} className = {userPageCss['cell']} style = {{marginTop:'5vh'}}>
+          <div onClick={()=>{this.cancelAuthority()}} className = {userPageCss['cell']} style = {{marginTop:'5vh'}}>
             <span style = {{fontSize:15,color:'#2b2c2d',width:'46.5vw',marginLeft:'3.5vw'}}>我的押金
               <span style = {{fontSize:15,color:'red'}}>{aStr}</span>
             </span>
