@@ -30,6 +30,7 @@ class studentApply extends React.Component{
       isStudent().then(r=>{
         if(r['isStudent'] === 1){
           alert('您已经是学生用户了，不要重复申请！');
+
           this.closeWeb();
         }
       })
@@ -90,7 +91,7 @@ class studentApply extends React.Component{
 
     return(
       <div className = {Style['container']}
-           style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/studentapply1.jpg!w640)'}}>
+           style = {{backgroundImage:'url(http://rentservice.b0.upaiyun.com/studentA.jpg!w640)'}}>
           <div className = {Style['btn']}>
             <FileUpload options={options}>
               <div className = {Style['creImgInput']} ref="chooseAndUpload">
