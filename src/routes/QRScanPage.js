@@ -73,7 +73,8 @@ class QRScanPage extends React.Component {
         scanType: ["qrCode"], // 可以指定扫二维码还是一维码，默认二者都有
         success: function (res) {
           if(res.resultStr){
-            this.props.checkNeedRechargeable(res.resultStr,r=>{
+            self.props.checkNeedRechargeable(res.resultStr,r=>{
+              alert(r['need']);
               if(r['need']){
                 window.location = `${urlDomain}/recharge?showQR=true`;
               }
