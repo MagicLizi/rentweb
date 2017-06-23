@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="aca2e0a0-f881-452b-a440-c64dba87f5fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/QRScanPage.js" afterPath="$PROJECT_DIR$/src/routes/QRScanPage.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -71,12 +70,22 @@
         <entry file="file://$PROJECT_DIR$/src/routes/QRScanPage.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="185">
-              <caret line="76" column="31" lean-forward="false" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+              <caret line="76" column="34" lean-forward="false" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="34" />
               <folding>
-                <element signature="e#4172#4714#0" expanded="false" />
-                <marker date="1498196110000" expanded="true" signature="6509:6538" ph="..." />
-                <marker date="1498196110000" expanded="true" signature="6538:6556" ph="..." />
+                <element signature="e#4175#4717#0" expanded="false" />
+                <marker date="1498196594000" expanded="true" signature="6512:6541" ph="..." />
+                <marker date="1498196594000" expanded="true" signature="6541:6559" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="action.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/action.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="44" column="22" lean-forward="false" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,21 +116,6 @@
             <state relative-caret-position="255">
               <caret line="139" column="26" lean-forward="false" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="26" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="studentApply.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/routes/studentApply.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="34" column="13" lean-forward="false" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-              <folding>
-                <marker date="1497587260000" expanded="true" signature="2516:2949" ph="..." />
-                <marker date="1497587260000" expanded="true" signature="2536:2614" ph="..." />
-                <marker date="1497587260000" expanded="true" signature="2657:2905" ph="..." />
-                <marker date="1497587260000" expanded="true" signature="2700:2888" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -520,12 +514,12 @@
       <workItem from="1497585088784" duration="3791000" />
       <workItem from="1497589755701" duration="12000" />
       <workItem from="1497668452575" duration="191000" />
-      <workItem from="1498191696319" duration="3801000" />
+      <workItem from="1498191696319" duration="4284000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272570000" />
+    <option name="totallyTimeSpent" value="273053000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -740,13 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="44" column="22" lean-forward="false" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/UserOrder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -948,14 +935,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/action.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="44" column="22" lean-forward="false" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/routes/QRScanPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
-          <caret line="76" column="31" lean-forward="false" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+          <caret line="76" column="34" lean-forward="false" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="34" />
           <folding>
-            <element signature="e#4172#4714#0" expanded="false" />
-            <marker date="1498196110000" expanded="true" signature="6509:6538" ph="..." />
-            <marker date="1498196110000" expanded="true" signature="6538:6556" ph="..." />
+            <element signature="e#4175#4717#0" expanded="false" />
+            <marker date="1498196594000" expanded="true" signature="6512:6541" ph="..." />
+            <marker date="1498196594000" expanded="true" signature="6541:6559" ph="..." />
           </folding>
         </state>
       </provider>

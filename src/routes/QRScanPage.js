@@ -74,7 +74,7 @@ class QRScanPage extends React.Component {
         success: function (res) {
           if(res.resultStr){
             self.props.checkNeedRechargeable(res.resultStr,r=>{
-              alert(r['need']);
+              // alert(r['need']);
               if(r['need']){
                 window.location = `${urlDomain}/recharge?showQR=true`;
               }
