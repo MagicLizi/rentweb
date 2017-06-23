@@ -67,17 +67,17 @@ class QRScanPage extends React.Component {
       window.location = `${urlDomain}/recharge?showQR=true`;
     }
     else{
-      this.props.checkNeedRechargeable(r=>{
-        if(r['need']){
-          window.location = `${urlDomain}/recharge?showQR=true`;
-        }
-        else{
-          var self = this;
-          wx.scanQRCode({
-            needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
-            scanType: ["qrCode"], // 可以指定扫二维码还是一维码，默认二者都有
-            success: function (res) {
-              if(res.resultStr){
+      var self = this;
+      wx.scanQRCode({
+        needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+        scanType: ["qrCode"], // 可以指定扫二维码还是一维码，默认二者都有
+        success: function (res) {
+          if(res.resultStr){
+            this.props.checkNeedRechargeable(res.resultStr,r=>{
+              if(r['need']){
+                window.location = `${urlDomain}/recharge?showQR=true`;
+              }
+              else{
                 boxPrice(res.resultStr).then(r=>{
                   self.qr = res.resultStr;
                   if(r.freemin){
@@ -99,18 +99,11 @@ class QRScanPage extends React.Component {
                     }
                   }
                 })
-
-                // dealQRResult(res.resultStr).then(result=>{
-                //   if(result){
-                //     self.setState({boxInfo:result.boxInfo});
-                //     self.setState({showloading:true});
-                //   }
-                // })
               }
-            }
-          });
+            })
+          }
         }
-      })
+      });
     }
   }
 
@@ -233,8 +226,8 @@ class QRScanPage extends React.Component {
 
 var mapDispatchToProps = function(dispatch){
   return{
-    checkNeedRechargeable:(callback)=>{
-      dispatch({type:'user/checkNeedRechargeable',callback:callback})
+    checkNeedRechargeable:(qrCode,callback)=>{
+      dispatch({type:'user/checkNeedRechargeable',qrCode:qrCode,callback:callback})
     }
   }
 }

@@ -138,7 +138,7 @@ export default{
     },
 
     *checkNeedRechargeable(action,{call,put}){
-      var result = yield call(checkNeedRechargeable);
+      var result = yield call(checkNeedRechargeable,action.qrCode);
       action['callback']&&action['callback'](result);
     },
 

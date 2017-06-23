@@ -55,8 +55,8 @@ export async function bind(mobile,verifyCode,qr){
 }
 
 
-export async function checkNeedRechargeable(){
-  return await request(`/user/checkNeedRechargeable`,{});
+export async function checkNeedRechargeable(qrCode){
+  return await request(`/user/checkNeedRechargeable?qrCode=${qrCode}`,{});
 }
 
 
